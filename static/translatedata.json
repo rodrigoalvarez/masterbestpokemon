@@ -1,0 +1,2690 @@
+[
+    {
+        "name": "POUND",
+        "translate": "Destructor"
+    },
+    {
+        "name": "KARATE CHOP",
+        "translate": "Golpe Karate"
+    },
+    {
+        "name": "DOUBLE SLAP",
+        "translate": "Doble Bofetón"
+    },
+    {
+        "name": "COMET PUNCH",
+        "translate": "Puño Cometa"
+    },
+    {
+        "name": "MEGA PUNCH",
+        "translate": "Megapuño"
+    },
+    {
+        "name": "PAY DAY",
+        "translate": "Día de Pago"
+    },
+    {
+        "name": "FIRE PUNCH",
+        "translate": "Puño Fuego"
+    },
+    {
+        "name": "ICE PUNCH",
+        "translate": "Puño Hielo"
+    },
+    {
+        "name": "THUNDER PUNCH",
+        "translate": "Puño Trueno"
+    },
+    {
+        "name": "SCRATCH",
+        "translate": "Arañazo"
+    },
+    {
+        "name": "VICE GRIP",
+        "translate": "Agarre"
+    },
+    {
+        "name": "GUILLOTINE",
+        "translate": "Guillotina"
+    },
+    {
+        "name": "RAZOR WIND",
+        "translate": "Viento Cortante"
+    },
+    {
+        "name": "SWORDS DANCE",
+        "translate": "Danza Espada"
+    },
+    {
+        "name": "CUT",
+        "translate": "Corte"
+    },
+    {
+        "name": "GUST",
+        "translate": "Tornado"
+    },
+    {
+        "name": "WING ATTACK",
+        "translate": "Ataque Ala"
+    },
+    {
+        "name": "WHIRLWIND",
+        "translate": "Remolino"
+    },
+    {
+        "name": "FLY",
+        "translate": "Vuelo"
+    },
+    {
+        "name": "BIND",
+        "translate": "Atadura"
+    },
+    {
+        "name": "SLAM",
+        "translate": "Atizar"
+    },
+    {
+        "name": "VINE WHIP",
+        "translate": "Látigo Cepa"
+    },
+    {
+        "name": "STOMP",
+        "translate": "Pisotón"
+    },
+    {
+        "name": "DOUBLE KICK",
+        "translate": "Doble Patada"
+    },
+    {
+        "name": "MEGA KICK",
+        "translate": "Megapatada"
+    },
+    {
+        "name": "JUMP KICK",
+        "translate": "Patada Salto"
+    },
+    {
+        "name": "ROLLING KICK",
+        "translate": "Patada Giro"
+    },
+    {
+        "name": "SAND ATTACK",
+        "translate": "Ataque Arena"
+    },
+    {
+        "name": "HEADBUTT",
+        "translate": "Golpe Cabeza"
+    },
+    {
+        "name": "HORN ATTACK",
+        "translate": "Cornada"
+    },
+    {
+        "name": "FURY ATTACK",
+        "translate": "Ataque Furia"
+    },
+    {
+        "name": "HORN DRILL",
+        "translate": "Perforador"
+    },
+    {
+        "name": "TACKLE",
+        "translate": "Placaje"
+    },
+    {
+        "name": "BODY SLAM",
+        "translate": "Golpe Cuerpo"
+    },
+    {
+        "name": "WRAP",
+        "translate": "Constricción"
+    },
+    {
+        "name": "TAKE DOWN",
+        "translate": "Derribo"
+    },
+    {
+        "name": "THRASH",
+        "translate": "Golpe"
+    },
+    {
+        "name": "DOUBLE-EDGE",
+        "translate": "Doble Filo"
+    },
+    {
+        "name": "TAIL WHIP",
+        "translate": "Látigo"
+    },
+    {
+        "name": "POISON STING",
+        "translate": "Picotazo Ven"
+    },
+    {
+        "name": "TWINEEDLE",
+        "translate": "Doble Ataque"
+    },
+    {
+        "name": "PIN MISSILE",
+        "translate": "Pin Misil"
+    },
+    {
+        "name": "LEER",
+        "translate": "Malicioso"
+    },
+    {
+        "name": "BITE",
+        "translate": "Mordisco"
+    },
+    {
+        "name": "GROWL",
+        "translate": "Gruñido"
+    },
+    {
+        "name": "ROAR",
+        "translate": "Rugido"
+    },
+    {
+        "name": "SING",
+        "translate": "Canto"
+    },
+    {
+        "name": "SUPERSONIC",
+        "translate": "Supersónico"
+    },
+    {
+        "name": "SONIC BOOM",
+        "translate": "Bomba Sónico"
+    },
+    {
+        "name": "DISABLE",
+        "translate": "Anulación"
+    },
+    {
+        "name": "ACID",
+        "translate": "Ácido"
+    },
+    {
+        "name": "EMBER",
+        "translate": "Ascuas"
+    },
+    {
+        "name": "FLAMETHROWER",
+        "translate": "Lanzallamas"
+    },
+    {
+        "name": "MIST",
+        "translate": "Neblina"
+    },
+    {
+        "name": "WATER GUN",
+        "translate": "Pistola Agua"
+    },
+    {
+        "name": "HYDRO PUMP",
+        "translate": "Hidrobomba"
+    },
+    {
+        "name": "SURF",
+        "translate": "Surf"
+    },
+    {
+        "name": "ICE BEAM",
+        "translate": "Rayo Hielo"
+    },
+    {
+        "name": "BLIZZARD",
+        "translate": "Ventisca"
+    },
+    {
+        "name": "PSYBEAM",
+        "translate": "Psicorrayo"
+    },
+    {
+        "name": "BUBBLE BEAM",
+        "translate": "Rayo Burbuja"
+    },
+    {
+        "name": "AURORA BEAM",
+        "translate": "Rayo Aurora"
+    },
+    {
+        "name": "HYPER BEAM",
+        "translate": "Hiperrayo"
+    },
+    {
+        "name": "PECK",
+        "translate": "Picotazo"
+    },
+    {
+        "name": "DRILL PECK",
+        "translate": "Pico Taladro"
+    },
+    {
+        "name": "SUBMISSION",
+        "translate": "Sumisión"
+    },
+    {
+        "name": "LOW KICK",
+        "translate": "Patada Baja"
+    },
+    {
+        "name": "COUNTER",
+        "translate": "Contraataque"
+    },
+    {
+        "name": "SEISMIC TOSS",
+        "translate": "Mov. Sísmico"
+    },
+    {
+        "name": "STRENGTH",
+        "translate": "Fuerza"
+    },
+    {
+        "name": "ABSORB",
+        "translate": "Absorber"
+    },
+    {
+        "name": "MEGA DRAIN",
+        "translate": "Megaagotar"
+    },
+    {
+        "name": "LEECH SEED",
+        "translate": "Drenadoras"
+    },
+    {
+        "name": "GROWTH",
+        "translate": "Desarrollo"
+    },
+    {
+        "name": "RAZOR LEAF",
+        "translate": "Hoja Afilada"
+    },
+    {
+        "name": "SOLAR BEAM",
+        "translate": "Rayo Solar"
+    },
+    {
+        "name": "POISON POWDER",
+        "translate": "Polvo Veneno"
+    },
+    {
+        "name": "STUN SPORE",
+        "translate": "Paralizador"
+    },
+    {
+        "name": "SLEEP POWDER",
+        "translate": "Somnífero"
+    },
+    {
+        "name": "PETAL DANCE",
+        "translate": "Danza Pétalo"
+    },
+    {
+        "name": "STRING SHOT",
+        "translate": "Disparo Demora"
+    },
+    {
+        "name": "DRAGON RAGE",
+        "translate": "Furia Dragón"
+    },
+    {
+        "name": "FIRE SPIN",
+        "translate": "Giro Fuego"
+    },
+    {
+        "name": "THUNDER SHOCK",
+        "translate": "Impactrueno"
+    },
+    {
+        "name": "THUNDERBOLT",
+        "translate": "Rayo"
+    },
+    {
+        "name": "THUNDER WAVE",
+        "translate": "Onda Trueno"
+    },
+    {
+        "name": "THUNDER",
+        "translate": "Trueno"
+    },
+    {
+        "name": "ROCK THROW",
+        "translate": "Lanzarrocas"
+    },
+    {
+        "name": "EARTHQUAKE",
+        "translate": "Terremoto"
+    },
+    {
+        "name": "FISSURE",
+        "translate": "Fisura"
+    },
+    {
+        "name": "DIG",
+        "translate": "Excavar"
+    },
+    {
+        "name": "TOXIC",
+        "translate": "Tóxico"
+    },
+    {
+        "name": "CONFUSION",
+        "translate": "Confusión"
+    },
+    {
+        "name": "PSYCHIC",
+        "translate": "Psíquico"
+    },
+    {
+        "name": "HYPNOSIS",
+        "translate": "Hipnosis"
+    },
+    {
+        "name": "MEDITATE",
+        "translate": "Meditación"
+    },
+    {
+        "name": "AGILITY",
+        "translate": "Agilidad"
+    },
+    {
+        "name": "QUICK ATTACK",
+        "translate": "Ataque Rápido"
+    },
+    {
+        "name": "RAGE",
+        "translate": "Furia"
+    },
+    {
+        "name": "TELEPORT",
+        "translate": "Teletransporte"
+    },
+    {
+        "name": "NIGHT SHADE",
+        "translate": "Tinieblas"
+    },
+    {
+        "name": "MIMIC",
+        "translate": "Mimético"
+    },
+    {
+        "name": "SCREECH",
+        "translate": "Chirrido"
+    },
+    {
+        "name": "DOUBLE TEAM",
+        "translate": "Doble Equipo"
+    },
+    {
+        "name": "RECOVER",
+        "translate": "Recuperación"
+    },
+    {
+        "name": "HARDEN",
+        "translate": "Fortaleza"
+    },
+    {
+        "name": "MINIMIZE",
+        "translate": "Reducción"
+    },
+    {
+        "name": "SMOKESCREEN",
+        "translate": "Pantallahumo"
+    },
+    {
+        "name": "CONFUSE RAY",
+        "translate": "Rayo Confuso"
+    },
+    {
+        "name": "WITHDRAW",
+        "translate": "Refugio"
+    },
+    {
+        "name": "DEFENSE CURL",
+        "translate": "Rizo Defensa"
+    },
+    {
+        "name": "BARRIER",
+        "translate": "Barrera"
+    },
+    {
+        "name": "LIGHT SCREEN",
+        "translate": "Pantalla Luz"
+    },
+    {
+        "name": "HAZE",
+        "translate": "Niebla"
+    },
+    {
+        "name": "REFLECT",
+        "translate": "Reflejo"
+    },
+    {
+        "name": "FOCUS ENERGY",
+        "translate": "Foco Energía"
+    },
+    {
+        "name": "BIDE",
+        "translate": "Venganza"
+    },
+    {
+        "name": "METRONOME",
+        "translate": "Metrónomo"
+    },
+    {
+        "name": "MIRROR MOVE",
+        "translate": "Mov. Espejo"
+    },
+    {
+        "name": "SELF-DESTRUCT",
+        "translate": "Autodestrucción"
+    },
+    {
+        "name": "EGG BOMB",
+        "translate": "Bomba Huevo"
+    },
+    {
+        "name": "LICK",
+        "translate": "Lengüetazo"
+    },
+    {
+        "name": "SMOG",
+        "translate": "Polución"
+    },
+    {
+        "name": "SLUDGE",
+        "translate": "Residuos"
+    },
+    {
+        "name": "BONE CLUB",
+        "translate": "Hueso Palo"
+    },
+    {
+        "name": "FIRE BLAST",
+        "translate": "Llamarada"
+    },
+    {
+        "name": "WATERFALL",
+        "translate": "Cascada"
+    },
+    {
+        "name": "CLAMP",
+        "translate": "Tenaza"
+    },
+    {
+        "name": "SWIFT",
+        "translate": "Rapidez"
+    },
+    {
+        "name": "SKULL BASH",
+        "translate": "Cabezazo"
+    },
+    {
+        "name": "SPIKE CANNON",
+        "translate": "Clavo Cañón"
+    },
+    {
+        "name": "CONSTRICT",
+        "translate": "Restricción"
+    },
+    {
+        "name": "AMNESIA",
+        "translate": "Amnesia"
+    },
+    {
+        "name": "KINESIS",
+        "translate": "Kinético"
+    },
+    {
+        "name": "SOFT-BOILED",
+        "translate": "Amortiguador"
+    },
+    {
+        "name": "HIGH JUMP KICK",
+        "translate": "Pat. Salto Alta"
+    },
+    {
+        "name": "GLARE",
+        "translate": "Deslumbrar"
+    },
+    {
+        "name": "DREAM EATER",
+        "translate": "Comesueños"
+    },
+    {
+        "name": "POISON GAS",
+        "translate": "Gas Venenoso"
+    },
+    {
+        "name": "BARRAGE",
+        "translate": "Presa"
+    },
+    {
+        "name": "LEECH LIFE",
+        "translate": "Chupavidas"
+    },
+    {
+        "name": "LOVELY KISS",
+        "translate": "Beso Amoroso"
+    },
+    {
+        "name": "SKY ATTACK",
+        "translate": "Ataque Aéreo"
+    },
+    {
+        "name": "TRANSFORM",
+        "translate": "Transformación"
+    },
+    {
+        "name": "BUBBLE",
+        "translate": "Burbuja"
+    },
+    {
+        "name": "DIZZY PUNCH",
+        "translate": "Puño Mareo"
+    },
+    {
+        "name": "SPORE",
+        "translate": "Espora"
+    },
+    {
+        "name": "FLASH",
+        "translate": "Destello"
+    },
+    {
+        "name": "PSYWAVE",
+        "translate": "Psicoonda"
+    },
+    {
+        "name": "SPLASH",
+        "translate": "Salpicadura"
+    },
+    {
+        "name": "ACID ARMOR",
+        "translate": "Armadura Ácida"
+    },
+    {
+        "name": "CRABHAMMER",
+        "translate": "Martillazo"
+    },
+    {
+        "name": "EXPLOSION",
+        "translate": "Explosión"
+    },
+    {
+        "name": "FURY SWIPES",
+        "translate": "Golpes Furia"
+    },
+    {
+        "name": "BONEMERANG",
+        "translate": "Huesomerang"
+    },
+    {
+        "name": "REST",
+        "translate": "Descanso"
+    },
+    {
+        "name": "ROCK SLIDE",
+        "translate": "Avalancha"
+    },
+    {
+        "name": "HYPER FANG",
+        "translate": "Hiper Colmillo"
+    },
+    {
+        "name": "SHARPEN",
+        "translate": "Afilar"
+    },
+    {
+        "name": "CONVERSION",
+        "translate": "Conversión"
+    },
+    {
+        "name": "TRI ATTACK",
+        "translate": "Triataque"
+    },
+    {
+        "name": "SUPER FANG",
+        "translate": "Superdiente"
+    },
+    {
+        "name": "SLASH",
+        "translate": "Cuchillada"
+    },
+    {
+        "name": "SUBSTITUTE",
+        "translate": "Sustituto"
+    },
+    {
+        "name": "STRUGGLE",
+        "translate": "Combate"
+    },
+    {
+        "name": "SKETCH",
+        "translate": "Esquema"
+    },
+    {
+        "name": "TRIPLE KICK",
+        "translate": "Triple Patada"
+    },
+    {
+        "name": "THIEF",
+        "translate": "Ladrón"
+    },
+    {
+        "name": "SPIDER WEB",
+        "translate": "Telaraña"
+    },
+    {
+        "name": "MIND READER",
+        "translate": "Telépata"
+    },
+    {
+        "name": "NIGHTMARE",
+        "translate": "Pesadilla"
+    },
+    {
+        "name": "FLAME WHEEL",
+        "translate": "Rueda Fuego"
+    },
+    {
+        "name": "SNORE",
+        "translate": "Ronquido"
+    },
+    {
+        "name": "CURSE",
+        "translate": "Maldición"
+    },
+    {
+        "name": "FLAIL",
+        "translate": "Azote"
+    },
+    {
+        "name": "CONVERSION2",
+        "translate": "Conversión2"
+    },
+    {
+        "name": "AEROBLAST",
+        "translate": "Aerochorro"
+    },
+    {
+        "name": "COTTON SPORE",
+        "translate": "Esporagodón"
+    },
+    {
+        "name": "REVERSAL",
+        "translate": "Inversión"
+    },
+    {
+        "name": "SPITE",
+        "translate": "Rencor"
+    },
+    {
+        "name": "POWDER SNOW",
+        "translate": "Nieve Polvo"
+    },
+    {
+        "name": "PROTECT",
+        "translate": "Protección"
+    },
+    {
+        "name": "MACH PUNCH",
+        "translate": "Ultrapuño"
+    },
+    {
+        "name": "SCARY FACE",
+        "translate": "Cara Susto"
+    },
+    {
+        "name": "FEINT ATTACK",
+        "translate": "Finta"
+    },
+    {
+        "name": "SWEET KISS",
+        "translate": "Beso Dulce"
+    },
+    {
+        "name": "BELLY DRUM",
+        "translate": "Tambor"
+    },
+    {
+        "name": "SLUDGE BOMB",
+        "translate": "Bomba Lodo"
+    },
+    {
+        "name": "MUD-SLAP",
+        "translate": "Bofetón Lodo"
+    },
+    {
+        "name": "OCTAZOOKA",
+        "translate": "Pulpocañón"
+    },
+    {
+        "name": "SPIKES",
+        "translate": "Púas"
+    },
+    {
+        "name": "ZAP CANNON",
+        "translate": "Electrocañón"
+    },
+    {
+        "name": "FORESIGHT",
+        "translate": "Profecía"
+    },
+    {
+        "name": "DESTINY BOND",
+        "translate": "Mismo Destino"
+    },
+    {
+        "name": "PERISH SONG",
+        "translate": "Canto Mortal"
+    },
+    {
+        "name": "ICY WIND",
+        "translate": "Viento Hielo"
+    },
+    {
+        "name": "DETECT",
+        "translate": "Detección"
+    },
+    {
+        "name": "BONE RUSH",
+        "translate": "Ataque Óseo"
+    },
+    {
+        "name": "LOCK-ON",
+        "translate": "Fijar Blanco"
+    },
+    {
+        "name": "OUTRAGE",
+        "translate": "Enfado"
+    },
+    {
+        "name": "SANDSTORM",
+        "translate": "Tormenta Arena"
+    },
+    {
+        "name": "GIGA DRAIN",
+        "translate": "Gigadrenado"
+    },
+    {
+        "name": "ENDURE",
+        "translate": "Aguante"
+    },
+    {
+        "name": "CHARM",
+        "translate": "Encanto"
+    },
+    {
+        "name": "ROLLOUT",
+        "translate": "Desenrollar"
+    },
+    {
+        "name": "FALSE SWIPE",
+        "translate": "Falsotortazo"
+    },
+    {
+        "name": "SWAGGER",
+        "translate": "Contoneo"
+    },
+    {
+        "name": "MILK DRINK",
+        "translate": "Batido"
+    },
+    {
+        "name": "SPARK",
+        "translate": "Chispa"
+    },
+    {
+        "name": "FURY CUTTER",
+        "translate": "Cortefuria"
+    },
+    {
+        "name": "STEEL WING",
+        "translate": "Ala De Acero"
+    },
+    {
+        "name": "MEAN LOOK",
+        "translate": "Mal De Ojo"
+    },
+    {
+        "name": "ATTRACT",
+        "translate": "Atracción"
+    },
+    {
+        "name": "SLEEP TALK",
+        "translate": "Sonámbulo"
+    },
+    {
+        "name": "HEAL BELL",
+        "translate": "Campana Cura"
+    },
+    {
+        "name": "RETURN",
+        "translate": "Retribución"
+    },
+    {
+        "name": "PRESENT",
+        "translate": "Presente"
+    },
+    {
+        "name": "FRUSTRATION",
+        "translate": "Frustración"
+    },
+    {
+        "name": "SAFEGUARD",
+        "translate": "Velo Sagrado"
+    },
+    {
+        "name": "PAIN SPLIT",
+        "translate": "Divide Dolor"
+    },
+    {
+        "name": "SACRED FIRE",
+        "translate": "Fuego Sagrado"
+    },
+    {
+        "name": "MAGNITUDE",
+        "translate": "Magnitud"
+    },
+    {
+        "name": "DYNAMIC PUNCH",
+        "translate": "Puño Dinámico"
+    },
+    {
+        "name": "MEGAHORN",
+        "translate": "Megacuerno"
+    },
+    {
+        "name": "DRAGON BREATH",
+        "translate": "Dragoaliento"
+    },
+    {
+        "name": "BATON PASS",
+        "translate": "Relevo"
+    },
+    {
+        "name": "ENCORE",
+        "translate": "Otra Vez"
+    },
+    {
+        "name": "PURSUIT",
+        "translate": "Persecución"
+    },
+    {
+        "name": "RAPID SPIN",
+        "translate": "Giro Rápido"
+    },
+    {
+        "name": "SWEET SCENT",
+        "translate": "Dulce Aroma"
+    },
+    {
+        "name": "IRON TAIL",
+        "translate": "Cola Férrea"
+    },
+    {
+        "name": "METAL CLAW",
+        "translate": "Garra Metal"
+    },
+    {
+        "name": "VITAL THROW",
+        "translate": "Tiro Vital"
+    },
+    {
+        "name": "MORNING SUN",
+        "translate": "Sol Matinal"
+    },
+    {
+        "name": "SYNTHESIS",
+        "translate": "Síntesis"
+    },
+    {
+        "name": "MOONLIGHT",
+        "translate": "Luz Lunar"
+    },
+    {
+        "name": "HIDDEN POWER",
+        "translate": "Poder Oculto"
+    },
+    {
+        "name": "CROSS CHOP",
+        "translate": "Tajo Cruzado"
+    },
+    {
+        "name": "TWISTER",
+        "translate": "Ciclón"
+    },
+    {
+        "name": "RAIN DANCE",
+        "translate": "Danza Lluvia"
+    },
+    {
+        "name": "SUNNY DAY",
+        "translate": "Día Soleado"
+    },
+    {
+        "name": "CRUNCH",
+        "translate": "Triturar"
+    },
+    {
+        "name": "MIRROR COAT",
+        "translate": "Manto Espejo"
+    },
+    {
+        "name": "PSYCH UP",
+        "translate": "Más Psique"
+    },
+    {
+        "name": "EXTREME SPEED",
+        "translate": "Veloc. Extrema"
+    },
+    {
+        "name": "ANCIENT POWER",
+        "translate": "Poder Pasado"
+    },
+    {
+        "name": "SHADOW BALL",
+        "translate": "Bola Sombra"
+    },
+    {
+        "name": "FUTURE SIGHT",
+        "translate": "Premonición"
+    },
+    {
+        "name": "ROCK SMASH",
+        "translate": "Golpe Roca"
+    },
+    {
+        "name": "WHIRLPOOL",
+        "translate": "Torbellino"
+    },
+    {
+        "name": "BEAT UP",
+        "translate": "Paliza"
+    },
+    {
+        "name": "FAKE OUT",
+        "translate": "Sorpresa"
+    },
+    {
+        "name": "UPROAR",
+        "translate": "Alboroto"
+    },
+    {
+        "name": "STOCKPILE",
+        "translate": "Reserva"
+    },
+    {
+        "name": "SPIT UP",
+        "translate": "Escupir"
+    },
+    {
+        "name": "SWALLOW",
+        "translate": "Tragar"
+    },
+    {
+        "name": "HEAT WAVE",
+        "translate": "Onda Ígnea"
+    },
+    {
+        "name": "HAIL",
+        "translate": "Granizo"
+    },
+    {
+        "name": "TORMENT",
+        "translate": "Tormento"
+    },
+    {
+        "name": "FLATTER",
+        "translate": "Camelo"
+    },
+    {
+        "name": "WILL-O-WISP",
+        "translate": "Fuego Fatuo"
+    },
+    {
+        "name": "MEMENTO",
+        "translate": "Legado"
+    },
+    {
+        "name": "FACADE",
+        "translate": "Imagen"
+    },
+    {
+        "name": "FOCUS PUNCH",
+        "translate": "Puño Certero"
+    },
+    {
+        "name": "SMELLING SALTS",
+        "translate": "Estímulo"
+    },
+    {
+        "name": "FOLLOW ME",
+        "translate": "Señuelo"
+    },
+    {
+        "name": "NATURE POWER",
+        "translate": "Adaptación"
+    },
+    {
+        "name": "CHARGE",
+        "translate": "Carga"
+    },
+    {
+        "name": "TAUNT",
+        "translate": "Mofa"
+    },
+    {
+        "name": "HELPING HAND",
+        "translate": "Refuerzo"
+    },
+    {
+        "name": "TRICK",
+        "translate": "Truco"
+    },
+    {
+        "name": "ROLE PLAY",
+        "translate": "Imitación"
+    },
+    {
+        "name": "WISH",
+        "translate": "Deseo"
+    },
+    {
+        "name": "ASSIST",
+        "translate": "Ayuda"
+    },
+    {
+        "name": "INGRAIN",
+        "translate": "Arraigo"
+    },
+    {
+        "name": "SUPERPOWER",
+        "translate": "Fuerza Bruta"
+    },
+    {
+        "name": "MAGIC COAT",
+        "translate": "Capa Mágica"
+    },
+    {
+        "name": "RECYCLE",
+        "translate": "Reciclaje"
+    },
+    {
+        "name": "REVENGE",
+        "translate": "Desquite"
+    },
+    {
+        "name": "BRICK BREAK",
+        "translate": "Demolición"
+    },
+    {
+        "name": "YAWN",
+        "translate": "Bostezo"
+    },
+    {
+        "name": "KNOCK OFF",
+        "translate": "Desarme"
+    },
+    {
+        "name": "ENDEAVOR",
+        "translate": "Esfuerzo"
+    },
+    {
+        "name": "ERUPTION",
+        "translate": "Estallido"
+    },
+    {
+        "name": "SKILL SWAP",
+        "translate": "Intercambio"
+    },
+    {
+        "name": "IMPRISON",
+        "translate": "Cerca"
+    },
+    {
+        "name": "REFRESH",
+        "translate": "Alivio"
+    },
+    {
+        "name": "GRUDGE",
+        "translate": "Rabia"
+    },
+    {
+        "name": "SNATCH",
+        "translate": "Robo"
+    },
+    {
+        "name": "SECRET POWER",
+        "translate": "Daño Secreto"
+    },
+    {
+        "name": "DIVE",
+        "translate": "Buceo"
+    },
+    {
+        "name": "ARM THRUST",
+        "translate": "Empujón"
+    },
+    {
+        "name": "CAMOUFLAGE",
+        "translate": "Camuflaje"
+    },
+    {
+        "name": "TAIL GLOW",
+        "translate": "Ráfaga"
+    },
+    {
+        "name": "LUSTER PURGE",
+        "translate": "Resplandor"
+    },
+    {
+        "name": "MIST BALL",
+        "translate": "Bola Neblina"
+    },
+    {
+        "name": "FEATHER DANCE",
+        "translate": "Danza Pluma"
+    },
+    {
+        "name": "TEETER DANCE",
+        "translate": "Danza Caos"
+    },
+    {
+        "name": "BLAZE KICK",
+        "translate": "Patada Ígnea"
+    },
+    {
+        "name": "MUD SPORT",
+        "translate": "Chapoteo Lodo"
+    },
+    {
+        "name": "ICE BALL",
+        "translate": "Bola Hielo"
+    },
+    {
+        "name": "NEEDLE ARM",
+        "translate": "Brazo Pincho"
+    },
+    {
+        "name": "SLACK OFF",
+        "translate": "Relajo"
+    },
+    {
+        "name": "HYPER VOICE",
+        "translate": "Vozarrón"
+    },
+    {
+        "name": "POISON FANG",
+        "translate": "Colmillo Ven"
+    },
+    {
+        "name": "CRUSH CLAW",
+        "translate": "Garra Brutal"
+    },
+    {
+        "name": "BLAST BURN",
+        "translate": "Anillo Ígneo"
+    },
+    {
+        "name": "HYDRO CANNON",
+        "translate": "Hidrocañón"
+    },
+    {
+        "name": "METEOR MASH",
+        "translate": "Puño Meteoro"
+    },
+    {
+        "name": "ASTONISH",
+        "translate": "Impresionar"
+    },
+    {
+        "name": "WEATHER BALL",
+        "translate": "Meteorobola"
+    },
+    {
+        "name": "AROMATHERAPY",
+        "translate": "Aromaterapia"
+    },
+    {
+        "name": "FAKE TEARS",
+        "translate": "Llanto Falso"
+    },
+    {
+        "name": "AIR CUTTER",
+        "translate": "Aire Afilado"
+    },
+    {
+        "name": "OVERHEAT",
+        "translate": "Sofoco"
+    },
+    {
+        "name": "ODOR SLEUTH",
+        "translate": "Rastreo"
+    },
+    {
+        "name": "ROCK TOMB",
+        "translate": "Tumba Rocas"
+    },
+    {
+        "name": "SILVER WIND",
+        "translate": "Viento Plata"
+    },
+    {
+        "name": "METAL SOUND",
+        "translate": "Eco Metálico"
+    },
+    {
+        "name": "GRASS WHISTLE",
+        "translate": "Silbato"
+    },
+    {
+        "name": "TICKLE",
+        "translate": "Cosquillas"
+    },
+    {
+        "name": "COSMIC POWER",
+        "translate": "Masa Cósmica"
+    },
+    {
+        "name": "WATER SPOUT",
+        "translate": "Salpicar"
+    },
+    {
+        "name": "SIGNAL BEAM",
+        "translate": "Doble Rayo"
+    },
+    {
+        "name": "SHADOW PUNCH",
+        "translate": "Puño Sombra"
+    },
+    {
+        "name": "EXTRASENSORY",
+        "translate": "Paranormal"
+    },
+    {
+        "name": "SKY UPPERCUT",
+        "translate": "Gancho Alto"
+    },
+    {
+        "name": "SAND TOMB",
+        "translate": "Bucle Arena"
+    },
+    {
+        "name": "SHEER COLD",
+        "translate": "Frío Polar"
+    },
+    {
+        "name": "MUDDY WATER",
+        "translate": "Agua Lodosa"
+    },
+    {
+        "name": "BULLET SEED",
+        "translate": "Recurrente"
+    },
+    {
+        "name": "AERIAL ACE",
+        "translate": "Golpe Aéreo"
+    },
+    {
+        "name": "ICICLE SPEAR",
+        "translate": "Carámbano"
+    },
+    {
+        "name": "IRON DEFENSE",
+        "translate": "Defensa Férrea"
+    },
+    {
+        "name": "BLOCK",
+        "translate": "Bloqueo"
+    },
+    {
+        "name": "HOWL",
+        "translate": "Aullido"
+    },
+    {
+        "name": "DRAGON CLAW",
+        "translate": "Garra Dragón"
+    },
+    {
+        "name": "FRENZY PLANT",
+        "translate": "Planta Feroz"
+    },
+    {
+        "name": "BULK UP",
+        "translate": "Corpulencia"
+    },
+    {
+        "name": "BOUNCE",
+        "translate": "Bote"
+    },
+    {
+        "name": "MUD SHOT",
+        "translate": "Disparo Lodo"
+    },
+    {
+        "name": "POISON TAIL",
+        "translate": "Cola Veneno"
+    },
+    {
+        "name": "COVET",
+        "translate": "Antojo"
+    },
+    {
+        "name": "VOLT TACKLE",
+        "translate": "Placaje Eléctrico"
+    },
+    {
+        "name": "MAGICAL LEAF",
+        "translate": "Hoja Mágica"
+    },
+    {
+        "name": "WATER SPORT",
+        "translate": "Hidrochorro"
+    },
+    {
+        "name": "CALM MIND",
+        "translate": "Paz Mental"
+    },
+    {
+        "name": "LEAF BLADE",
+        "translate": "Hoja Aguda"
+    },
+    {
+        "name": "DRAGON DANCE",
+        "translate": "Danza Dragón"
+    },
+    {
+        "name": "ROCK BLAST",
+        "translate": "Pedrada"
+    },
+    {
+        "name": "SHOCK WAVE",
+        "translate": "Onda Voltio"
+    },
+    {
+        "name": "WATER PULSE",
+        "translate": "Hidropulso"
+    },
+    {
+        "name": "DOOM DESIRE",
+        "translate": "Deseo Oculto"
+    },
+    {
+        "name": "PSYCHO BOOST",
+        "translate": "Psicoataque"
+    },
+    {
+        "name": "ROOST",
+        "translate": "Respiro"
+    },
+    {
+        "name": "GRAVITY",
+        "translate": "Gravedad"
+    },
+    {
+        "name": "MIRACLE EYE",
+        "translate": "Gran Ojo"
+    },
+    {
+        "name": "WAKE-UP SLAP",
+        "translate": "Espabila"
+    },
+    {
+        "name": "HAMMER ARM",
+        "translate": "Machada"
+    },
+    {
+        "name": "GYRO BALL",
+        "translate": "Giro Bola"
+    },
+    {
+        "name": "HEALING WISH",
+        "translate": "Deseo Cura"
+    },
+    {
+        "name": "BRINE",
+        "translate": "Salmuera"
+    },
+    {
+        "name": "NATURAL GIFT",
+        "translate": "Don Natural"
+    },
+    {
+        "name": "FEINT",
+        "translate": "Amago"
+    },
+    {
+        "name": "PLUCK",
+        "translate": "Picoteo"
+    },
+    {
+        "name": "TAILWIND",
+        "translate": "Viento Afín"
+    },
+    {
+        "name": "ACUPRESSURE",
+        "translate": "Acupresión"
+    },
+    {
+        "name": "METAL BURST",
+        "translate": "Represión Metal"
+    },
+    {
+        "name": "U-TURN",
+        "translate": "Ida y Vuelta"
+    },
+    {
+        "name": "CLOSE COMBAT",
+        "translate": "A Bocajarro"
+    },
+    {
+        "name": "PAYBACK",
+        "translate": "Vendetta"
+    },
+    {
+        "name": "ASSURANCE",
+        "translate": "Buena Baza"
+    },
+    {
+        "name": "EMBARGO",
+        "translate": "Embargo"
+    },
+    {
+        "name": "FLING",
+        "translate": "Lanzamiento"
+    },
+    {
+        "name": "PSYCHO SHIFT",
+        "translate": "Psico-cambio"
+    },
+    {
+        "name": "TRUMP CARD",
+        "translate": "As Oculto"
+    },
+    {
+        "name": "HEAL BLOCK",
+        "translate": "Anticura"
+    },
+    {
+        "name": "WRING OUT",
+        "translate": "Estrujón"
+    },
+    {
+        "name": "POWER TRICK",
+        "translate": "Truco Fuerza"
+    },
+    {
+        "name": "GASTRO ACID",
+        "translate": "Bilis"
+    },
+    {
+        "name": "LUCKY CHANT",
+        "translate": "Conjuro"
+    },
+    {
+        "name": "ME FIRST",
+        "translate": "Yo Primero"
+    },
+    {
+        "name": "COPYCAT",
+        "translate": "Copión"
+    },
+    {
+        "name": "POWER SWAP",
+        "translate": "Cambia Fuerza"
+    },
+    {
+        "name": "GUARD SWAP",
+        "translate": "Cambia Defensa"
+    },
+    {
+        "name": "PUNISHMENT",
+        "translate": "Castigo"
+    },
+    {
+        "name": "LAST RESORT",
+        "translate": "Última Baza"
+    },
+    {
+        "name": "WORRY SEED",
+        "translate": "Abatidoras"
+    },
+    {
+        "name": "SUCKER PUNCH",
+        "translate": "Golpe Bajo"
+    },
+    {
+        "name": "TOXIC SPIKES",
+        "translate": "Púas Tóxicas"
+    },
+    {
+        "name": "HEART SWAP",
+        "translate": "Cambia Almas"
+    },
+    {
+        "name": "AQUA RING",
+        "translate": "Acua Aro"
+    },
+    {
+        "name": "MAGNET RISE",
+        "translate": "Levitón"
+    },
+    {
+        "name": "FLARE BLITZ",
+        "translate": "Envite Ígneo"
+    },
+    {
+        "name": "FORCE PALM",
+        "translate": "Palmeo"
+    },
+    {
+        "name": "AURA SPHERE",
+        "translate": "Esfera Aural"
+    },
+    {
+        "name": "ROCK POLISH",
+        "translate": "Pulimento"
+    },
+    {
+        "name": "POISON JAB",
+        "translate": "Puya Nociva"
+    },
+    {
+        "name": "DARK PULSE",
+        "translate": "Pulso Umbrío"
+    },
+    {
+        "name": "NIGHT SLASH",
+        "translate": "Tajo Umbrío"
+    },
+    {
+        "name": "AQUA TAIL",
+        "translate": "Acua Cola"
+    },
+    {
+        "name": "SEED BOMB",
+        "translate": "Bomba Germen"
+    },
+    {
+        "name": "AIR SLASH",
+        "translate": "Tajo Aéreo"
+    },
+    {
+        "name": "X-SCISSOR",
+        "translate": "Tijera X"
+    },
+    {
+        "name": "BUG BUZZ",
+        "translate": "Zumbido"
+    },
+    {
+        "name": "DRAGON PULSE",
+        "translate": "Pulso Dragón"
+    },
+    {
+        "name": "DRAGON RUSH",
+        "translate": "Carga Dragón"
+    },
+    {
+        "name": "POWER GEM",
+        "translate": "Joya de Luz"
+    },
+    {
+        "name": "DRAIN PUNCH",
+        "translate": "Puño Drenaje"
+    },
+    {
+        "name": "VACUUM WAVE",
+        "translate": "Onda Vacío"
+    },
+    {
+        "name": "FOCUS BLAST",
+        "translate": "Onda Certera"
+    },
+    {
+        "name": "ENERGY BALL",
+        "translate": "Energibola"
+    },
+    {
+        "name": "BRAVE BIRD",
+        "translate": "Pájaro Osado"
+    },
+    {
+        "name": "EARTH POWER",
+        "translate": "Tierra Viva"
+    },
+    {
+        "name": "SWITCHEROO",
+        "translate": "Trapicheo"
+    },
+    {
+        "name": "GIGA IMPACT",
+        "translate": "Giga Impacto"
+    },
+    {
+        "name": "NASTY PLOT",
+        "translate": "Maquinación"
+    },
+    {
+        "name": "BULLET PUNCH",
+        "translate": "Puño Bala"
+    },
+    {
+        "name": "AVALANCHE",
+        "translate": "Alud"
+    },
+    {
+        "name": "ICE SHARD",
+        "translate": "Canto Helado"
+    },
+    {
+        "name": "SHADOW CLAW",
+        "translate": "Garra Umbría"
+    },
+    {
+        "name": "THUNDER FANG",
+        "translate": "Colmillo Rayo"
+    },
+    {
+        "name": "ICE FANG",
+        "translate": "Colmillo Hielo"
+    },
+    {
+        "name": "FIRE FANG",
+        "translate": "Colmillo Ígneo"
+    },
+    {
+        "name": "SHADOW SNEAK",
+        "translate": "Sombra Vil"
+    },
+    {
+        "name": "MUD BOMB",
+        "translate": "Bomba Fango"
+    },
+    {
+        "name": "PSYCHO CUT",
+        "translate": "Psico-corte"
+    },
+    {
+        "name": "ZEN HEADBUTT",
+        "translate": "Cabezazo Zen"
+    },
+    {
+        "name": "MIRROR SHOT",
+        "translate": "Disparo Espejo"
+    },
+    {
+        "name": "FLASH CANNON",
+        "translate": "Foco Resplandor"
+    },
+    {
+        "name": "ROCK CLIMB",
+        "translate": "Treparrocas"
+    },
+    {
+        "name": "DEFOG",
+        "translate": "Despejar"
+    },
+    {
+        "name": "TRICK ROOM",
+        "translate": "Espacio Raro"
+    },
+    {
+        "name": "DRACO METEOR",
+        "translate": "Cometa Draco"
+    },
+    {
+        "name": "DISCHARGE",
+        "translate": "Chispazo"
+    },
+    {
+        "name": "LAVA PLUME",
+        "translate": "Humareda"
+    },
+    {
+        "name": "LEAF STORM",
+        "translate": "Lluevahojas"
+    },
+    {
+        "name": "POWER WHIP",
+        "translate": "Latigazo"
+    },
+    {
+        "name": "ROCK WRECKER",
+        "translate": "Romperrocas"
+    },
+    {
+        "name": "CROSS POISON",
+        "translate": "Veneno X"
+    },
+    {
+        "name": "GUNK SHOT",
+        "translate": "Lanza Mugre"
+    },
+    {
+        "name": "IRON HEAD",
+        "translate": "Cabeza de Hierro"
+    },
+    {
+        "name": "MAGNET BOMB",
+        "translate": "Bomba Imán"
+    },
+    {
+        "name": "STONE EDGE",
+        "translate": "Roca Afilada"
+    },
+    {
+        "name": "CAPTIVATE",
+        "translate": "Seducción"
+    },
+    {
+        "name": "STEALTH ROCK",
+        "translate": "Trampa Rocas"
+    },
+    {
+        "name": "GRASS KNOT",
+        "translate": "Hierba Lazo"
+    },
+    {
+        "name": "CHATTER",
+        "translate": "Cháchara"
+    },
+    {
+        "name": "JUDGMENT",
+        "translate": "Sentencia"
+    },
+    {
+        "name": "BUG BITE",
+        "translate": "Picadura"
+    },
+    {
+        "name": "CHARGE BEAM",
+        "translate": "Rayo Carga"
+    },
+    {
+        "name": "WOOD HAMMER",
+        "translate": "Mazazo"
+    },
+    {
+        "name": "AQUA JET",
+        "translate": "Acua Jet"
+    },
+    {
+        "name": "ATTACK ORDER",
+        "translate": "Al Ataque"
+    },
+    {
+        "name": "DEFEND ORDER",
+        "translate": "A Defender"
+    },
+    {
+        "name": "HEAL ORDER",
+        "translate": "Auxilio"
+    },
+    {
+        "name": "HEAD SMASH",
+        "translate": "Testarazo"
+    },
+    {
+        "name": "DOUBLE HIT",
+        "translate": "Doble Golpe"
+    },
+    {
+        "name": "ROAR OF TIME",
+        "translate": "Distorsión"
+    },
+    {
+        "name": "SPACIAL REND",
+        "translate": "Corte Vacío"
+    },
+    {
+        "name": "LUNAR DANCE",
+        "translate": "Danza Lunar"
+    },
+    {
+        "name": "CRUSH GRIP",
+        "translate": "Agarrón"
+    },
+    {
+        "name": "MAGMA STORM",
+        "translate": "Lluvia Ígnea"
+    },
+    {
+        "name": "DARK VOID",
+        "translate": "Brecha Negra"
+    },
+    {
+        "name": "SEED FLARE",
+        "translate": "Fogonazo"
+    },
+    {
+        "name": "OMINOUS WIND",
+        "translate": "Viento Aciago"
+    },
+    {
+        "name": "SHADOW FORCE",
+        "translate": "Golpe Umbrío"
+    },
+    {
+        "name": "HONE CLAWS",
+        "translate": "Afilagarras"
+    },
+    {
+        "name": "WIDE GUARD",
+        "translate": "Vastaguardia"
+    },
+    {
+        "name": "GUARD SPLIT",
+        "translate": "Isoguardia"
+    },
+    {
+        "name": "POWER SPLIT",
+        "translate": "Isofuerza"
+    },
+    {
+        "name": "WONDER ROOM",
+        "translate": "Zona Extraña"
+    },
+    {
+        "name": "PSYSHOCK",
+        "translate": "Psicocarga"
+    },
+    {
+        "name": "VENOSHOCK",
+        "translate": "Cargatóxica"
+    },
+    {
+        "name": "AUTOTOMIZE",
+        "translate": "Aligerar"
+    },
+    {
+        "name": "RAGE POWDER",
+        "translate": "Polvo Ira"
+    },
+    {
+        "name": "TELEKINESIS",
+        "translate": "Telequinesis"
+    },
+    {
+        "name": "MAGIC ROOM",
+        "translate": "Zona Mágica"
+    },
+    {
+        "name": "SMACK DOWN",
+        "translate": "Antiaéreo"
+    },
+    {
+        "name": "STORM THROW",
+        "translate": "Llave Corsé"
+    },
+    {
+        "name": "FLAME BURST",
+        "translate": "Pirotecnia"
+    },
+    {
+        "name": "SLUDGE WAVE",
+        "translate": "Onda Tóxica"
+    },
+    {
+        "name": "QUIVER DANCE",
+        "translate": "Danza Aleteo"
+    },
+    {
+        "name": "HEAVY SLAM",
+        "translate": "Cuerpo Pesado"
+    },
+    {
+        "name": "SYNCHRONOISE",
+        "translate": "Sincrorruido"
+    },
+    {
+        "name": "ELECTRO BALL",
+        "translate": "Bola Voltio"
+    },
+    {
+        "name": "SOAK",
+        "translate": "Anegar"
+    },
+    {
+        "name": "FLAME CHARGE",
+        "translate": "Nitrocarga"
+    },
+    {
+        "name": "COIL",
+        "translate": "Enrosque"
+    },
+    {
+        "name": "LOW SWEEP",
+        "translate": "Puntapié"
+    },
+    {
+        "name": "ACID SPRAY",
+        "translate": "Bomba Ácida"
+    },
+    {
+        "name": "FOUL PLAY",
+        "translate": "Juego Sucio"
+    },
+    {
+        "name": "SIMPLE BEAM",
+        "translate": "Onda Simple"
+    },
+    {
+        "name": "ENTRAINMENT",
+        "translate": "Danza Amiga"
+    },
+    {
+        "name": "AFTER YOU",
+        "translate": "Cede Paso"
+    },
+    {
+        "name": "ROUND",
+        "translate": "Canon"
+    },
+    {
+        "name": "ECHOED VOICE",
+        "translate": "Eco Voz"
+    },
+    {
+        "name": "CHIP AWAY",
+        "translate": "Guardia Baja"
+    },
+    {
+        "name": "CLEAR SMOG",
+        "translate": "Niebla Clara"
+    },
+    {
+        "name": "STORED POWER",
+        "translate": "Poder Reserva"
+    },
+    {
+        "name": "QUICK GUARD",
+        "translate": "Anticipo"
+    },
+    {
+        "name": "ALLY SWITCH",
+        "translate": "Cambio Banda"
+    },
+    {
+        "name": "SCALD",
+        "translate": "Escaldar"
+    },
+    {
+        "name": "SHELL SMASH",
+        "translate": "Rompecoraza"
+    },
+    {
+        "name": "HEAL PULSE",
+        "translate": "Pulso Cura"
+    },
+    {
+        "name": "HEX",
+        "translate": "Infortunio"
+    },
+    {
+        "name": "SKY DROP",
+        "translate": "Caída Libre"
+    },
+    {
+        "name": "SHIFT GEAR",
+        "translate": "Cambio de Marcha"
+    },
+    {
+        "name": "CIRCLE THROW",
+        "translate": "Llave Giro"
+    },
+    {
+        "name": "INCINERATE",
+        "translate": "Calcinación"
+    },
+    {
+        "name": "QUASH",
+        "translate": "Último Lugar"
+    },
+    {
+        "name": "ACROBATICS",
+        "translate": "Acróbata"
+    },
+    {
+        "name": "REFLECT TYPE",
+        "translate": "Clonatipo"
+    },
+    {
+        "name": "RETALIATE",
+        "translate": "Represalia"
+    },
+    {
+        "name": "FINAL GAMBIT",
+        "translate": "Sacrificio"
+    },
+    {
+        "name": "BESTOW",
+        "translate": "Ofrenda"
+    },
+    {
+        "name": "INFERNO",
+        "translate": "Infierno"
+    },
+    {
+        "name": "WATER PLEDGE",
+        "translate": "Voto Agua"
+    },
+    {
+        "name": "FIRE PLEDGE",
+        "translate": "Voto Fuego"
+    },
+    {
+        "name": "GRASS PLEDGE",
+        "translate": "Voto Planta"
+    },
+    {
+        "name": "VOLT SWITCH",
+        "translate": "Voltiocambio"
+    },
+    {
+        "name": "STRUGGLE BUG",
+        "translate": "Estoicismo"
+    },
+    {
+        "name": "BULLDOZE",
+        "translate": "Terratemblor"
+    },
+    {
+        "name": "FROST BREATH",
+        "translate": "Vaho Gélido"
+    },
+    {
+        "name": "DRAGON TAIL",
+        "translate": "Cola Dragón"
+    },
+    {
+        "name": "WORK UP",
+        "translate": "Avivar"
+    },
+    {
+        "name": "ELECTROWEB",
+        "translate": "Electrotela"
+    },
+    {
+        "name": "WILD CHARGE",
+        "translate": "Voltio Cruel"
+    },
+    {
+        "name": "DRILL RUN",
+        "translate": "Taladradora"
+    },
+    {
+        "name": "DUAL CHOP",
+        "translate": "Golpe Bis"
+    },
+    {
+        "name": "HEART STAMP",
+        "translate": "Arrumaco"
+    },
+    {
+        "name": "HORN LEECH",
+        "translate": "Asta Drenaje"
+    },
+    {
+        "name": "SACRED SWORD",
+        "translate": "Espada Santa"
+    },
+    {
+        "name": "RAZOR SHELL",
+        "translate": "Concha Filo"
+    },
+    {
+        "name": "HEAT CRASH",
+        "translate": "Golpe Calor"
+    },
+    {
+        "name": "LEAF TORNADO",
+        "translate": "Ciclón de Hojas"
+    },
+    {
+        "name": "STEAMROLLER",
+        "translate": "Rodillo Púas"
+    },
+    {
+        "name": "COTTON GUARD",
+        "translate": "Rizo Algodón"
+    },
+    {
+        "name": "NIGHT DAZE",
+        "translate": "Pulso Noche"
+    },
+    {
+        "name": "PSYSTRIKE",
+        "translate": "Onda Mental"
+    },
+    {
+        "name": "TAIL SLAP",
+        "translate": "Plumerazo"
+    },
+    {
+        "name": "HURRICANE",
+        "translate": "Vendaval"
+    },
+    {
+        "name": "HEAD CHARGE",
+        "translate": "Ariete"
+    },
+    {
+        "name": "GEAR GRIND",
+        "translate": "Rueda Doble"
+    },
+    {
+        "name": "SEARING SHOT",
+        "translate": "Bomba Ígnea"
+    },
+    {
+        "name": "TECHNO BLAST",
+        "translate": "Tecno Shock"
+    },
+    {
+        "name": "RELIC SONG",
+        "translate": "Canto Arcaico"
+    },
+    {
+        "name": "SECRET SWORD",
+        "translate": "Sable Místico"
+    },
+    {
+        "name": "GLACIATE",
+        "translate": "Mundo Gélido"
+    },
+    {
+        "name": "BOLT STRIKE",
+        "translate": "Ataque Fulgor"
+    },
+    {
+        "name": "BLUE FLARE",
+        "translate": "Llama Azul"
+    },
+    {
+        "name": "FIERY DANCE",
+        "translate": "Danza Llama"
+    },
+    {
+        "name": "FREEZE SHOCK",
+        "translate": "Rayo Gélido"
+    },
+    {
+        "name": "ICE BURN",
+        "translate": "Llama Gélida"
+    },
+    {
+        "name": "SNARL",
+        "translate": "Alarido"
+    },
+    {
+        "name": "ICICLE CRASH",
+        "translate": "Chuzos"
+    },
+    {
+        "name": "V-CREATE",
+        "translate": "V de Fuego"
+    },
+    {
+        "name": "FUSION FLARE",
+        "translate": "Llama Fusión"
+    },
+    {
+        "name": "FUSION BOLT",
+        "translate": "Rayo Fusión"
+    },
+    {
+        "name": "FLYING PRESS",
+        "translate": "Plancha Voladora"
+    },
+    {
+        "name": "MAT BLOCK",
+        "translate": "Escudo Tatami"
+    },
+    {
+        "name": "BELCH",
+        "translate": "Eructo"
+    },
+    {
+        "name": "ROTOTILLER",
+        "translate": "Fertilizante"
+    },
+    {
+        "name": "STICKY WEB",
+        "translate": "Red Viscosa"
+    },
+    {
+        "name": "FELL STINGER",
+        "translate": "Aguijón Letal"
+    },
+    {
+        "name": "PHANTOM FORCE",
+        "translate": "Golpe Fantasma"
+    },
+    {
+        "name": "TRICK-OR-TREAT",
+        "translate": "Halloween"
+    },
+    {
+        "name": "NOBLE ROAR",
+        "translate": "Rugido de Guerra"
+    },
+    {
+        "name": "ION DELUGE",
+        "translate": "Cortina Plasma"
+    },
+    {
+        "name": "PARABOLIC CHARGE",
+        "translate": "Carga Parábola"
+    },
+    {
+        "name": "FOREST'S CURSE",
+        "translate": "Condena Silvana"
+    },
+    {
+        "name": "PETAL BLIZZARD",
+        "translate": "Tormenta Floral"
+    },
+    {
+        "name": "FREEZE-DRY",
+        "translate": "Liofilización"
+    },
+    {
+        "name": "DISARMING VOICE",
+        "translate": "Voz Cautivadora"
+    },
+    {
+        "name": "PARTING SHOT",
+        "translate": "Última Palabra"
+    },
+    {
+        "name": "TOPSY-TURVY",
+        "translate": "Reversión"
+    },
+    {
+        "name": "DRAINING KISS",
+        "translate": "Beso Drenaje"
+    },
+    {
+        "name": "CRAFTY SHIELD",
+        "translate": "Truco Defensa"
+    },
+    {
+        "name": "FLOWER SHIELD",
+        "translate": "Defensa Floral"
+    },
+    {
+        "name": "GRASSY TERRAIN",
+        "translate": "Campo de Hierba"
+    },
+    {
+        "name": "MISTY TERRAIN",
+        "translate": "Campo de Niebla"
+    },
+    {
+        "name": "ELECTRIFY",
+        "translate": "Electrificación"
+    },
+    {
+        "name": "PLAY ROUGH",
+        "translate": "Carantoña"
+    },
+    {
+        "name": "FAIRY WIND",
+        "translate": "Viento Feérico"
+    },
+    {
+        "name": "MOONBLAST",
+        "translate": "Fuerza Lunar"
+    },
+    {
+        "name": "BOOMBURST",
+        "translate": "Estruendo"
+    },
+    {
+        "name": "FAIRY LOCK",
+        "translate": "Cerrojo Feérico"
+    },
+    {
+        "name": "KING'S SHIELD",
+        "translate": "Escudo Real"
+    },
+    {
+        "name": "PLAY NICE",
+        "translate": "Camaradería"
+    },
+    {
+        "name": "CONFIDE",
+        "translate": "Confidencia"
+    },
+    {
+        "name": "DIAMOND STORM",
+        "translate": "Torm. Diamantes"
+    },
+    {
+        "name": "STEAM ERUPTION",
+        "translate": "Chorro de Vapor"
+    },
+    {
+        "name": "HYPERSPACE HOLE",
+        "translate": "Paso Dimensional"
+    },
+    {
+        "name": "WATER SHURIKEN",
+        "translate": "Shuriken de Agua"
+    },
+    {
+        "name": "MYSTICAL FIRE",
+        "translate": "Llama Embrujada"
+    },
+    {
+        "name": "SPIKY SHIELD",
+        "translate": "Barrera Espinosa"
+    },
+    {
+        "name": "AROMATIC MIST",
+        "translate": "Niebla Aromática"
+    },
+    {
+        "name": "EERIE IMPULSE",
+        "translate": "Onda Anómala"
+    },
+    {
+        "name": "VENOM DRENCH",
+        "translate": "Trampa Venenosa"
+    },
+    {
+        "name": "POWDER",
+        "translate": "Polvo Explosivo"
+    },
+    {
+        "name": "GEOMANCY",
+        "translate": "Geocontrol"
+    },
+    {
+        "name": "MAGNETIC FLUX",
+        "translate": "Aura Magnética"
+    },
+    {
+        "name": "HAPPY HOUR",
+        "translate": "Paga Extra"
+    },
+    {
+        "name": "ELECTRIC TERRAIN",
+        "translate": "Campo Eléctrico"
+    },
+    {
+        "name": "DAZZLING GLEAM",
+        "translate": "Brillo Mágico"
+    },
+    {
+        "name": "CELEBRATE",
+        "translate": "Celebración"
+    },
+    {
+        "name": "HOLD HANDS",
+        "translate": "Manos Juntas"
+    },
+    {
+        "name": "BABY-DOLL EYES",
+        "translate": "Ojitos Tiernos"
+    },
+    {
+        "name": "NUZZLE",
+        "translate": "Moflete Estático"
+    },
+    {
+        "name": "HOLD BACK",
+        "translate": "Clemencia"
+    },
+    {
+        "name": "INFESTATION",
+        "translate": "Acoso"
+    },
+    {
+        "name": "POWER-UP PUNCH",
+        "translate": "Puño Incremento"
+    },
+    {
+        "name": "OBLIVION WING",
+        "translate": "Ala Mortífera"
+    },
+    {
+        "name": "THOUSAND ARROWS",
+        "translate": "Mil Flechas"
+    },
+    {
+        "name": "THOUSAND WAVES",
+        "translate": "Mil Temblores"
+    },
+    {
+        "name": "LAND'S WRATH",
+        "translate": "Fuerza Telúrica"
+    },
+    {
+        "name": "LIGHT OF RUIN",
+        "translate": "Luz Aniquiladora"
+    },
+    {
+        "name": "ORIGIN PULSE",
+        "translate": "Pulso Primigenio"
+    },
+    {
+        "name": "PRECIPICE BLADES",
+        "translate": "Filo del Abismo"
+    },
+    {
+        "name": "DRAGON ASCENT",
+        "translate": "Ascenso Draco"
+    },
+    {
+        "name": "HYPERSPACE FURY",
+        "translate": "Cerco Dimensión"
+    },
+    {
+        "name": "SHORE UP",
+        "translate": "Recogearena"
+    },
+    {
+        "name": "FIRST IMPRESSION",
+        "translate": "Escaramuza"
+    },
+    {
+        "name": "BANEFUL BUNKER",
+        "translate": "Búnker"
+    },
+    {
+        "name": "SPIRIT SHACKLE",
+        "translate": "Puntada Sombría"
+    },
+    {
+        "name": "DARKEST LARIAT",
+        "translate": "Lariat Oscuro"
+    },
+    {
+        "name": "SPARKLING ARIA",
+        "translate": "Aria Burbuja"
+    },
+    {
+        "name": "ICE HAMMER",
+        "translate": "Martillo Hielo"
+    },
+    {
+        "name": "FLORAL HEALING",
+        "translate": "Cura Floral"
+    },
+    {
+        "name": "HIGH HORSEPOWER",
+        "translate": "Fuerza Equina"
+    },
+    {
+        "name": "STRENGTH SAP",
+        "translate": "Absorbefuerza"
+    },
+    {
+        "name": "SOLAR BLADE",
+        "translate": "Cuchilla Solar"
+    },
+    {
+        "name": "LEAFAGE",
+        "translate": "Follaje"
+    },
+    {
+        "name": "SPOTLIGHT",
+        "translate": "Foco"
+    },
+    {
+        "name": "TOXIC THREAD",
+        "translate": "Hilo Venenoso"
+    },
+    {
+        "name": "LASER FOCUS",
+        "translate": "Aguzar"
+    },
+    {
+        "name": "GEAR UP",
+        "translate": "Piñón Auxiliar"
+    },
+    {
+        "name": "THROAT CHOP",
+        "translate": "Golpe Mordaza"
+    },
+    {
+        "name": "POLLEN PUFF",
+        "translate": "Bola de Polen"
+    },
+    {
+        "name": "ANCHOR SHOT",
+        "translate": "Anclaje"
+    },
+    {
+        "name": "PSYCHIC TERRAIN",
+        "translate": "Campo Psíquico"
+    },
+    {
+        "name": "LUNGE",
+        "translate": "Plancha"
+    },
+    {
+        "name": "FIRE LASH",
+        "translate": "Látigo Ígneo"
+    },
+    {
+        "name": "POWER TRIP",
+        "translate": "Chulería"
+    },
+    {
+        "name": "BURN UP",
+        "translate": "Llama Final"
+    },
+    {
+        "name": "SPEED SWAP",
+        "translate": "Cambia Velocidad"
+    },
+    {
+        "name": "SMART STRIKE",
+        "translate": "Cuerno Certero"
+    },
+    {
+        "name": "PURIFY",
+        "translate": "Purificación"
+    },
+    {
+        "name": "REVELATION DANCE",
+        "translate": "Danza Despertar"
+    },
+    {
+        "name": "CORE ENFORCER",
+        "translate": "Núcleo Castigo"
+    },
+    {
+        "name": "TROP KICK",
+        "translate": "Patada Tropica"
+    },
+    {
+        "name": "INSTRUCT",
+        "translate": "Mandato"
+    },
+    {
+        "name": "BEAK BLAST",
+        "translate": "Pico Cañón"
+    },
+    {
+        "name": "CLANGING SCALES",
+        "translate": "Fragor Escamas"
+    },
+    {
+        "name": "DRAGON HAMMER",
+        "translate": "Martillo Dragón"
+    },
+    {
+        "name": "BRUTAL SWING",
+        "translate": "Giro Vil"
+    },
+    {
+        "name": "AURORA VEIL",
+        "translate": "Velo Aurora"
+    },
+    {
+        "name": "SHELL TRAP",
+        "translate": "Coraza Trampa"
+    },
+    {
+        "name": "FLEUR CANNON",
+        "translate": "Cañón Floral"
+    },
+    {
+        "name": "PSYCHIC FANGS",
+        "translate": "Psicocolmillo"
+    },
+    {
+        "name": "STOMPING TANTRUM",
+        "translate": "Pataleta"
+    },
+    {
+        "name": "SHADOW BONE",
+        "translate": "Hueso Sombrío"
+    },
+    {
+        "name": "ACCELEROCK",
+        "translate": "Roca Veloz"
+    },
+    {
+        "name": "LIQUIDATION",
+        "translate": "Hidroariete"
+    },
+    {
+        "name": "PRISMATIC LASER",
+        "translate": "Láser Prisma"
+    },
+    {
+        "name": "SPECTRAL THIEF",
+        "translate": "Robasombra"
+    },
+    {
+        "name": "SUNSTEEL STRIKE",
+        "translate": "Meteoimpacto"
+    },
+    {
+        "name": "MOONGEIST BEAM",
+        "translate": "Rayo Umbrío"
+    },
+    {
+        "name": "TEARFUL LOOK",
+        "translate": "Ojos Llorosos"
+    },
+    {
+        "name": "ZING ZAP",
+        "translate": "Electropunzada"
+    },
+    {
+        "name": "NATURE'S MADNESS",
+        "translate": "Furia Natural"
+    },
+    {
+        "name": "MULTI-ATTACK",
+        "translate": "Multiataque"
+    }
+]

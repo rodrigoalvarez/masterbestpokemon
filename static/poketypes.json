@@ -1,0 +1,247 @@
+[
+    {
+        "name": "normal",
+        "weaknesses": [
+            "ghost",
+            "rock",
+            "steel"
+        ],
+        "strengths": []
+    },
+    {
+        "name": "fire",
+        "weaknesses": [
+            "fire",
+            "water",
+            "rock",
+            "dragon"
+        ],
+        "strengths": [
+            "grass",
+            "ice",
+            "bug",
+            "steel"
+        ]
+    },
+    {
+        "name": "water",
+        "weaknesses": [
+            "water",
+            "grass",
+            "dragon"
+        ],
+        "strengths": [
+            "fire",
+            "ground",
+            "rock"
+        ]
+    },
+    {
+        "name": "electric",
+        "weaknesses": [
+            "ground",
+            "electric",
+            "grass",
+            "dragon"
+        ],
+        "strengths": [
+            "water",
+            "flying"
+        ]
+    },
+    {
+        "name": "grass",
+        "weaknesses": [
+            "fire",
+            "grass",
+            "poison",
+            "flying",
+            "bug",
+            "dragon",
+            "steel"
+        ],
+        "strengths": [
+            "water",
+            "ground",
+            "rock"
+        ]
+    },
+    {
+        "name": "ice",
+        "weaknesses": [
+            "fire",
+            "water",
+            "ice",
+            "steel"
+        ],
+        "strengths": [
+            "grass",
+            "ground",
+            "flying",
+            "dragon"
+        ]
+    },
+    {
+        "name": "fighting",
+        "weaknesses": [
+            "ghost",
+            "poison",
+            "flying",
+            "psychic",
+            "bug",
+            "fairy"
+        ],
+        "strengths": [
+            "normal",
+            "ice",
+            "rock",
+            "dark",
+            "steel"
+        ]
+    },
+    {
+        "name": "poison",
+        "weaknesses": [
+            "steel",
+            "poison",
+            "ground",
+            "rock",
+            "ghost"
+        ],
+        "strengths": [
+            "grass",
+            "fairy"
+        ]
+    },
+    {
+        "name": "ground",
+        "weaknesses": [
+            "flying",
+            "grass",
+            "bug"
+        ],
+        "strengths": [
+            "fire",
+            "electric",
+            "poison",
+            "rock",
+            "steel"
+        ]
+    },
+    {
+        "name": "flying",
+        "weaknesses": [
+            "electric",
+            "rock",
+            "steel"
+        ],
+        "strengths": [
+            "grass",
+            "fighting",
+            "bug"
+        ]
+    },
+    {
+        "name": "psychic",
+        "weaknesses": [
+            "dark",
+            "psychic",
+            "steel"
+        ],
+        "strengths": [
+            "fighting",
+            "poison"
+        ]
+    },
+    {
+        "name": "bug",
+        "weaknesses": [
+            "fire",
+            "fighting",
+            "poison",
+            "flying",
+            "ghost",
+            "steel",
+            "fairy"
+        ],
+        "strengths": [
+            "grass",
+            "psychic",
+            "dark"
+        ]
+    },
+    {
+        "name": "rock",
+        "weaknesses": [
+            "fighting",
+            "ground",
+            "steel"
+        ],
+        "strengths": [
+            "fire",
+            "ice",
+            "flying",
+            "bug"
+        ]
+    },
+    {
+        "name": "ghost",
+        "weaknesses": [
+            "normal",
+            "dark"
+        ],
+        "strengths": [
+            "psychic",
+            "ghost"
+        ]
+    },
+    {
+        "name": "dragon",
+        "weaknesses": [
+            "fairy",
+            "steel"
+        ],
+        "strengths": [
+            "dragon"
+        ]
+    },
+    {
+        "name": "dark",
+        "weaknesses": [
+            "fighting",
+            "dark",
+            "fairy"
+        ],
+        "strengths": [
+            "psychic",
+            "ghost"
+        ]
+    },
+    {
+        "name": "steel",
+        "weaknesses": [
+            "fire",
+            "water",
+            "electric",
+            "steel"
+        ],
+        "strengths": [
+            "ice",
+            "rock",
+            "fairy"
+        ]
+    },
+    {
+        "name": "fairy",
+        "weaknesses": [
+            "fire",
+            "poison",
+            "steel"
+        ],
+        "strengths": [
+            "fighting",
+            "dragon",
+            "dark"
+        ]
+    }
+]

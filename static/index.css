@@ -1,0 +1,101 @@
+body {
+    font-family: "Segoe UI",Arial,sans-serif;
+    color: #333;
+}
+
+.best-header {
+    text-align: center;
+}
+
+.best-title {
+
+}
+
+.best-subtitle {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.best-pokemon-list {
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.best-opponent-list {
+    list-style: none;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+
+.best-opponent-list li {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 8px;
+    color: #666;
+}
+
+.best-pokemon-data {
+    display: inline-block;
+    width: 110px;
+}
+
+.best-pokemon-name {
+    font-weight: 600;
+}
+
+.best-pokemon-image {
+    width: auto;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2;
+}
+
+.best-moves {
+    display: inline-block;
+    text-align: left;
+}
+
+.best-move-name {
+    display: inline-block;
+    min-width: 100px;
+    font-size: 12px;
+}
+
+.best-move-power {
+    display: inline-block;
+    min-width: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.best-move-image {
+    display: inline-block;
+    width: 80px;
+    height: 8px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.best-move-image.energy-1 {
+    background-image: url('images/Energy1_GO.png');
+}
+
+.best-move-image.energy-2 {
+    background-image: url('images/Energy2_GO.png');
+}
+
+.best-move-image.energy-3 {
+    background-image: url('images/Energy3_GO.png');
+}
