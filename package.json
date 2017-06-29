@@ -1,0 +1,30 @@
+{
+  "name": "masterbestpokemon",
+  "version": "1.0.0",
+  "description": "Best pokemon for...",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigoalvarez/masterbestpokemon.git"
+  },
+  "keywords": [
+    "best",
+    "pokemon",
+    "battle"
+  ],
+  "author": "Rodrigo Alvarez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigoalvarez/masterbestpokemon/issues"
+  },
+  "homepage": "https://github.com/rodrigoalvarez/masterbestpokemon#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mime": "^1.3.6"
+  }
+}
