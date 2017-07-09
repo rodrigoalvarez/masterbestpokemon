@@ -11,6 +11,7 @@ $(document).ready(function () {
         $.each(getPokemonNames(), function (key, value) {
             $("#xPokemonList").append($("<option></option>").attr("value", value.id).text(value.name));
         });
+        setTimeout(function() { changePokemon(); }, 1000);
     });
     $.getJSON('poketypes.json', function (data) {
         pokemonTypes = data;
@@ -18,38 +19,41 @@ $(document).ready(function () {
     $.getJSON('translatedata.json', function (data) {
         translatedAttacks = data;
     });
-    $("#xPokemonList").change(function () {
-        var id = $("#xPokemonList option:selected").val();
-        var name = $("#xPokemonList option:selected").text();
-        $("#xPokemonName").text(name);
-        $("#xOpponentList").empty();
-        $.each(getPokemonOpponents(id), function (key, value) {
-            $("#xOpponentList")
-                .append($(
-                    '<li>' +
-                        '<div class="best-pokemon-data">' +
-                            '<div class="best-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
-                            '<span class="best-pokemon-name">' + value.pokemon.name + '</span>' +
-                        '</div>' +
-                        '<div class="best-moves">' +
-                            '<div>' +
-                                '<span class="best-move-name">' + getAttackName(value.pokemon.quick.name) + '</span>' +
-                                '<span class="best-move-power">' + value.pokemon.quick.power + '</span>' +
-                                '<div class="best-move-image"></div>' +
-                            '</div>' +
-                            '<div>' +
-                                '<span class="best-move-name">' + getAttackName(value.pokemon.charge.name) + '</span>' +
-                                '<span class="best-move-power">' + value.pokemon.charge.power + '</span>' +
-                                '<div class="best-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
-                            '</div>' +
-                        '</div>' +
-                    '</li>')
-                .attr("value", value.pokemon.id));
-                //.text(value.pokemon.name + ' [ ' + value.result + ' - ' + value.factor1 + ' - ' + value.factor2 + ' - ' + value.power1 + ' - ' + value.power2 + ' - ' + value.pokemon.quick.name + ' - ' + value.pokemon.charge.name + ' ]'));
-                //.text(value.pokemon.name + ' [ ' + value.pokemon.quick.name + ' - ' + value.pokemon.charge.name + ' - ' + value.result + ' ]'));
-        });
-    });
+    $("#xPokemonList").change(changePokemon);
 });
+
+function changePokemon() {
+    var id = $("#xPokemonList option:selected").val();
+    var name = $("#xPokemonList option:selected").text();
+    $("#xPokemonName").text(name);
+    $("#xPokemonImage .best-pokemon-image").css('background-image', 'url(' + "'images/" + name + "_GO.png'" + ')');
+    $("#xOpponentList").empty();
+    $.each(getPokemonOpponents(id), function (key, value) {
+        $("#xOpponentList")
+            .append($(
+                '<li>' +
+                    '<div class="best-pokemon-data">' +
+                        '<div class="best-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
+                        '<span class="best-pokemon-name">' + value.pokemon.name + '</span>' +
+                    '</div>' +
+                    '<div class="best-moves">' +
+                        '<div>' +
+                            '<span class="best-move-name">' + getAttackName(value.pokemon.quick.name) + '</span>' +
+                            '<span class="best-move-power">' + value.pokemon.quick.power + '</span>' +
+                            '<div class="best-move-image"></div>' +
+                        '</div>' +
+                        '<div>' +
+                            '<span class="best-move-name">' + getAttackName(value.pokemon.charge.name) + '</span>' +
+                            '<span class="best-move-power">' + value.pokemon.charge.power + '</span>' +
+                            '<div class="best-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
+                        '</div>' +
+                    '</div>' +
+                '</li>')
+            .attr("value", value.pokemon.id));
+            //.text(value.pokemon.name + ' [ ' + value.result + ' - ' + value.factor1 + ' - ' + value.factor2 + ' - ' + value.power1 + ' - ' + value.power2 + ' - ' + value.pokemon.quick.name + ' - ' + value.pokemon.charge.name + ' ]'));
+            //.text(value.pokemon.name + ' [ ' + value.pokemon.quick.name + ' - ' + value.pokemon.charge.name + ' - ' + value.result + ' ]'));
+    });
+}
 
 // UI Functions
 
@@ -58,6 +62,9 @@ function getPokemonNames() {
     pokemons.forEach(function (element) {
         result.push({ 'id': element.speciesID, 'name': element.speciesName });
     }, this);
+    result = result.sort(function(a, b) {
+        return a.name < b.name ? -1 : 1;
+    });
     return result;
 }
 
@@ -68,7 +75,7 @@ function getPokemonOpponents(id) {
     result = opponents.sort(function(a, b) {
         return b.result - a.result;
     });
-    return result.slice(0, 100);
+    return result.slice(0, 50);
 }
 
 // Common Functions

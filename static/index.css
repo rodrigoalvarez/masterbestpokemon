@@ -23,6 +23,10 @@ body {
     width: 200px;
 }
 
+#xPokemonImage .best-pokemon-image {
+    height: 80px;
+}
+
 .best-opponent-list {
     list-style: none;
     padding: 10px;
