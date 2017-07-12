@@ -50,8 +50,6 @@ function changePokemon() {
                     '</div>' +
                 '</li>')
             .attr("value", value.pokemon.id));
-            //.text(value.pokemon.name + ' [ ' + value.result + ' - ' + value.factor1 + ' - ' + value.factor2 + ' - ' + value.power1 + ' - ' + value.power2 + ' - ' + value.pokemon.quick.name + ' - ' + value.pokemon.charge.name + ' ]'));
-            //.text(value.pokemon.name + ' [ ' + value.pokemon.quick.name + ' - ' + value.pokemon.charge.name + ' - ' + value.result + ' ]'));
     });
 }
 
@@ -114,7 +112,6 @@ function getPowerCombinations(type1, type2) {
         if (legendary.indexOf(element.id) > -1) {
             dps = 0;
         }
-        //result.push({ 'pokemon': element, 'result': dps, 'factor1': factor1, 'factor2': factor2, 'power1': power1, 'power2': power2 });
         result.push({ 'pokemon': element, 'result': dps });
     }, this);
     return result;
@@ -141,26 +138,3 @@ function getAttackName(attack) {
     }, this);
     return result;
 }
-
-/*var types = pokemon.superEffectiveDefense.filter(function (value) {
-    return pokemon.notEffectiveDefense.indexOf(value) < 0;
-});*/
-
-/*function getPokemonByAttackType(name) {
-    //Stab
-    var resultA = [];
-    //BothMove
-    var resultB = [];
-    //QuickMove
-    var resultC = [];
-    //ChargeMove
-    var resultD = [];
-
-    pokemons.forEach(function (element) {
-        if (element.type1 == name || element.type2 == name) {
-
-        }
-        result.push({ 'id': element.speciesID, 'name': element.speciesName });
-    }, this);
-    return result;
-}*/
