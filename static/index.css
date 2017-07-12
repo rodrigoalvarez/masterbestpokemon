@@ -102,3 +102,30 @@ body {
 .best-move-image.energy-3 {
     background-image: url('images/Energy3_GO.png');
 }
+
+@media only screen and (max-width: 639px) and (min-width: 320px) {
+    .best-opponent-list {
+        padding: 5px;
+    }
+    
+    .best-opponent-list li {
+        display: block;
+    }
+
+    .best-pokemon-data {
+        max-width: 85px;
+        vertical-align: middle;
+    }
+
+    .best-moves {
+        vertical-align: middle;
+    }
+
+    .best-move-image {
+        display: block;
+    }
+
+    .best-pokemon-name {
+        font-size: 14px;
+    }
+}
