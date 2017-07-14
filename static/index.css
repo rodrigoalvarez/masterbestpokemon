@@ -52,6 +52,7 @@ body {
 }
 
 .best-opponent-list li {
+    position: relative;
     display: inline-block;
     border: 1px solid #ddd;
     padding: 5px;
@@ -59,6 +60,14 @@ body {
     text-align: center;
     border-radius: 8px;
     color: #666;
+    background: #fafafa;
+}
+
+.best-opponent-list li.pokemon-stored {
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position: calc(100% + 10px) 50%;
+    background-image: url('images/checkItem.png');
 }
 
 .best-pokemon-data {

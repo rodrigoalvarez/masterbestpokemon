@@ -30,7 +30,7 @@ function changePokemon() {
     $.each(getOptionalPokemonCombinations(id), function (key, value) {
         $("#xPokedexNewOptionalList")
             .append($(
-                '<li onclick="addPokemon(' + "'" + value.pokemon.id + "','" + value.pokemon.quick.move_id + "','" + value.pokemon.charge.move_id + "'" + ')">' +
+                '<li onclick="addPokemon(' + "'" + value.pokemon.id + "','" + value.pokemon.quick.move_id + "','" + value.pokemon.charge.move_id + "'" + ')" class="new-pokemon">' +
                     '<div class="pokedex-pokemon-data">' +
                         '<div class="pokedex-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
                         '<span class="pokedex-pokemon-name">' + value.pokemon.name + '</span>' +

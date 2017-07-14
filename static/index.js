@@ -1,4 +1,5 @@
 var pokemons = [];
+var storedPokemons = [];
 var combinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
@@ -8,6 +9,7 @@ $(document).ready(function () {
     $.getJSON('pokedata.json', function (data) {
         pokemons = data;
         combinations = getAllPokemonCombinations();
+        storedPokemons = getStoredPokemons();
         $.each(getPokemonNames(), function (key, value) {
             $("#xPokemonList").append($("<option></option>").attr("value", value.id).text(value.name));
         });
@@ -31,7 +33,7 @@ function changePokemon() {
     $.each(getPokemonOpponents(id), function (key, value) {
         $("#xOpponentList")
             .append($(
-                '<li>' +
+                '<li ' + (inStorage(value.pokemon) ? 'class="pokemon-stored"' : '') + '>' +
                     '<div class="best-pokemon-data">' +
                         '<div class="best-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
                         '<span class="best-pokemon-name">' + value.pokemon.name + '</span>' +
@@ -74,6 +76,33 @@ function getPokemonOpponents(id) {
         return b.result - a.result;
     });
     return result.slice(0, 50);
+}
+
+// Storage Functions
+
+function getStoredPokemons() {
+    var result = [];
+    if (typeof(Storage) !== "undefined") {
+        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
+        data.forEach(function (element) {
+            combinations.forEach(function (k) {
+                if (element.pokemon == k.id && element.quick == k.quick.move_id && element.charge == k.charge.move_id) {
+                    result.push({ 'pokemon': k });
+                }
+            }, this);
+        }, this);
+    }
+    return result;
+}
+
+function inStorage(pokemon) {
+    var result = false;
+    storedPokemons.forEach(function (element) {
+        result = result || (element.pokemon.id == pokemon.id && 
+                            element.pokemon.quick.move_id == pokemon.quick.move_id && 
+                            element.pokemon.charge.move_id == pokemon.charge.move_id);
+    }, this);
+    return result;
 }
 
 // Common Functions
