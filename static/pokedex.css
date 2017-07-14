@@ -15,6 +15,18 @@ body {
     text-align: center;
 }
 
+.best-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('images/battleLink.png');
+}
+
 .pokedex-title {
 
 }
@@ -69,6 +81,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    /*opacity: 0.25;*/
 }
 
 .pokedex-moves {

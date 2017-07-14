@@ -8,6 +8,7 @@ $(document).ready(function () {
     $.getJSON('pokedata.json', function (data) {
         pokemons = data;
         combinations = getAllPokemonCombinations();
+        updatePokemons();
         $.each(getPokemonNames(), function (key, value) {
             $("#xPokedexNewList").append($("<option></option>").attr("value", value.id).text(value.name));
         });
@@ -29,7 +30,34 @@ function changePokemon() {
     $.each(getOptionalPokemonCombinations(id), function (key, value) {
         $("#xPokedexNewOptionalList")
             .append($(
-                '<li>' +
+                '<li onclick="addPokemon(' + "'" + value.pokemon.id + "','" + value.pokemon.quick.move_id + "','" + value.pokemon.charge.move_id + "'" + ')">' +
+                    '<div class="pokedex-pokemon-data">' +
+                        '<div class="pokedex-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
+                        '<span class="pokedex-pokemon-name">' + value.pokemon.name + '</span>' +
+                    '</div>' +
+                    '<div class="pokedex-moves">' +
+                        '<div>' +
+                            '<span class="pokedex-move-name">' + getAttackName(value.pokemon.quick.name) + '</span>' +
+                            '<span class="pokedex-move-power">' + value.pokemon.quick.power + '</span>' +
+                            '<div class="pokedex-move-image"></div>' +
+                        '</div>' +
+                        '<div>' +
+                            '<span class="pokedex-move-name">' + getAttackName(value.pokemon.charge.name) + '</span>' +
+                            '<span class="pokedex-move-power">' + value.pokemon.charge.power + '</span>' +
+                            '<div class="pokedex-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
+                        '</div>' +
+                    '</div>' +
+                '</li>')
+            .attr("value", value.pokemon.id));
+    });
+}
+
+function updatePokemons() {
+    $("#xPokedexList").empty();
+    $.each(getStoredPokemons(), function (key, value) {
+        $("#xPokedexList")
+            .append($(
+                '<li onclick="removePokemon(' + "'" + value.pokemon.id + "','" + value.pokemon.quick.move_id + "','" + value.pokemon.charge.move_id + "'" + ')">' +
                     '<div class="pokedex-pokemon-data">' +
                         '<div class="pokedex-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
                         '<span class="pokedex-pokemon-name">' + value.pokemon.name + '</span>' +
@@ -72,6 +100,49 @@ function getOptionalPokemonCombinations(id) {
         }
     }, this);
     return result.slice(0, 50);
+}
+
+// Storage Functions
+
+function getStoredPokemons() {
+    var result = [];
+    if (typeof(Storage) !== "undefined") {
+        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
+        data.forEach(function (element) {
+            combinations.forEach(function (k) {
+                if (element.pokemon == k.id && element.quick == k.quick.move_id && element.charge == k.charge.move_id) {
+                    result.push({ 'pokemon': k });
+                }
+            }, this);
+        }, this);
+    }
+    return result;
+}
+
+function addPokemon(pokemonId, quickId, chargeId) {
+    if (typeof(Storage) !== "undefined") {
+        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
+        data.push({ 'pokemon': pokemonId, 'quick': quickId, 'charge': chargeId });
+        localStorage.setItem("mbp-pokemons", JSON.stringify(data));
+    }
+    updatePokemons();
+}
+
+function removePokemon(pokemonId, quickId, chargeId) {
+    if (typeof(Storage) !== "undefined") {
+        var result = [];
+        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
+        var flagRemoved = false;
+        data.forEach(function (element) {
+            if (flagRemoved || element.pokemon != pokemonId || element.quick != quickId || element.charge != chargeId) {
+                result.push(element);
+            } else {
+                flagRemoved = true;
+            }
+        }, this);
+        localStorage.setItem("mbp-pokemons", JSON.stringify(result));
+    }
+    updatePokemons();
 }
 
 // Common Functions
