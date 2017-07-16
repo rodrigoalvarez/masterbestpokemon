@@ -3,6 +3,11 @@ body {
     color: #333;
 }
 
+input,
+select {
+    color: #333;
+}
+
 .pokedex-header {
     text-align: center;
 }
@@ -12,6 +17,21 @@ body {
 }
 
 .pokedex-content {
+    text-align: center;
+}
+
+#xUsername {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#xUsernameInput {
+    width: 100px;
+    border: 2px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
     text-align: center;
 }
 

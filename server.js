@@ -3,6 +3,9 @@ var url         = require('url');
 var fs          = require('fs');
 var mime        = require('mime');
 var bodyParser  = require('body-parser');
+var storage     = require('node-persist');
+var shortid     = require('shortid');
+var express     = require('express');
 
 const PORT = 8080;
 
@@ -10,12 +13,11 @@ const PORT = 8080;
 // Server
 // =======================
 
-var express = require('express');
 var app = express();
 
+app.use(express.static('static'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static('static'));
 
 app.set('port', (process.env.PORT || 8080));
 
@@ -25,7 +27,10 @@ app.set('port', (process.env.PORT || 8080));
 //app.get('/index.js', handleStaticRequest);
 //app.get('/pokedata.json', handleStaticRequest);
 //app.get('/poketypes.json', handleStaticRequest);
-//app.get('/favicon.ico', handleStaticRequest);
+
+app.get('/createUser', handleStaticRequest);
+app.get('/getUser', handleStaticRequest);
+app.put('/saveUser', handleStaticRequest);
 
 
 app.listen(app.get('port'), function() {
@@ -35,31 +40,67 @@ app.listen(app.get('port'), function() {
 
 function handleStaticRequest(request, response) {
     var requestUrl = url.parse(request.url);
+    var queryUrl = url.parse(request.url, true).query;
 
-    var path = 'static' + requestUrl.pathname;
-    if (path =='static/') {
-        path = 'static/index.html';
-    }
-    fs.exists(path, function(exist){
-        if (exist) {
-            fs.readFile(path, function(error, data) {
-                if (error) {
-                    response.writeHead(500, {'Content-Type': 'text/plain'});
-                    response.write('Internal Server Error');
-                    response.end();
-                } else {
-                    var mimeType = mime.lookup(path);
-                    response.writeHead(200, {'Content-Type': mimeType});
-                    response.write(data);
-                    response.end();
-                }
-            });
-        } else {
-            response.writeHead(404, {'Content-Type': 'text/html'});
-            response.write('<!doctype html><html><head></head><body>Sorry: the resource does not exist</body></html>');        
-            response.end();
+    console.log(requestUrl);
+    //console.log(queryUrl);
+    //console.log(request.body);
+    //console.log(request.body.pokemons);
+
+    if (requestUrl.pathname == '/createUser') {
+
+        var data = shortid.generate();
+        console.log(data);
+        storage.initSync();
+        storage.setItemSync('user-' + data, '[]');
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.write(data);
+        response.end();
+
+    } else if (requestUrl.pathname == '/getUser') {
+
+        storage.initSync();
+        var data = storage.getItemSync('user-' + queryUrl.username);
+        console.log(data);
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.write(data || '');
+        response.end();
+
+    } else if (requestUrl.pathname == '/saveUser') {
+
+        storage.initSync();
+        storage.setItemSync('user-' + queryUrl.username, request.body.pokemons);
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.end();
+
+    } else {
+
+        /*var path = 'static' + requestUrl.pathname;
+        if (path =='static/') {
+            path = 'static/index.html';
         }
-    });
+        fs.exists(path, function(exist) {
+            if (exist) {
+                fs.readFile(path, function(error, data) {
+                    if (error) {
+                        response.writeHead(500, {'Content-Type': 'text/plain'});
+                        response.write('Internal Server Error');
+                        response.end();
+                    } else {
+                        var mimeType = mime.lookup(path);
+                        response.writeHead(200, {'Content-Type': mimeType});
+                        response.write(data);
+                        response.end();
+                    }
+                });
+            } else {
+                response.writeHead(404, {'Content-Type': 'text/html'});
+                response.write('<!doctype html><html><head></head><body>Sorry: the resource does not exist</body></html>');        
+                response.end();
+            }
+        });*/
+
+    }
 }
 
 

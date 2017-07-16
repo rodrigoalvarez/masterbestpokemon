@@ -1,27 +1,48 @@
+var userName = '';
 var pokemons = [];
 var combinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
 var legendary = ['144','145','146','150','151','243','244','245','249','250', '251'];
+var loadingFlag = 0;
 
 $(document).ready(function () {
     $.getJSON('pokedata.json', function (data) {
         pokemons = data;
         combinations = getAllPokemonCombinations();
-        updatePokemons();
+        loadPokemons();
         $.each(getPokemonNames(), function (key, value) {
             $("#xPokedexNewList").append($("<option></option>").attr("value", value.id).text(value.name));
         });
-        setTimeout(function() { changePokemon(); }, 1000);
+        loadingCheck();
+        //setTimeout(function() { changePokemon(); }, 1000);
     });
     $.getJSON('poketypes.json', function (data) {
         pokemonTypes = data;
+        loadingCheck();
     });
     $.getJSON('translatedata.json', function (data) {
         translatedAttacks = data;
+        loadingCheck();
     });
+    /*$("#xUsernameText").clic(function() {
+        $("xUsernameInput").val($("#xUsernameText").text()).show();
+    });*/
+    $("#xUsernameInput").on('keypress', function(e) {
+         if(e.which === 13) {
+            saveUsername($("#xUsernameInput").val());
+            loadPokemons();
+         }
+   });
     $("#xPokedexNewList").change(changePokemon);
 });
+
+function loadingCheck() {
+    loadingFlag++;
+    if (loadingFlag == 3) {
+        changePokemon();
+    }
+}
 
 function changePokemon() {
     var id = $("#xPokedexNewList option:selected").val();
@@ -79,6 +100,36 @@ function updatePokemons() {
     });
 }
 
+function loadPokemons() {
+    userName = getUsername();
+    $("#xUsernameInput").val(userName);
+    if (userName == '') {
+        $.get('createUser', function (data) {
+            saveUsername(data);
+            loadPokemons();
+        });
+    } else {
+        $.get('getUser?username=' + userName, function (data) {
+            setPokemons(data);
+        });
+    }
+}
+
+function synPokemons() {
+    var data = '';
+    if (typeof(Storage) !== "undefined") {
+        data = localStorage.getItem("mbp-pokemons") || '';
+    }
+    $.ajax({
+        url: 'saveUser?username=' + userName,
+        type: 'PUT',
+        data: JSON.stringify({pokemons: data}),
+        contentType: 'application/json',
+        success: function () {
+        }
+    });
+}
+
 // UI Functions
 
 function getPokemonNames() {
@@ -104,6 +155,20 @@ function getOptionalPokemonCombinations(id) {
 
 // Storage Functions
 
+function getUsername() {
+    var result = '';
+    if (typeof(Storage) !== "undefined") {
+        result = localStorage.getItem("mbp-username") || '';
+    }
+    return result;
+}
+
+function saveUsername(username) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("mbp-username", username);
+    }
+}
+
 function getStoredPokemons() {
     var result = [];
     if (typeof(Storage) !== "undefined") {
@@ -119,12 +184,20 @@ function getStoredPokemons() {
     return result;
 }
 
+function setPokemons(data) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("mbp-pokemons", data);
+    }
+    updatePokemons();
+}
+
 function addPokemon(pokemonId, quickId, chargeId) {
     if (typeof(Storage) !== "undefined") {
         var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
         data.push({ 'pokemon': pokemonId, 'quick': quickId, 'charge': chargeId });
         localStorage.setItem("mbp-pokemons", JSON.stringify(data));
     }
+    synPokemons();
     updatePokemons();
 }
 
@@ -142,6 +215,7 @@ function removePokemon(pokemonId, quickId, chargeId) {
         }, this);
         localStorage.setItem("mbp-pokemons", JSON.stringify(result));
     }
+    synPokemons();
     updatePokemons();
 }
 
