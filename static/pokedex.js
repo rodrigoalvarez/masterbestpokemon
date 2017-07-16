@@ -54,12 +54,12 @@ function changePokemon() {
                     '</div>' +
                     '<div class="pokedex-moves">' +
                         '<div>' +
-                            '<span class="pokedex-move-name">' + getAttackName(value.pokemon.quick.name) + '</span>' +
+                            '<span class="pokedex-move-name type-' + value.pokemon.quick.type + '">' + getAttackName(value.pokemon.quick.name) + '</span>' +
                             '<span class="pokedex-move-power">' + value.pokemon.quick.power + '</span>' +
                             '<div class="pokedex-move-image"></div>' +
                         '</div>' +
                         '<div>' +
-                            '<span class="pokedex-move-name">' + getAttackName(value.pokemon.charge.name) + '</span>' +
+                            '<span class="pokedex-move-name type-' + value.pokemon.charge.type + '">' + getAttackName(value.pokemon.charge.name) + '</span>' +
                             '<span class="pokedex-move-power">' + value.pokemon.charge.power + '</span>' +
                             '<div class="pokedex-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
                         '</div>' +
@@ -81,12 +81,12 @@ function updatePokemons() {
                     '</div>' +
                     '<div class="pokedex-moves">' +
                         '<div>' +
-                            '<span class="pokedex-move-name">' + getAttackName(value.pokemon.quick.name) + '</span>' +
+                            '<span class="pokedex-move-name type-' + value.pokemon.quick.type + '">' + getAttackName(value.pokemon.quick.name) + '</span>' +
                             '<span class="pokedex-move-power">' + value.pokemon.quick.power + '</span>' +
                             '<div class="pokedex-move-image"></div>' +
                         '</div>' +
                         '<div>' +
-                            '<span class="pokedex-move-name">' + getAttackName(value.pokemon.charge.name) + '</span>' +
+                            '<span class="pokedex-move-name type-' + value.pokemon.charge.type + '">' + getAttackName(value.pokemon.charge.name) + '</span>' +
                             '<span class="pokedex-move-power">' + value.pokemon.charge.power + '</span>' +
                             '<div class="pokedex-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
                         '</div>' +

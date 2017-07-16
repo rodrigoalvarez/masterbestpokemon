@@ -56,12 +56,12 @@ function changePokemon() {
                     '</div>' +
                     '<div class="best-moves">' +
                         '<div>' +
-                            '<span class="best-move-name">' + getAttackName(value.pokemon.quick.name) + '</span>' +
+                            '<span class="best-move-name type-' + value.pokemon.quick.type + '">' + getAttackName(value.pokemon.quick.name) + '</span>' +
                             '<span class="best-move-power">' + value.pokemon.quick.power + '</span>' +
                             '<div class="best-move-image"></div>' +
                         '</div>' +
                         '<div>' +
-                            '<span class="best-move-name">' + getAttackName(value.pokemon.charge.name) + '</span>' +
+                            '<span class="best-move-name type-' + value.pokemon.charge.type + '">' + getAttackName(value.pokemon.charge.name) + '</span>' +
                             '<span class="best-move-power">' + value.pokemon.charge.power + '</span>' +
                             '<div class="best-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
                         '</div>' +

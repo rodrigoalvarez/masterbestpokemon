@@ -129,9 +129,77 @@ select {
 }
 
 .pokedex-move-name {
+    position: relative;
     display: inline-block;
     min-width: 100px;
     font-size: 12px;
+    padding-left: 10px;
+}
+
+.pokedex-move-name::before {
+    position: absolute;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: ' ';
+}
+
+.pokedex-move-name.type-bug::before {
+    background-image: url('images/type_bug_GO.png');
+}
+.pokedex-move-name.type-dark::before {
+    background-image: url('images/type_dark_GO.png');
+}
+.pokedex-move-name.type-dragon::before {
+    background-image: url('images/type_dragon_GO.png');
+}
+.pokedex-move-name.type-electric::before {
+    background-image: url('images/type_electric_GO.png');
+}
+.pokedex-move-name.type-fairy::before {
+    background-image: url('images/type_fairy_GO.png');
+}
+.pokedex-move-name.type-fighting::before {
+    background-image: url('images/type_fighting_GO.png');
+}
+.pokedex-move-name.type-fire::before {
+    background-image: url('images/type_fire_GO.png');
+}
+.pokedex-move-name.type-flying::before {
+    background-image: url('images/type_flying_GO.png');
+}
+.pokedex-move-name.type-ghost::before {
+    background-image: url('images/type_ghost_GO.png');
+}
+.pokedex-move-name.type-grass::before {
+    background-image: url('images/type_grass_GO.png');
+}
+.pokedex-move-name.type-ground::before {
+    background-image: url('images/type_ground_GO.png');
+}
+.pokedex-move-name.type-ice::before {
+    background-image: url('images/type_ice_GO.png');
+}
+.pokedex-move-name.type-normal::before {
+    background-image: url('images/type_normal_GO.png');
+}
+.pokedex-move-name.type-poison::before {
+    background-image: url('images/type_poison_GO.png');
+}
+.pokedex-move-name.type-psychic::before {
+    background-image: url('images/type_psychic_GO.png');
+}
+.pokedex-move-name.type-rock::before {
+    background-image: url('images/type_rock_GO.png');
+}
+.pokedex-move-name.type-steel::before {
+    background-image: url('images/type_steel_GO.png');
+}
+.pokedex-move-name.type-water::before {
+    background-image: url('images/type_water_GO.png');
 }
 
 .pokedex-move-power {
