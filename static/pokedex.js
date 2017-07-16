@@ -15,7 +15,6 @@ $(document).ready(function () {
             $("#xPokedexNewList").append($("<option></option>").attr("value", value.id).text(value.name));
         });
         loadingCheck();
-        //setTimeout(function() { changePokemon(); }, 1000);
     });
     $.getJSON('poketypes.json', function (data) {
         pokemonTypes = data;
@@ -25,9 +24,6 @@ $(document).ready(function () {
         translatedAttacks = data;
         loadingCheck();
     });
-    /*$("#xUsernameText").clic(function() {
-        $("xUsernameInput").val($("#xUsernameText").text()).show();
-    });*/
     $("#xUsernameInput").on('keypress', function(e) {
          if(e.which === 13) {
             saveUsername($("#xUsernameInput").val());

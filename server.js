@@ -21,13 +21,6 @@ app.use(bodyParser.json());
 
 app.set('port', (process.env.PORT || 8080));
 
-//app.get('/', handleStaticRequest);
-//app.get('/index.html', handleStaticRequest);
-//app.get('/index.css', handleStaticRequest);
-//app.get('/index.js', handleStaticRequest);
-//app.get('/pokedata.json', handleStaticRequest);
-//app.get('/poketypes.json', handleStaticRequest);
-
 app.get('/createUser', handleStaticRequest);
 app.get('/getUser', handleStaticRequest);
 app.put('/saveUser', handleStaticRequest);
@@ -63,7 +56,7 @@ function handleStaticRequest(request, response) {
         var data = storage.getItemSync('user-' + queryUrl.username);
         console.log(data);
         response.writeHead(200, {'Content-Type': 'text/plain'});
-        response.write(data || '');
+        response.write(data || '[]');
         response.end();
 
     } else if (requestUrl.pathname == '/saveUser') {
