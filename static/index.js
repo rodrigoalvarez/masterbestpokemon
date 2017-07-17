@@ -4,6 +4,7 @@ var combinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
 var legendary = ['144','145','146','150','151','243','244','245','249','250', '251'];
+var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','153','156','159','248'];
 var loadingFlag = 0;
 
 $(document).ready(function () {
@@ -12,7 +13,11 @@ $(document).ready(function () {
         combinations = getAllPokemonCombinations();
         loadPokemons();
         $.each(getPokemonNames(), function (key, value) {
-            $("#xPokemonList").append($("<option></option>").attr("value", value.id).text(value.name));
+            if (value.id == '000') {
+                $("#xPokemonList").append($("<option disabled></option>").attr("value", value.id).text(value.name));
+            } else {
+                $("#xPokemonList").append($("<option></option>").attr("value", value.id).text(value.name));
+            }
         });
         loadingCheck();
     });
@@ -90,11 +95,18 @@ function loadPokemons() {
 
 function getPokemonNames() {
     var result = [];
+    result.push({ 'id': '000', 'name': '- Raids -', 'raid': 1 });
+    result.push({ 'id': '000', 'name': '- Todos -', 'raid': 0 });
     pokemons.forEach(function (element) {
-        result.push({ 'id': element.speciesID, 'name': element.speciesName });
+        if (legendary.indexOf(element.speciesID) == -1) {
+            result.push({ 'id': element.speciesID, 'name': element.speciesName, 'raid': 0 });
+            if (raids.indexOf(element.speciesID) > -1) {
+                result.push({ 'id': element.speciesID, 'name': element.speciesName, 'raid': 1 });
+            }
+        }
     }, this);
     result = result.sort(function(a, b) {
-        return a.name < b.name ? -1 : 1;
+        return a.raid > b.raid ? -1 : (a.raid < b.raid ? 1 : (a.name < b.name ? -1 : 1));
     });
     return result;
 }
@@ -174,7 +186,15 @@ function getAllPokemonCombinations() {
     pokemons.forEach(function (element) {
         element.quickMoves.forEach(function (quick) {
             element.chargeMoves.forEach(function (charge) {
-                result.push({ 'id': element.speciesID, 'name': element.speciesName, 'type1': element.type1, 'type2': element.type2, 'quick': quick, 'charge': charge, 'attack': element.base_attack });
+                if (legendary.indexOf(element.speciesID) == -1) {
+                    result.push({ 'id': element.speciesID, 
+                                'name': element.speciesName, 
+                                'type1': element.type1, 
+                                'type2': element.type2, 
+                                'quick': quick, 
+                                'charge': charge, 
+                                'attack': element.base_attack });
+                }
             }, this);
         }, this);
     }, this);
@@ -190,9 +210,9 @@ function getPowerCombinations(type1, type2) {
         var power1 = element.quick.power * element.attack * stab * factor1 * Math.round(100 / element.quick.energy);
         var power2 = element.charge.power * element.attack * stab * factor2;
         var dps = (power1 + power2) / (element.quick.duration * Math.round(100 / element.quick.energy) + element.charge.duration);
-        if (legendary.indexOf(element.id) > -1) {
+        /*if (legendary.indexOf(element.id) > -1) {
             dps = 0;
-        }
+        }*/
         result.push({ 'pokemon': element, 'result': dps });
     }, this);
     return result;
