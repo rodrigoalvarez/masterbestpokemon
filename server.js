@@ -24,6 +24,8 @@ app.set('port', (process.env.PORT || 8080));
 app.get('/createUser', handleStaticRequest);
 app.get('/getUser', handleStaticRequest);
 app.put('/saveUser', handleStaticRequest);
+app.get('/backup', handleStaticRequest);
+app.put('/restore', handleStaticRequest);
 
 
 app.listen(app.get('port'), function() {
@@ -63,6 +65,28 @@ function handleStaticRequest(request, response) {
 
         storage.initSync();
         storage.setItemSync('user-' + queryUrl.username, request.body.pokemons);
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.end();
+
+    } else if (requestUrl.pathname == '/backup') {
+
+        var data = [];
+        storage.initSync();
+        storage.forEach(function(key, value) {
+            data.push({ 'user': key, 'pokemons': value });
+        });
+        response.writeHead(200, {'Content-Type': 'text/plain'});
+        response.write(JSON.stringify(data));
+        response.end();
+
+    } else if (requestUrl.pathname == '/restore') {
+
+        var data = JSON.parse(request.body.backup) || [];
+        var dataLength = data.length;
+        storage.initSync();
+        for (var i = 0; i < dataLength; i++) {
+            storage.setItemSync(data[i].user, data[i].pokemons);
+        }
         response.writeHead(200, {'Content-Type': 'text/plain'});
         response.end();
 
