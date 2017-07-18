@@ -155,9 +155,16 @@ function getOptionalPokemonCombinations(id) {
     var result = [];
     combinations.forEach(function (element) {
         if (element.id == id) {
-            result.push({ 'pokemon': element });
+            var stab = (element.quick.type == element.charge.type && (element.quick.type == element.type1 || element.quick.type == element.type2)) ? 1.2 : 1;
+            var power1 = element.quick.power * element.attack * stab * Math.round(100 / element.quick.energy);
+            var power2 = element.charge.power * element.attack * stab;
+            var dps = (power1 + power2) / (element.quick.duration * Math.round(100 / element.quick.energy) + element.charge.duration);
+            result.push({ 'pokemon': element, 'result': dps });
         }
     }, this);
+    result = result.sort(function(a, b) {
+        return b.result - a.result;
+    });
     return result.slice(0, 50);
 }
 
