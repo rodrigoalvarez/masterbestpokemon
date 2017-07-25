@@ -3,8 +3,8 @@ var pokemons = [];
 var combinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
-var legendary = ['144','145','146','150','151','243','244','245','249','250', '251'];
-var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','153','156','159','248'];
+var legendary = [];//'144','145','146','150','151','243','244','245','249','250', '251'
+var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','144','153','156','159','248','249'];
 var loadingFlag = 0;
 
 $(document).ready(function () {
@@ -204,12 +204,13 @@ function getAllPokemonCombinations() {
 function getPowerCombinations(type1, type2) {
     var result = [];
     combinations.forEach(function (element) {
-        var stab = (element.quick.type == element.charge.type && (element.quick.type == element.type1 || element.quick.type == element.type2)) ? 1.2 : 1;
+        var stab1 = (element.quick.type == element.type1 || element.quick.type == element.type2) ? 1.2 : 1;
+        var stab2 = (element.charge.type == element.type1 || element.charge.type == element.type2) ? 1.2 : 1;
         var factor1 = getPowerType(element.quick.type, type1, type2);
         var factor2 = getPowerType(element.charge.type, type1, type2);
-        var power1 = element.quick.power * element.attack * stab * factor1 * Math.round(100 / element.quick.energy);
-        var power2 = element.charge.power * element.attack * stab * factor2;
-        var dps = (power1 + power2) / (element.quick.duration * Math.round(100 / element.quick.energy) + element.charge.duration);
+        var power1 = element.quick.power * element.attack * stab1 * factor1 * Math.round(100 / element.quick.energy);
+        var power2 = element.charge.power * element.attack * stab2 * factor2 * Math.round(100 / element.charge.energyBars);
+        var dps = (power1 + power2) / (element.quick.duration * Math.round(100 / element.quick.energy) + element.charge.duration * Math.round(100 / element.charge.energyBars));
         /*if (legendary.indexOf(element.id) > -1) {
             dps = 0;
         }*/
