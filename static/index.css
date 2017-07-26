@@ -108,6 +108,43 @@ select {
     /*opacity: 0.25;*/
 }
 
+.best-opponent-list li .best-pokemon-warning {
+    display: block;
+    position: absolute;
+    top: 6px;
+    right: 10px;
+    font-size: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 3px #333;
+}
+
+.warning-0 .best-pokemon-warning {
+    background: #b8f640;
+}
+.warning-1 .best-pokemon-warning {
+    background: #f6b840;
+}
+.warning-2 .best-pokemon-warning {
+    background: #f96c20;
+}
+.warning-3 .best-pokemon-warning {
+    background: #c73333;
+}
+.warning-4 .best-pokemon-warning {
+    background: #8a0808;
+}
+.warning-5 .best-pokemon-warning {
+    background: #1f0000;
+}
+.warning-6 .best-pokemon-warning {
+    background: #1f0000;
+}
+.warning-7 .best-pokemon-warning {
+    background: #1f0000;
+}
+
 .best-moves {
     display: inline-block;
     text-align: left;

@@ -3,7 +3,7 @@ var pokemons = [];
 var combinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
-var legendary = [];//'144','145','146','150','151','243','244','245','249','250', '251'
+var legendary = ['150','151','243','244','245','250', '251'];//'144','145','146','150','151','243','244','245','249','250', '251'
 var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','144','153','156','159','248','249'];
 var loadingFlag = 0;
 
@@ -54,10 +54,11 @@ function changePokemon() {
     $.each(getPokemonOpponents(id), function (key, value) {
         $("#xOpponentList")
             .append($(
-                '<li ' + (inStorage(value.pokemon) ? 'class="pokemon-stored"' : '') + '>' +
+                '<li class="' + (inStorage(value.pokemon) ? 'pokemon-stored ' : '') + (value.warning > 0 ? 'pokemon-warning ' : '') + 'warning-' + value.warning + '">' +
                     '<div class="best-pokemon-data">' +
                         '<div class="best-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
                         '<span class="best-pokemon-name">' + value.pokemon.name + '</span>' +
+                        '<span class="best-pokemon-warning"></span>' +
                     '</div>' +
                     '<div class="best-moves">' +
                         '<div>' +
@@ -114,7 +115,7 @@ function getPokemonNames() {
 function getPokemonOpponents(id) {
     var result = [];
     var pokemon = getPokemon(id);
-    var opponents = getPowerCombinations(pokemon.type1, pokemon.type2);
+    var opponents = getPowerCombinations(pokemon);
     result = opponents.sort(function(a, b) {
         return b.result - a.result;
     });
@@ -201,22 +202,33 @@ function getAllPokemonCombinations() {
     return result;
 }
 
-function getPowerCombinations(type1, type2) {
+function getPowerCombinations(pokemon) {
     var result = [];
     combinations.forEach(function (element) {
         var stab1 = (element.quick.type == element.type1 || element.quick.type == element.type2) ? 1.2 : 1;
         var stab2 = (element.charge.type == element.type1 || element.charge.type == element.type2) ? 1.2 : 1;
-        var factor1 = getPowerType(element.quick.type, type1, type2);
-        var factor2 = getPowerType(element.charge.type, type1, type2);
-        var power1 = element.quick.power * element.attack * stab1 * factor1 * Math.round(100 / element.quick.energy);
-        var power2 = element.charge.power * element.attack * stab2 * factor2 * Math.round(100 / element.charge.energyBars);
-        var dps = (power1 + power2) / (element.quick.duration * Math.round(100 / element.quick.energy) + element.charge.duration * Math.round(100 / element.charge.energyBars));
-        /*if (legendary.indexOf(element.id) > -1) {
-            dps = 0;
-        }*/
-        result.push({ 'pokemon': element, 'result': dps });
+        var factor1 = getPowerType(element.quick.type, pokemon.type1, pokemon.type2);
+        var factor2 = getPowerType(element.charge.type, pokemon.type1, pokemon.type2);
+        var power1 = element.quick.power * element.attack * stab1 * factor1 * Math.ceil(100 / element.quick.energy);
+        var power2 = element.charge.power * element.attack * stab2 * factor2 * element.charge.energyBars;
+        var dps = (power1 + power2) / (element.quick.duration * Math.ceil(100 / element.quick.energy) + element.charge.duration * element.charge.energyBars);
+        result.push({ 'pokemon': element, 'result': dps, 'warning': getWarningCombinations(element, pokemon) });
     }, this);
     return result;
+}
+
+function getWarningCombinations(pokemonA, pokemonD) {
+    var result = 0;
+    combinations.forEach(function (element) {
+        if (element.id == pokemonA.id) {
+            var factor1 = getPowerType(pokemonA.quick.type, pokemonD.type1, pokemonD.type2);
+            var factor2 = getPowerType(pokemonA.charge.type, pokemonD.type1, pokemonD.type2);
+            if (factor1 * factor2 > 1) {
+                result += 1;
+            }
+        }
+    }, this);
+    return Math.ceil(result / 3);
 }
 
 function getPowerType(type, type1, type2) {
