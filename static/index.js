@@ -1,16 +1,20 @@
 var userName = '';
 var pokemons = [];
 var combinations = [];
+var battleCombinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
 var legendary = ['150','151','243','244','245','250', '251'];//'144','145','146','150','151','243','244','245','249','250', '251'
 var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','144','153','156','159','248','249'];
 var loadingFlag = 0;
+var cpM = 0.7317;
+var iv = 7;
 
 $(document).ready(function () {
     $.getJSON('pokedata.json', function (data) {
         pokemons = data;
         combinations = getAllPokemonCombinations();
+        //battleCombinations = getAllBattleCombinations();
         loadPokemons();
         $.each(getPokemonNames(), function (key, value) {
             if (value.id == '000') {
@@ -72,6 +76,13 @@ function changePokemon() {
                             '<div class="best-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
                         '</div>' +
                     '</div>' +
+                    /*'<div class="best-damage">' +
+                        '<div>' +
+                            '<span class="best-damage-time">' + value.battles[0].battleTime + '</span>' +
+                            '<span class="best-damage-attacker">' + value.battles[0].battleHpA + '</span>' +
+                            '<span class="best-damage-deffender">' + value.battles[0].battleHpD + '</span>' +
+                        '</div>' +
+                    '</div>' +*/
                 '</li>')
             .attr("value", value.pokemon.id));
     });
@@ -115,11 +126,11 @@ function getPokemonNames() {
 function getPokemonOpponents(id) {
     var result = [];
     var pokemon = getPokemon(id);
-    var opponents = getPowerCombinations(pokemon);
-    result = opponents.sort(function(a, b) {
+    return getPowerCombinations(pokemon);
+    /*result = opponents.sort(function(a, b) {
         return b.result - a.result;
     });
-    return result.slice(0, 50);
+    return result.slice(0, 50);*/
 }
 
 // Storage Functions
@@ -194,7 +205,9 @@ function getAllPokemonCombinations() {
                                 'type2': element.type2, 
                                 'quick': quick, 
                                 'charge': charge, 
-                                'attack': element.base_attack });
+                                'attack': (parseInt(element.base_attack) + iv) * cpM,
+                                'defense': (parseInt(element.base_defense) + iv) * cpM,
+                                'stamina': Math.floor((parseInt(element.base_stamina) + iv) * cpM) });
                 }
             }, this);
         }, this);
@@ -209,12 +222,112 @@ function getPowerCombinations(pokemon) {
         var stab2 = (element.charge.type == element.type1 || element.charge.type == element.type2) ? 1.2 : 1;
         var factor1 = getPowerType(element.quick.type, pokemon.type1, pokemon.type2);
         var factor2 = getPowerType(element.charge.type, pokemon.type1, pokemon.type2);
-        var power1 = element.quick.power * element.attack * stab1 * factor1 * Math.ceil(100 / element.quick.energy);
-        var power2 = element.charge.power * element.attack * stab2 * factor2 * element.charge.energyBars;
-        var dps = (power1 + power2) / (element.quick.duration * Math.ceil(100 / element.quick.energy) + element.charge.duration * element.charge.energyBars);
+
+        var power1 = Math.floor(0.5 * element.quick.power * (element.attack / pokemon.defense) * stab1 * factor1) + 1;
+        var fullPower1 = power1 * Math.ceil(100 / element.quick.energy);
+        var power2 = Math.floor(0.5 * element.charge.power * (element.attack / pokemon.defense) * stab2 * factor2) + 1;
+        var fullPower2 = power2 * element.charge.energyBars;
+
+        var dps = 1000 * (fullPower1 + fullPower2) / (element.quick.duration * Math.ceil(100 / element.quick.energy) + element.charge.duration * element.charge.energyBars);
         result.push({ 'pokemon': element, 'result': dps, 'warning': getWarningCombinations(element, pokemon) });
     }, this);
+
+    result = result.sort(function(a, b) {
+        return b.result - a.result;
+    });
+    result = result.slice(0, 50);
+
+    result.forEach(function (element) {
+        element.battles = getBattleCombinations(element.pokemon, pokemon);
+    });
     return result;
+}
+
+function getAllBattleCombinations() {
+    var result = [];
+    combinations.forEach(function (element, index) {
+        combinations.forEach(function (kElement, kIndex) {
+            if (index <= kIndex) {
+                var battle = getBattleResult(element, kElement);
+                result.push({ 'attacker': index, 'defender': kIndex, 'battleTime': battle.battleTime, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
+            }
+        }, this);
+    }, this);
+    return result;
+}
+
+function getBattleCombinations(pokemonA, pokemonD) {
+    var result = [];
+    combinations.forEach(function (element) {
+        if (element.speciesID == pokemonD.speciesID) {
+            var battle = getBattleResult(pokemonA, element);
+            result.push({ 'battleTime': battle.battleTime, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
+        }
+    }, this);
+    return result;
+}
+
+function getBattleResult(element, pokemon) {
+    var stabA1 = (element.quick.type == element.type1 || element.quick.type == element.type2) ? 1.2 : 1;
+    var stabA2 = (element.charge.type == element.type1 || element.charge.type == element.type2) ? 1.2 : 1;
+    var stabD1 = (pokemon.quick.type == pokemon.type1 || pokemon.quick.type == pokemon.type2) ? 1.2 : 1;
+    var stabD2 = (pokemon.charge.type == pokemon.type1 || pokemon.charge.type == pokemon.type2) ? 1.2 : 1;
+
+    var factorA1 = getPowerType(element.quick.type, pokemon.type1, pokemon.type2);
+    var factorA2 = getPowerType(element.charge.type, pokemon.type1, pokemon.type2);
+    var factorD1 = getPowerType(pokemon.quick.type, element.type1, element.type2);
+    var factorD2 = getPowerType(pokemon.charge.type, element.type1, element.type2);
+
+    var powerA1 = Math.floor(0.5 * element.quick.power * (element.attack / pokemon.defense) * stabA1 * factorA1) + 1;
+    var powerD1 = Math.floor(0.5 * pokemon.quick.power * (pokemon.attack / element.defense) * stabD1 * factorD1) + 1;
+
+    var fullPowerA1 = powerA1 * Math.ceil(100 / element.quick.energy);
+    var fullPowerD1 = powerD1 * Math.ceil(100 / pokemon.quick.energy);
+
+    var powerA2 = Math.floor(0.5 * element.charge.power * (element.attack / pokemon.defense) * stabA2 * factorA2) + 1;
+    var powerD2 = Math.floor(0.5 * pokemon.charge.power * (pokemon.attack / element.defense) * stabD2 * factorD2) + 1;
+
+    var fullPowerA2 = powerA2 * element.charge.energyBars;
+    var fullPowerD2 = powerD2 * pokemon.charge.energyBars;
+    
+    var dpsA = 1000 * (fullPowerA1 + fullPowerA2) / (element.quick.duration * Math.ceil(100 / element.quick.energy) + element.charge.duration * element.charge.energyBars);
+    var dpsD = 1000 * (fullPowerD1 + fullPowerD2) / (pokemon.quick.duration * Math.ceil(100 / pokemon.quick.energy) + pokemon.charge.duration * pokemon.charge.energyBars);
+
+    var time = 0;
+    var hpA = element.stamina;
+    var hpD = pokemon.stamina;
+    var lastA = 0;
+    var lastD = 0;
+    var chargeA = 0;
+    var chargeD = 0;
+
+    while (hpA > 0 && hpD > 0 && time < 120000) {
+        if (lastA + parseInt(element.charge.duration) <= time && chargeA >= 100 / element.charge.energyBars)
+        {
+            hpD -= powerA2;
+            lastA = time;
+        }
+        else if (lastA + parseInt(element.quick.duration) <= time && chargeA < 100 / element.charge.energyBars)
+        {
+            hpD -= powerA1;
+            lastA = time;
+            chargeA = parseInt(chargeA) + parseInt(element.quick.energy);
+        }
+        if (lastD + parseInt(pokemon.charge.duration) <= time && chargeD >= 100 / pokemon.charge.energyBars)
+        {
+            hpA -= powerD2;
+            lastD = time;
+        }
+        else if (lastD + parseInt(pokemon.quick.duration) <= time && chargeD < 100 / pokemon.charge.energyBars)
+        {
+            hpA -= powerD1;
+            lastD = time;
+            chargeD = parseInt(chargeD) + parseInt(pokemon.quick.energy);
+        }
+        time += 50;
+    }
+
+    return { 'battleTime': time, 'battleHpA': hpA, 'battleHpD': hpD };
 }
 
 function getWarningCombinations(pokemonA, pokemonD) {

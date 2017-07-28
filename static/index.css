@@ -105,7 +105,7 @@ select {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /*opacity: 0.25;*/
+    opacity: 0.25;/**/
 }
 
 .best-opponent-list li .best-pokemon-warning {
