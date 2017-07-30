@@ -105,7 +105,7 @@ select {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.25;/**/
+    /*opacity: 0.25;*/
 }
 
 .best-opponent-list li .best-pokemon-warning {
@@ -252,6 +252,28 @@ select {
 
 .best-move-image.energy-3 {
     background-image: url('images/Energy3_GO.png');
+}
+
+.best-damage {
+    border-top: 1px solid #ddd;
+    margin: 10px 20px 0 20px;
+    padding-top: 5px;
+    font-size: 12px;
+}
+
+.best-damage-win {
+    display: inline-block;
+    width: 30%;
+}
+
+.best-damage-time {
+    display: inline-block;
+    width: 30%;
+}
+
+.best-damage-hp {
+    display: inline-block;
+    width: 30%;
 }
 
 @media only screen and (max-width: 639px) and (min-width: 320px) {

@@ -116,7 +116,7 @@ select {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.25;/**/
+    /*opacity: 0.25;*/
 }
 
 .new-pokemon .pokedex-pokemon-image {

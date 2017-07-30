@@ -76,6 +76,7 @@ function changePokemon() {
                             '<div class="best-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
                         '</div>' +
                     '</div>' +
+                    getBattleTemplate(value.battles) +
                     /*'<div class="best-damage">' +
                         '<div>' +
                             '<span class="best-damage-time">' + value.battles[0].battleTime + '</span>' +
@@ -86,6 +87,26 @@ function changePokemon() {
                 '</li>')
             .attr("value", value.pokemon.id));
     });
+}
+
+function getBattleTemplate(battles) {
+    var result = '<div class="best-damage">';
+    battles.forEach(function (element) {
+        var item = '<div>' +
+                        '<span class="best-damage-win">' + (element.battleHpA > 0 ? 'Win' : 'Lose') + '</span>' +
+                        '<span class="best-damage-time">' + getTimeUI(element.battleTime) + '</span>' +
+                        '<span class="best-damage-hp">' + (element.battleHpA > 0 ? (Math.max(element.battleHpA, 0) + '/' + element.hpA) : (Math.max(element.battleHpD, 0) + '/' + element.hpD)) + '</span>' +
+                    '</div>';
+        result += item;
+    });
+    result += '</div>';
+    return result;
+}
+
+function getTimeUI(value) {
+    var time = Math.floor(value / 1000);
+    var result = Math.floor(time / 60) + 'm ' + (time % 60) + 's';
+    return result;
 }
 
 function loadPokemons() {
@@ -125,7 +146,7 @@ function getPokemonNames() {
 
 function getPokemonOpponents(id) {
     var result = [];
-    var pokemon = getPokemon(id);
+    var pokemon = getPokemonData(id);
     return getPowerCombinations(pokemon);
     /*result = opponents.sort(function(a, b) {
         return b.result - a.result;
@@ -193,6 +214,16 @@ function getPokemon(id) {
     return result;
 }
 
+function getPokemonData(id) {
+    var result = {};
+    combinations.forEach(function (element) {
+        if (element.id == id) {
+            result = element;
+        }
+    }, this);
+    return result;
+}
+
 function getAllPokemonCombinations() {
     var result = [];
     pokemons.forEach(function (element) {
@@ -243,7 +274,7 @@ function getPowerCombinations(pokemon) {
     return result;
 }
 
-function getAllBattleCombinations() {
+/*function getAllBattleCombinations() {
     var result = [];
     combinations.forEach(function (element, index) {
         combinations.forEach(function (kElement, kIndex) {
@@ -254,14 +285,14 @@ function getAllBattleCombinations() {
         }, this);
     }, this);
     return result;
-}
+}*/
 
 function getBattleCombinations(pokemonA, pokemonD) {
     var result = [];
     combinations.forEach(function (element) {
-        if (element.speciesID == pokemonD.speciesID) {
+        if (element.id == pokemonD.id) {
             var battle = getBattleResult(pokemonA, element);
-            result.push({ 'battleTime': battle.battleTime, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
+            result.push({ 'battleTime': battle.battleTime, 'hpA': battle.hpA, 'hpD': battle.hpD, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
         }
     }, this);
     return result;
@@ -327,7 +358,7 @@ function getBattleResult(element, pokemon) {
         time += 50;
     }
 
-    return { 'battleTime': time, 'battleHpA': hpA, 'battleHpD': hpD };
+    return { 'battleTime': time, 'hpA': element.stamina, 'hpD': pokemon.stamina, 'battleHpA': hpA, 'battleHpD': hpD };
 }
 
 function getWarningCombinations(pokemonA, pokemonD) {
