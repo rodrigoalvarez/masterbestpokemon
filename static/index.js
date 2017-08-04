@@ -246,7 +246,13 @@ function getPowerCombinations(pokemon) {
     var count = 0;
     opponent.forEach(function (element) {
         if (count < 50) {
-            if (filterId == 1) {
+            element.battles = getBattleCombinations(element.pokemon, pokemon);
+            if (element.battles.length > 0) {
+                result.push(element);
+                count++;
+            }
+            
+            /*if (filterId == 1) {
                 element.battles = getBattleCombinations(element.pokemon, pokemon);
                 result.push(element);
                 count++;
@@ -262,7 +268,7 @@ function getPowerCombinations(pokemon) {
                     result.push(element);
                     count++;
                 }
-            }
+            }*/
         }
     });
 
@@ -274,7 +280,7 @@ function winAnyBattle(battles) {
     battles.forEach(function (element) {
         result = result || element.win;
     });
-    return result;
+    return result || battles.length == 0;
 }
 
 function winAllBattles(battles) {
@@ -287,13 +293,17 @@ function winAllBattles(battles) {
 
 function getBattleCombinations(pokemonA, pokemonD) {
     var result = [];
+    var flagAllOk = true;
+    var flagOk = true;
     combinations.forEach(function (element) {
-        if (element.id == pokemonD.id) {
+        if (flagOk && element.id == pokemonD.id) {
             var battle = getBattleResult(pokemonA, element);
+            flagAllOk = flagAllOk && battle.win;
+            flagOk = flagOk && ((filterId == 1 || filterId == 2 || filterId == 4) || ((filterId == 3 || filterId == 5) && flagAllOk));
             result.push({ 'battleTime': battle.battleTime, 'win': battle.win, 'hpA': battle.hpA, 'hpD': battle.hpD, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
         }
     }, this);
-    return result;
+    return flagOk ? result : [];
 }
 
 function getBattleResult(element, pokemon) {
