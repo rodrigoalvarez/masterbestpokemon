@@ -77,6 +77,7 @@ select {
     border: 1px solid #ddd;
     padding: 5px;
     margin: 5px;
+    vertical-align: top;
     text-align: center;
     border-radius: 8px;
     color: #666;
@@ -105,7 +106,7 @@ select {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /*opacity: 0.25;*/
+    opacity: 0.25;/**/
 }
 
 .best-opponent-list li .best-pokemon-warning {
@@ -259,6 +260,11 @@ select {
     margin: 10px 20px 0 20px;
     padding-top: 5px;
     font-size: 12px;
+    /*display: none;*/
+}
+
+.best-opponent-list li.show-battles .best-damage {
+    display: block;
 }
 
 .best-damage-win {

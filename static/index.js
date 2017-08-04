@@ -6,6 +6,7 @@ var pokemonTypes = [];
 var translatedAttacks = [];
 var legendary = ['150','151','243','244','245','250', '251'];//'144','145','146','150','151','243','244','245','249','250', '251'
 var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','144','153','156','159','248','249'];
+var filterId = 1;
 var loadingFlag = 0;
 var cpM = 0.7317;
 var iv = 7;
@@ -40,6 +41,7 @@ $(document).ready(function () {
          }
    });
     $("#xPokemonList").change(changePokemon);
+    $("#xFilterList").change(changePokemon);
 });
 
 function loadingCheck() {
@@ -50,6 +52,29 @@ function loadingCheck() {
 }
 
 function changePokemon() {
+    filterId = $("#xFilterList option:selected").val();
+    if (filterId == 1) {
+        $("#xFilterDescription")
+            .text('Pokemons que tienen mejor DPS (daño por segundo) sin importar que el pokemon muera intentando derrotar al oponente. ' +
+                    'En este supuesto, el pokemon no esquiva los ataques del oponente.');
+    } else if (filterId == 2) {
+        $("#xPokemonName")
+            .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente al menos una vez sin morir en el intento. ' +
+                    'En este supuesto, el pokemon no esquiva los ataques del oponente.');
+    } else if (filterId == 3) {
+        $("#xPokemonName")
+            .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente sin morir en el intento. ' +
+                    'En este supuesto, el pokemon no esquiva los ataques del oponente.');
+    } else if (filterId == 4) {
+        $("#xPokemonName")
+            .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente al menos una vez sin morir en el intento. ' +
+                'En este supuesto, el pokemon esquiva los ataques del oponente.');
+    } else if (filterId == 5) {
+        $("#xPokemonName")
+            .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente sin morir en el intento. ' +
+                'En este supuesto, el pokemon esquiva los ataques del oponente.');
+    }
+
     var id = $("#xPokemonList option:selected").val();
     var name = $("#xPokemonList option:selected").text();
     $("#xPokemonName").text(name);
@@ -58,7 +83,8 @@ function changePokemon() {
     $.each(getPokemonOpponents(id), function (key, value) {
         $("#xOpponentList")
             .append($(
-                '<li class="' + (inStorage(value.pokemon) ? 'pokemon-stored ' : '') + (value.warning > 0 ? 'pokemon-warning ' : '') + 'warning-' + value.warning + '">' +
+                '<li class="' + (inStorage(value.pokemon) ? 'pokemon-stored ' : '') + (value.warning > 0 ? 'pokemon-warning ' : '') + 'warning-' + value.warning + '" ' + 
+                    'onclick="showBattles(this)">' +
                     '<div class="best-pokemon-data">' +
                         '<div class="best-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
                         '<span class="best-pokemon-name">' + value.pokemon.name + '</span>' +
@@ -77,13 +103,6 @@ function changePokemon() {
                         '</div>' +
                     '</div>' +
                     getBattleTemplate(value.battles) +
-                    /*'<div class="best-damage">' +
-                        '<div>' +
-                            '<span class="best-damage-time">' + value.battles[0].battleTime + '</span>' +
-                            '<span class="best-damage-attacker">' + value.battles[0].battleHpA + '</span>' +
-                            '<span class="best-damage-deffender">' + value.battles[0].battleHpD + '</span>' +
-                        '</div>' +
-                    '</div>' +*/
                 '</li>')
             .attr("value", value.pokemon.id));
     });
@@ -93,9 +112,9 @@ function getBattleTemplate(battles) {
     var result = '<div class="best-damage">';
     battles.forEach(function (element) {
         var item = '<div>' +
-                        '<span class="best-damage-win">' + (element.battleHpA > 0 ? 'Win' : 'Lose') + '</span>' +
+                        '<span class="best-damage-win">' + (element.win ? 'Win' : 'Lose') + '</span>' +
                         '<span class="best-damage-time">' + getTimeUI(element.battleTime) + '</span>' +
-                        '<span class="best-damage-hp">' + (element.battleHpA > 0 ? (Math.max(element.battleHpA, 0) + '/' + element.hpA) : (Math.max(element.battleHpD, 0) + '/' + element.hpD)) + '</span>' +
+                        '<span class="best-damage-hp">' + (element.win ? (Math.max(element.battleHpA, 0) + '/' + element.hpA) : (Math.max(element.battleHpD, 0) + '/' + element.hpD)) + '</span>' +
                     '</div>';
         result += item;
     });
@@ -107,6 +126,14 @@ function getTimeUI(value) {
     var time = Math.floor(value / 1000);
     var result = Math.floor(time / 60) + 'm ' + (time % 60) + 's';
     return result;
+}
+
+function showBattles(element) {
+    if ($(element).hasClass('show-battles')) {
+        $(element).removeClass('show-battles');
+    } else {
+        $(element).addClass('show-battles');
+    }
 }
 
 function loadPokemons() {
@@ -148,58 +175,6 @@ function getPokemonOpponents(id) {
     var result = [];
     var pokemon = getPokemonData(id);
     return getPowerCombinations(pokemon);
-    /*result = opponents.sort(function(a, b) {
-        return b.result - a.result;
-    });
-    return result.slice(0, 50);*/
-}
-
-// Storage Functions
-
-function getUsername() {
-    var result = '';
-    if (typeof(Storage) !== "undefined") {
-        result = localStorage.getItem("mbp-username") || '';
-    }
-    return result;
-}
-
-function saveUsername(username) {
-    if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("mbp-username", username);
-    }
-}
-
-function getStoredPokemons() {
-    var result = [];
-    if (typeof(Storage) !== "undefined") {
-        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
-        data.forEach(function (element) {
-            combinations.forEach(function (k) {
-                if (element.pokemon == k.id && element.quick == k.quick.move_id && element.charge == k.charge.move_id) {
-                    result.push({ 'pokemon': k });
-                }
-            }, this);
-        }, this);
-    }
-    return result;
-}
-
-function setPokemons(data) {
-    if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("mbp-pokemons", data);
-        changePokemon();
-    }
-}
-
-function inStorage(pokemon) {
-    var result = false;
-    $.each(getStoredPokemons(), function (index, element) {
-        result = result || (element.pokemon.id == pokemon.id && 
-                            element.pokemon.quick.move_id == pokemon.quick.move_id && 
-                            element.pokemon.charge.move_id == pokemon.charge.move_id);
-    }, this);
-    return result;
 }
 
 // Common Functions
@@ -247,7 +222,7 @@ function getAllPokemonCombinations() {
 }
 
 function getPowerCombinations(pokemon) {
-    var result = [];
+    var opponent = [];
     combinations.forEach(function (element) {
         var stab1 = (element.quick.type == element.type1 || element.quick.type == element.type2) ? 1.2 : 1;
         var stab2 = (element.charge.type == element.type1 || element.charge.type == element.type2) ? 1.2 : 1;
@@ -260,39 +235,62 @@ function getPowerCombinations(pokemon) {
         var fullPower2 = power2 * element.charge.energyBars;
 
         var dps = 1000 * (fullPower1 + fullPower2) / (element.quick.duration * Math.ceil(100 / element.quick.energy) + element.charge.duration * element.charge.energyBars);
-        result.push({ 'pokemon': element, 'result': dps, 'warning': getWarningCombinations(element, pokemon) });
+        opponent.push({ 'pokemon': element, 'result': dps, 'warning': getWarningCombinations(element, pokemon) });
     }, this);
 
-    result = result.sort(function(a, b) {
+    opponent = opponent.sort(function(a, b) {
         return b.result - a.result;
     });
-    result = result.slice(0, 50);
 
-    result.forEach(function (element) {
-        element.battles = getBattleCombinations(element.pokemon, pokemon);
+    var result = [];
+    var count = 0;
+    opponent.forEach(function (element) {
+        if (count < 50) {
+            if (filterId == 1) {
+                element.battles = getBattleCombinations(element.pokemon, pokemon);
+                result.push(element);
+                count++;
+            } else if (filterId == 2 || filterId == 4) {
+                element.battles = getBattleCombinations(element.pokemon, pokemon);
+                if (winAnyBattle(element.battles)) {
+                    result.push(element);
+                    count++;
+                }
+            } else if (filterId == 3 || filterId == 5) {
+                element.battles = getBattleCombinations(element.pokemon, pokemon);
+                if (winAllBattles(element.battles)) {
+                    result.push(element);
+                    count++;
+                }
+            }
+        }
+    });
+
+    //var result = opponent.slice(0, 50);
+    return result;
+}
+function winAnyBattle(battles) {
+    var result = false;
+    battles.forEach(function (element) {
+        result = result || element.win;
     });
     return result;
 }
 
-/*function getAllBattleCombinations() {
-    var result = [];
-    combinations.forEach(function (element, index) {
-        combinations.forEach(function (kElement, kIndex) {
-            if (index <= kIndex) {
-                var battle = getBattleResult(element, kElement);
-                result.push({ 'attacker': index, 'defender': kIndex, 'battleTime': battle.battleTime, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
-            }
-        }, this);
-    }, this);
+function winAllBattles(battles) {
+    var result = true;
+    battles.forEach(function (element) {
+        result = result && element.win;
+    });
     return result;
-}*/
+}
 
 function getBattleCombinations(pokemonA, pokemonD) {
     var result = [];
     combinations.forEach(function (element) {
         if (element.id == pokemonD.id) {
             var battle = getBattleResult(pokemonA, element);
-            result.push({ 'battleTime': battle.battleTime, 'hpA': battle.hpA, 'hpD': battle.hpD, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
+            result.push({ 'battleTime': battle.battleTime, 'win': battle.win, 'hpA': battle.hpA, 'hpD': battle.hpD, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
         }
     }, this);
     return result;
@@ -331,23 +329,32 @@ function getBattleResult(element, pokemon) {
     var lastD = 0;
     var chargeA = 0;
     var chargeD = 0;
+    var dodgeLastA = 0;
 
     while (hpA > 0 && hpD > 0 && time < 120000) {
-        if (lastA + parseInt(element.charge.duration) <= time && chargeA >= 100 / element.charge.energyBars)
+        if (lastA + parseInt(element.charge.duration) + dodgeLastA <= time && chargeA >= 100 / element.charge.energyBars)
         {
             hpD -= powerA2;
             lastA = time;
+            dodgeLastA = 0;
         }
-        else if (lastA + parseInt(element.quick.duration) <= time && chargeA < 100 / element.charge.energyBars)
+        else if (lastA + parseInt(element.quick.duration) + dodgeLastA <= time && chargeA < 100 / element.charge.energyBars)
         {
             hpD -= powerA1;
             lastA = time;
+            dodgeLastA = 0;
             chargeA = parseInt(chargeA) + parseInt(element.quick.energy);
         }
         if (lastD + parseInt(pokemon.charge.duration) <= time && chargeD >= 100 / pokemon.charge.energyBars)
         {
-            hpA -= powerD2;
-            lastD = time;
+            if (filterId == 4 || filterId == 5) {
+                hpA -= Math.floor(powerD2 * 0.25);
+                lastD = time;
+                dodgeLastA += parseInt(pokemon.charge.damage_window);
+            } else {
+                hpA -= powerD2;
+                lastD = time;
+            }
         }
         else if (lastD + parseInt(pokemon.quick.duration) <= time && chargeD < 100 / pokemon.charge.energyBars)
         {
@@ -358,7 +365,7 @@ function getBattleResult(element, pokemon) {
         time += 50;
     }
 
-    return { 'battleTime': time, 'hpA': element.stamina, 'hpD': pokemon.stamina, 'battleHpA': hpA, 'battleHpD': hpD };
+    return { 'battleTime': time, 'win': hpA > 0 && hpA > hpD, 'hpA': element.stamina, 'hpD': pokemon.stamina, 'battleHpA': hpA, 'battleHpD': hpD };
 }
 
 function getWarningCombinations(pokemonA, pokemonD) {
@@ -396,3 +403,64 @@ function getAttackName(attack) {
     }, this);
     return result;
 }
+
+/* === Storage Functions === */
+
+function getUsername() {
+    var result = '';
+    if (typeof(Storage) !== "undefined") {
+        result = localStorage.getItem("mbp-username") || '';
+    }
+    return result;
+}
+
+function saveUsername(username) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("mbp-username", username);
+    }
+}
+
+function getStoredPokemons() {
+    var result = [];
+    if (typeof(Storage) !== "undefined") {
+        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
+        data.forEach(function (element) {
+            combinations.forEach(function (k) {
+                if (element.pokemon == k.id && element.quick == k.quick.move_id && element.charge == k.charge.move_id) {
+                    result.push({ 'pokemon': k });
+                }
+            }, this);
+        }, this);
+    }
+    return result;
+}
+
+function setPokemons(data) {
+    if (typeof(Storage) !== "undefined") {
+        localStorage.setItem("mbp-pokemons", data);
+        changePokemon();
+    }
+}
+
+function inStorage(pokemon) {
+    var result = false;
+    $.each(getStoredPokemons(), function (index, element) {
+        result = result || (element.pokemon.id == pokemon.id && 
+                            element.pokemon.quick.move_id == pokemon.quick.move_id && 
+                            element.pokemon.charge.move_id == pokemon.charge.move_id);
+    }, this);
+    return result;
+}
+
+/*function getAllBattleCombinations() {
+    var result = [];
+    combinations.forEach(function (element, index) {
+        combinations.forEach(function (kElement, kIndex) {
+            if (index <= kIndex) {
+                var battle = getBattleResult(element, kElement);
+                result.push({ 'attacker': index, 'defender': kIndex, 'battleTime': battle.battleTime, 'battleHpA': battle.battleHpA, 'battleHpD': battle.battleHpD });
+            }
+        }, this);
+    }, this);
+    return result;
+}*/
