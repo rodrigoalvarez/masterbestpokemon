@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Master Best Pokemon | RAIDS</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="raid.js"></script>
+    <link rel="stylesheet" href="raid.css">
+</head>
+
+<body>
+
+    <div class="master-header">
+        <div id="xUsername">
+            <input id="xUsernameInput" type="text"/>
+        </div>
+        <h1 id="xTitle" class="master-title">Pokemon</h1>
+        <a id="xPokedex" class="pokedex-link" href="/pokedex.html"></a>
+    </div>
+    
+    <div class="master-content">
+        <select id="xPokemonList" class="master-pokemon-list"></select>
+        <h2 class="master-subtitle">
+            <span>Estos son los mejores equipos contra </span>
+            <span id="xPokemonName">Pokemon</span>
+        </h2>
+        <div id="xPokemonImage" class="master-pokemon-data">
+            <div class="master-pokemon-image"></div>
+        </div>
+        <h2 class="master-subtitle">
+            <span>Integrantes del equipo</span>
+        </h2>
+        <select id="xFilterList" class="master-pokemon-list">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select>
+        <ul id="xOpponentList" class="master-opponent-list"></ul>
+    </div>
+
+</body>
+
+</html>

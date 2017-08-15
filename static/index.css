@@ -50,6 +50,7 @@ select {
 .best-subtitle {
     font-size: 14px;
     font-weight: normal;
+    color: #666;
 }
 
 .best-pokemon-list {
@@ -82,6 +83,7 @@ select {
     border-radius: 8px;
     color: #666;
     background: #fafafa;
+    cursor: pointer;
 }
 
 .best-opponent-list li.pokemon-stored {
@@ -260,7 +262,7 @@ select {
     margin: 10px 20px 0 20px;
     padding-top: 5px;
     font-size: 12px;
-    /*display: none;*/
+    display: none;/**/
 }
 
 .best-opponent-list li.show-battles .best-damage {
