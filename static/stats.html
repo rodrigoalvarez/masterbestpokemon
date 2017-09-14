@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Master Best Pokemon | Stats</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="stats.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="stats.css">
+</head>
+
+<body>
+
+    <div class="best-header">
+        <div id="xUsername">
+            <input id="xUsernameInput" type="text"/>
+        </div>
+        <a id="xPokedex" class="pokedex-link" href="/index.html"></a>
+    </div>
+    
+    <div class="best-content">
+        <select id="xPokemonListA" class="best-pokemon-list"></select>
+        <select id="xPokemonListB" class="best-pokemon-list"></select>
+        
+        <div id="xPokemonChart">
+            <canvas id="myChart" width="600" height="400"></canvas>
+        </div>
+    </div>
+
+</body>
+
+</html>
