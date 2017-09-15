@@ -11,34 +11,107 @@
 
 <body>
 
-    <div class="best-header">
-        <div id="xUsername">
-            <input id="xUsernameInput" type="text"/>
+    <div class="master-header">
+        <div class="header-title" onclick="goHome()">
+            <span class="header-title-title">MasterPokemonGo</span>
+            <span class="header-title-title-small">MPG</span>
+            <span class="header-title-subtitle"></span>
         </div>
-        <h1 id="xTitle" class="best-title">Pokemon</h1>
-        <a id="xPokedex" class="pokedex-link" href="/pokedex.html"></a>
+        <div class="header-options">
+            <div class="header-options-item header-signup">
+                <span class="header-option-text" onclick="goSignup()">Registro</span>
+            </div>
+            <div class="header-options-item header-signin">
+                <span class="header-option-text" onclick="goSignin()">Login</span>
+            </div>
+            <div class="header-options-item header-user">
+                <span class="header-option-text">Usuario</span>
+            </div>
+            <div class="header-options-item header-pokedex">
+                <span class="header-option-text" onclick="goPokedex()">Pokedex</span>
+            </div>
+            <div class="header-options-item header-battle">
+                <span class="header-option-text" onclick="goBattle()">Batallas</span>
+            </div>
+            <div class="header-options-item header-arena">
+                <span class="header-option-text" onclick="goArena()">Comparativa</span>
+            </div>
+            <div class="header-options-item header-logout">
+                <span class="header-option-text" onclick="goLogout()">Logout</span>
+            </div>
+        </div>
     </div>
     
-    <div class="best-content">
-        <select id="xPokemonList" class="best-pokemon-list"></select>
-        <h2 class="best-subtitle">
-            <span>Estos son los mejores pokemon contra </span>
-            <span id="xPokemonName">Pokemon</span>
-        </h2>
-        <select id="xFilterList" class="best-pokemon-list">
-            <option value="1">DPS</option>
-            <option value="2">DPS - Sobrevivencia parcial</option>
-            <option value="3">DPS - Sobrevivencia total</option>
-            <option value="4">DPS - Sobrevivencia parcial - Esquive</option>
-            <option value="5">DPS - Sobrevivencia total - Esquive</option>
-        </select>
-        <h2 class="best-subtitle">
-            <span id="xFilterDescription">Descripción</span>
-        </h2>
-        <div id="xPokemonImage" class="best-pokemon-data">
-            <div class="best-pokemon-image"></div>
+    <div class="master-content">
+
+        <div id="xContentPokedex" class="master-content-pokedex">
+            <div class="battle-header">
+                <div class="battle-field">
+                    <div id="xBattleImage" class="battle-pokemon-image"></div>
+                </div>
+                <div class="battle-field">
+                    <span class="battle-field-text">Pokemon oponente</span>
+                    <select id="xBattleSelect" class="content-select"></select>
+                </div>
+                <div class="battle-field">
+                    <span class="battle-field-text">Condiciones de batalla</span>
+                    <select id="xBattleFilter" class="content-select">
+                        <option value="1">DPS</option>
+                        <option value="2">DPS - Sobrevivencia parcial</option>
+                        <option value="3">DPS - Sobrevivencia total</option>
+                        <option value="4">DPS - Sobrevivencia parcial - Esquive</option>
+                        <option value="5">DPS - Sobrevivencia total - Esquive</option>
+                    </select>
+                </div>
+                <span id="xBattleDescription" class="battle-field-info"></span>
+            </div>
+            <ul id="xBattleList" class="content-list"></ul>
         </div>
-        <ul id="xOpponentList" class="best-opponent-list"></ul>
+
+        <div id="xContentBattle" class="master-content-battle">
+
+        </div>
+
+        <div id="xContentArena" class="master-content-arena">
+
+        </div>
+    </div>
+
+    <div class="master-dialog">
+        <div id="xSignupDialog" class="dialog-content dialog-mode-login">
+            <h3 class="dialog-title">
+                <span>REGISTRARSE</span>
+                <span class="dialog-field-error">Error</span>
+            </h3>
+            <span class="dialog-field-text">Usuario</span>
+            <input id="xSignupUser" type="text" maxlength="20" class="dialog-field">
+            <span class="dialog-field-text">Contraseña</span>
+            <input id="xSignupPass" type="password" class="dialog-field">
+            <span class="dialog-field-text">Repetir contraseña</span>
+            <input id="xSignupRepass" type="password" class="dialog-field">
+            <input id="xSignupOk" type="button" class="dialog-button" value="Registrarse" onclick="signup()">
+        </div>
+        <div id="xSigninDialog" class="dialog-content dialog-mode-login">
+            <h3 class="dialog-title">
+                <span>INICIAR SESIÓN</span>
+                <span class="dialog-field-error">Error</span>
+            </h3>
+            <span class="dialog-field-text">Usuario</span>
+            <input id="xSigninUser" type="text" class="dialog-field">
+            <span class="dialog-field-text">Contraseña</span>
+            <input id="xSigninPass" type="password" class="dialog-field">
+            <span class="dialog-field-link" onclick="goSignup()">No tiene un usuario? ... Registrarse</span>
+            <input id="xSigninOk" type="button" class="dialog-button" value="Iniciar sesión" onclick="signin()">
+        </div>
+        <div id="xPokemonDialog" class="dialog-content dialog-mode-message">
+            <h3 class="dialog-title">
+                <span>POKEMON</span>
+                <span class="dialog-field-error">Error</span>
+            </h3>
+            <span class="dialog-field-text">Mensaje</span>
+            <textarea id="xCommentText" class="dialog-field"></textarea>
+            <input id="xCommentOk" type="button" class="dialog-button" value="Comentar" onclick="sendComment()">
+        </div>
     </div>
 
 </body>

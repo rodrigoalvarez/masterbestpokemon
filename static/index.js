@@ -1,25 +1,36 @@
+var userId = '';
 var userName = '';
 var pokemons = [];
+var myPokemons = [];
 var combinations = [];
 var pokemonTypes = [];
 var translatedAttacks = [];
-var legendary = ['243','244','245','250', '251'];//'144','145','146','150','151','243','244','245','249','250', '251'
-var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131','134','135','136','143','144','145','146','150','151','153','156','159','248','249'];
+var legendary = ['151','250', '251'];//'144','145','146','150','151','243','244','245','249','250', '251'
+var raids = ['003','006','009','059','065','068','089','094','103','110','112','125','126','129','131',
+            '134','135','136','143','144','145','146','150','153','156','159','243','244','245','248','249'];
 var filterId = 1;
 var loadingFlag = 0;
-var cpM = 0.7317;
-var iv = 7;
+
+const cpM = 0.7317;
+const iv = 7;
+const pokedexCount = 251;
 
 $(document).ready(function () {
+    actionVisit();
+    getStoredUser();
+    if (userId && userName) {
+        login(userId, userName);
+    }
+
     $.getJSON('pokedata.json', function (data) {
         pokemons = data;
         combinations = getAllPokemonCombinations();
         loadPokemons();
         $.each(getPokemonNames(), function (key, value) {
             if (value.id == '000') {
-                $("#xPokemonList").append($("<option disabled></option>").attr("value", value.id).text(value.name));
+                $("#xBattleSelect").append($("<option disabled></option>").attr("value", value.id).text(value.name));
             } else {
-                $("#xPokemonList").append($("<option></option>").attr("value", value.id).text(value.name));
+                $("#xBattleSelect").append($("<option></option>").attr("value", value.id).text(value.name));
             }
         });
         loadingCheck();
@@ -32,72 +43,66 @@ $(document).ready(function () {
         translatedAttacks = data;
         loadingCheck();
     });
-    $("#xUsernameInput").on('keypress', function(e) {
-         if(e.which === 13) {
-            saveUsername($("#xUsernameInput").val());
-            loadPokemons();
-         }
-   });
-    $("#xPokemonList").change(changePokemon);
-    $("#xFilterList").change(changePokemon);
+
+    $("#xBattleSelect").change(battleChangePokemon);
+    $("#xBattleFilter").change(battleChangePokemon);
 });
 
 function loadingCheck() {
     loadingFlag++;
     if (loadingFlag == 3) {
-        changePokemon();
+        battleChangePokemon();
     }
 }
 
-function changePokemon() {
-    filterId = $("#xFilterList option:selected").val();
+function battleChangePokemon() {
+    filterId = $("#xBattleFilter option:selected").val();
     if (filterId == 1) {
-        $("#xFilterDescription")
+        $("#xBattleDescription")
             .text('Pokemons que tienen mejor DPS (daño por segundo) sin importar que el pokemon muera intentando derrotar al oponente. ' +
                     'En este supuesto, el pokemon no esquiva los ataques del oponente.');
     } else if (filterId == 2) {
-        $("#xPokemonName")
+        $("#xBattleDescription")
             .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente al menos una vez sin morir en el intento. ' +
                     'En este supuesto, el pokemon no esquiva los ataques del oponente.');
     } else if (filterId == 3) {
-        $("#xPokemonName")
+        $("#xBattleDescription")
             .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente sin morir en el intento. ' +
                     'En este supuesto, el pokemon no esquiva los ataques del oponente.');
     } else if (filterId == 4) {
-        $("#xPokemonName")
+        $("#xBattleDescription")
             .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente al menos una vez sin morir en el intento. ' +
                 'En este supuesto, el pokemon esquiva los ataques del oponente.');
     } else if (filterId == 5) {
-        $("#xPokemonName")
+        $("#xBattleDescription")
             .text('Pokemons que tienen mejor DPS (daño por segundo) y que logran derrotar al oponente sin morir en el intento. ' +
                 'En este supuesto, el pokemon esquiva los ataques del oponente.');
     }
 
-    var id = $("#xPokemonList option:selected").val();
-    var name = $("#xPokemonList option:selected").text();
-    $("#xPokemonName").text(name);
-    $("#xPokemonImage .best-pokemon-image").css('background-image', 'url(' + "'images/" + name + "_GO.png'" + ')');
-    $("#xOpponentList").empty();
+    var id = $("#xBattleSelect option:selected").val();
+    var name = $("#xBattleSelect option:selected").text();
+    $("#xBattleImage").css('background-image', 'url(' + "'images/" + name + "_GO.png'" + ')');
+    $("#xBattleList").empty();
     $.each(getPokemonOpponents(id), function (key, value) {
-        $("#xOpponentList")
+        $("#xBattleList")
             .append($(
-                '<li class="' + (inStorage(value.pokemon) ? 'pokemon-stored ' : '') + (value.warning > 0 ? 'pokemon-warning ' : '') + 'warning-' + value.warning + '" ' + 
+                '<li class="' + (isMyPokemon(value.pokemon) ? 'pokemon-stored ' : '') + (value.warning > 0 ? 'pokemon-warning ' : '') + 'warning-' + value.warning + '" ' + 
                     'onclick="showBattles(this)">' +
-                    '<div class="best-pokemon-data">' +
-                        '<div class="best-pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
-                        '<span class="best-pokemon-name">' + value.pokemon.name + '</span>' +
-                        '<span class="best-pokemon-warning"></span>' +
+                    '<div class="pokemon-data">' +
+                        '<div class="pokemon-image" style="background-image: url(' + "'images/" + value.pokemon.name + "_GO.png'" + ')"></div>' +
+                        '<span class="pokemon-name">' + value.pokemon.name + '</span>' +
+                        '<span class="pokemon-warning"></span>' +
                     '</div>' +
-                    '<div class="best-moves">' +
+                    '<div class="pokemon-moves">' +
                         '<div>' +
-                            '<span class="best-move-name type-' + value.pokemon.quick.type + '">' + getAttackName(value.pokemon.quick.name) + '</span>' +
-                            '<span class="best-move-power">' + value.pokemon.quick.power + '</span>' +
-                            '<div class="best-move-image"></div>' +
+                            '<span class="pokemon-move-name type-' + value.pokemon.quick.type + '">' + getAttackName(value.pokemon.quick.name) + '</span>' +
+                            '<span class="pokemon-move-power">' + value.pokemon.quick.power + '</span>' +
+                            '<div class="pokemon-move-image"></div>' +
                         '</div>' +
                         '<div>' +
-                            '<span class="best-move-name type-' + value.pokemon.charge.type + '">' + getAttackName(value.pokemon.charge.name) + '</span>' +
-                            '<span class="best-move-power">' + value.pokemon.charge.power + '</span>' +
-                            '<div class="best-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
+                            '<span class="pokemon-move-name type-' + value.pokemon.charge.type + '">' + getAttackName(value.pokemon.charge.name) + '</span>' +
+                            '<span class="pokemon-move-power">' + value.pokemon.charge.power + '</span>' +
+                            '<div class="pokemon-move-image energy-' + value.pokemon.charge.energyBars + '"></div>' +
                         '</div>' +
                     '</div>' +
                     getBattleTemplate(value.battles) +
@@ -107,12 +112,12 @@ function changePokemon() {
 }
 
 function getBattleTemplate(battles) {
-    var result = '<div class="best-damage">';
+    var result = '<div class="pokemon-damage">';
     battles.forEach(function (element) {
         var item = '<div>' +
-                        '<span class="best-damage-win">' + (element.win ? 'Win' : 'Lose') + '</span>' +
-                        '<span class="best-damage-time">' + getTimeUI(element.battleTime) + '</span>' +
-                        '<span class="best-damage-hp">' + (element.win ? (Math.max(element.battleHpA, 0) + '/' + element.hpA) : (Math.max(element.battleHpD, 0) + '/' + element.hpD)) + '</span>' +
+                        '<span class="pokemon-damage-win">' + (element.win ? 'Win' : 'Lose') + '</span>' +
+                        '<span class="pokemon-damage-time">' + getTimeUI(element.battleTime) + '</span>' +
+                        '<span class="pokemon-damage-hp">' + (element.win ? (Math.max(element.battleHpA, 0) + '/' + element.hpA) : (Math.max(element.battleHpD, 0) + '/' + element.hpD)) + '</span>' +
                     '</div>';
         result += item;
     });
@@ -135,7 +140,7 @@ function showBattles(element) {
 }
 
 function loadPokemons() {
-    userName = getUsername();
+    /*userName = getUsername();
     $("#xUsernameInput").val(userName);
     if (userName == '') {
         $.get('createUser', function (data) {
@@ -146,7 +151,7 @@ function loadPokemons() {
         $.get('getUser?username=' + userName, function (data) {
             setPokemons(data);
         });
-    }
+    }*/
 }
 
 // UI Functions
@@ -155,14 +160,15 @@ function getPokemonNames() {
     var result = [];
     result.push({ 'id': '000', 'name': '- Raids -', 'raid': 1 });
     result.push({ 'id': '000', 'name': '- Todos -', 'raid': 0 });
-    pokemons.forEach(function (element) {
+    for (var i = 1; i <= pokedexCount; i++) {
+        var element = pokemons[i];
         if (legendary.indexOf(element.speciesID) == -1) {
             result.push({ 'id': element.speciesID, 'name': element.speciesName, 'raid': 0 });
             if (raids.indexOf(element.speciesID) > -1) {
                 result.push({ 'id': element.speciesID, 'name': element.speciesName, 'raid': 1 });
             }
         }
-    }, this);
+    }
     result = result.sort(function(a, b) {
         return a.raid > b.raid ? -1 : (a.raid < b.raid ? 1 : (a.name < b.name ? -1 : 1));
     });
@@ -199,7 +205,8 @@ function getPokemonData(id) {
 
 function getAllPokemonCombinations() {
     var result = [];
-    pokemons.forEach(function (element) {
+    for (var i = 1; i <= pokedexCount; i++) {
+        var element = pokemons[i];
         element.quickMoves.forEach(function (quick) {
             element.chargeMoves.forEach(function (charge) {
                 if (legendary.indexOf(element.speciesID) == -1) {
@@ -215,7 +222,7 @@ function getAllPokemonCombinations() {
                 }
             }, this);
         }, this);
-    }, this);
+    }
     return result;
 }
 
@@ -253,22 +260,6 @@ function getPowerCombinations(pokemon) {
     });
     return result;
 }
-
-/*function winAnyBattle(battles) {
-    var result = false;
-    battles.forEach(function (element) {
-        result = result || element.win;
-    });
-    return result || battles.length == 0;
-}
-
-function winAllBattles(battles) {
-    var result = true;
-    battles.forEach(function (element) {
-        result = result && element.win;
-    });
-    return result;
-}*/
 
 function getBattleCombinations(pokemonA, pokemonD) {
     var result = [];
@@ -403,50 +394,154 @@ function getAttackName(attack) {
     return result;
 }
 
-/* === Storage Functions === */
 
-function getUsername() {
-    var result = '';
-    if (typeof(Storage) !== "undefined") {
-        result = localStorage.getItem("mbp-username") || '';
-    }
-    return result;
+
+
+/* Functions - Auxiliar */
+
+function login(id, user) {
+    userId = id;
+    userName = user;
+    setStoredUser();
+    $('.header-user .header-option-text').text(user);
+
+    $('.header-signup .header-option-text').hide();
+    $('.header-signin .header-option-text').hide();
+    $('.header-user .header-option-text').show();
+    $('.header-pokedex .header-option-text').show();
+    $('.header-logout .header-option-text').show();
 }
 
-function saveUsername(username) {
+function logout() {
+    userId = '';
+    userName = '';
+    setStoredUser();
+    $('.header-user .header-option-text').text('');
+
+    $('.header-signup .header-option-text').show();
+    $('.header-signin .header-option-text').show();
+    $('.header-user .header-option-text').hide();
+    $('.header-pokedex .header-option-text').hide();
+    $('.header-logout .header-option-text').hide();
+}
+
+function errorFormat(code) {
+    if (code == 100) {
+        return 'Error interno en el servidor, inténtelo más tarde';
+
+    } else if (code == 101) {
+        return 'El usuario ya existe';
+
+    } else if (code == 102) {
+        return 'El usuario no existe o la contraseña no es válida';
+
+    } else if (code == 201) {
+        return 'El relato no existe';
+
+    }
+    return '';
+}
+
+
+/* Functions - Actions */
+
+function actionVisit() {
+    $.ajax({
+        url: 'actionvisit',
+        type: 'PUT',
+        cache: false,
+        contentType: 'application/json',
+        success: function (res) {
+            //$('.content-visit').show();
+            //$('.content-visit .content-visit-value').text(res);
+        }
+    });
+}
+
+
+/* Functions - Pokedex */
+
+function isMyPokemon(pokemon) {
+    return false;
+}
+
+
+/* Functions - Storage */
+
+function getStoredUser() {
     if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("mbp-username", username);
+        userId = localStorage.getItem("mpg-userid") || '';
+        userName = localStorage.getItem("mpg-username") || '';
     }
 }
 
-function getStoredPokemons() {
-    var result = [];
+function setStoredUser() {
     if (typeof(Storage) !== "undefined") {
-        var data = JSON.parse(localStorage.getItem("mbp-pokemons")) || [];
-        data.forEach(function (element) {
-            combinations.forEach(function (k) {
-                if (element.pokemon == k.id && element.quick == k.quick.move_id && element.charge == k.charge.move_id) {
-                    result.push({ 'pokemon': k });
-                }
-            }, this);
-        }, this);
-    }
-    return result;
-}
-
-function setPokemons(data) {
-    if (typeof(Storage) !== "undefined") {
-        localStorage.setItem("mbp-pokemons", data);
-        changePokemon();
+        localStorage.setItem("mpg-userid", userId);
+        localStorage.setItem("mpg-username", userName);
     }
 }
 
-function inStorage(pokemon) {
-    var result = false;
-    $.each(getStoredPokemons(), function (index, element) {
-        result = result || (element.pokemon.id == pokemon.id && 
-                            element.pokemon.quick.move_id == pokemon.quick.move_id && 
-                            element.pokemon.charge.move_id == pokemon.charge.move_id);
-    }, this);
-    return result;
+
+/* UI */
+
+function goLogout() {
+    logout();
+    goHome();
+}
+
+function goHome() {
+    $('#xContentPokedex').hide();
+    $('#xContentBattle').hide();
+    $('#xContentArena').hide();
+
+    $('.master-content').fadeIn();
+    $('.master-dialog').fadeOut();
+}
+
+function goDialog() {
+    $('#xSignupDialog').hide();
+    $('#xSigninDialog').hide();
+    $('#xPokemonDialog').hide();
+
+    $('.master-content').fadeOut();
+    $('.master-dialog').fadeIn();
+}
+
+function goSignup() {
+    goDialog();
+    $('#xSignupDialog').show();
+    $('.dialog-field-error').hide();
+    $('#xSignupUser').val('');
+    $('#xSignupPass').val('');
+    $('#xSignupRepass').val('');
+    $('#xSignupOk').prop('disabled', false);
+}
+
+function goSignin() {
+    goDialog();
+    $('#xSigninDialog').show();
+    $('.dialog-field-error').hide();
+    $('#xSigninUser').val('');
+    $('#xSigninPass').val('');
+    $('#xSigninOk').prop('disabled', false);
+}
+
+function goPokedex() {
+    if (!userId) {
+        goSignin();
+        return;
+    }
+    goHome();
+    $('#xContentPokedex').show();
+}
+
+function goBattle() {
+    goHome();
+    $('#xContentBattle').show();
+}
+
+function goArena() {
+    goHome();
+    $('#xContentArena').show();
 }

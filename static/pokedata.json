@@ -1,5 +1,5 @@
-[
-    {
+{
+    "1": {
         "speciesName": "Bulbasaur",
         "speciesSlug": "bulbasaur",
         "speciesID": "001",
@@ -149,7 +149,7 @@
             }
         ]
     },
-    {
+    "2": {
         "speciesName": "Ivysaur",
         "speciesSlug": "ivysaur",
         "speciesID": "002",
@@ -299,7 +299,7 @@
             }
         ]
     },
-    {
+    "3": {
         "speciesName": "Venusaur",
         "speciesSlug": "venusaur",
         "speciesID": "003",
@@ -452,7 +452,7 @@
             }
         ]
     },
-    {
+    "4": {
         "speciesName": "Charmander",
         "speciesSlug": "charmander",
         "speciesID": "004",
@@ -596,7 +596,7 @@
             }
         ]
     },
-    {
+    "5": {
         "speciesName": "Charmeleon",
         "speciesSlug": "charmeleon",
         "speciesID": "005",
@@ -759,7 +759,7 @@
             }
         ]
     },
-    {
+    "6": {
         "speciesName": "Charizard",
         "speciesSlug": "charizard",
         "speciesID": "006",
@@ -967,7 +967,7 @@
             }
         ]
     },
-    {
+    "7": {
         "speciesName": "Squirtle",
         "speciesSlug": "squirtle",
         "speciesID": "007",
@@ -1108,7 +1108,7 @@
             }
         ]
     },
-    {
+    "8": {
         "speciesName": "Wartortle",
         "speciesSlug": "wartortle",
         "speciesID": "008",
@@ -1249,7 +1249,7 @@
             }
         ]
     },
-    {
+    "9": {
         "speciesName": "Blastoise",
         "speciesSlug": "blastoise",
         "speciesID": "009",
@@ -1393,7 +1393,7 @@
             }
         ]
     },
-    {
+    "10": {
         "speciesName": "Caterpie",
         "speciesSlug": "caterpie",
         "speciesID": "010",
@@ -1496,7 +1496,7 @@
             }
         ]
     },
-    {
+    "11": {
         "speciesName": "Metapod",
         "speciesSlug": "metapod",
         "speciesID": "011",
@@ -1599,7 +1599,7 @@
             }
         ]
     },
-    {
+    "12": {
         "speciesName": "Butterfree",
         "speciesSlug": "butterfree",
         "speciesID": "012",
@@ -1762,7 +1762,7 @@
             }
         ]
     },
-    {
+    "13": {
         "speciesName": "Weedle",
         "speciesSlug": "weedle",
         "speciesID": "013",
@@ -1870,7 +1870,7 @@
             }
         ]
     },
-    {
+    "14": {
         "speciesName": "Kakuna",
         "speciesSlug": "kakuna",
         "speciesID": "014",
@@ -1978,7 +1978,7 @@
             }
         ]
     },
-    {
+    "15": {
         "speciesName": "Beedrill",
         "speciesSlug": "beedrill",
         "speciesID": "015",
@@ -2143,7 +2143,7 @@
             }
         ]
     },
-    {
+    "16": {
         "speciesName": "Pidgey",
         "speciesSlug": "pidgey",
         "speciesID": "016",
@@ -2287,7 +2287,7 @@
             }
         ]
     },
-    {
+    "17": {
         "speciesName": "Pidgeotto",
         "speciesSlug": "pidgeotto",
         "speciesID": "017",
@@ -2431,7 +2431,7 @@
             }
         ]
     },
-    {
+    "18": {
         "speciesName": "Pidgeot",
         "speciesSlug": "pidgeot",
         "speciesID": "018",
@@ -2613,7 +2613,7 @@
             }
         ]
     },
-    {
+    "19": {
         "speciesName": "Rattata",
         "speciesSlug": "rattata",
         "speciesID": "019",
@@ -2750,7 +2750,7 @@
             }
         ]
     },
-    {
+    "20": {
         "speciesName": "Raticate",
         "speciesSlug": "raticate",
         "speciesID": "020",
@@ -2887,7 +2887,7 @@
             }
         ]
     },
-    {
+    "21": {
         "speciesName": "Spearow",
         "speciesSlug": "spearow",
         "speciesID": "021",
@@ -3050,7 +3050,7 @@
             }
         ]
     },
-    {
+    "22": {
         "speciesName": "Fearow",
         "speciesSlug": "fearow",
         "speciesID": "022",
@@ -3213,7 +3213,7 @@
             }
         ]
     },
-    {
+    "23": {
         "speciesName": "Ekans",
         "speciesSlug": "ekans",
         "speciesID": "023",
@@ -3374,7 +3374,7 @@
             }
         ]
     },
-    {
+    "24": {
         "speciesName": "Arbok",
         "speciesSlug": "arbok",
         "speciesID": "024",
@@ -3516,7 +3516,7 @@
             }
         ]
     },
-    {
+    "25": {
         "speciesName": "Pikachu",
         "speciesSlug": "pikachu",
         "speciesID": "025",
@@ -3674,7 +3674,7 @@
             }
         ]
     },
-    {
+    "26": {
         "speciesName": "Raichu",
         "speciesSlug": "raichu",
         "speciesID": "026",
@@ -3851,7 +3851,7 @@
             }
         ]
     },
-    {
+    "27": {
         "speciesName": "Sandshrew",
         "speciesSlug": "sandshrew",
         "speciesID": "027",
@@ -4011,7 +4011,7 @@
             }
         ]
     },
-    {
+    "28": {
         "speciesName": "Sandslash",
         "speciesSlug": "sandslash",
         "speciesID": "028",
@@ -4152,7 +4152,7 @@
             }
         ]
     },
-    {
+    "29": {
         "speciesName": "Nidoran-F",
         "speciesSlug": "nidoran-f",
         "speciesID": "029",
@@ -4294,7 +4294,7 @@
             }
         ]
     },
-    {
+    "30": {
         "speciesName": "Nidorina",
         "speciesSlug": "nidorina",
         "speciesID": "030",
@@ -4436,7 +4436,7 @@
             }
         ]
     },
-    {
+    "31": {
         "speciesName": "Nidoqueen",
         "speciesSlug": "nidoqueen",
         "speciesID": "031",
@@ -4583,7 +4583,7 @@
             }
         ]
     },
-    {
+    "32": {
         "speciesName": "Nidoran-M",
         "speciesSlug": "nidoran-m",
         "speciesID": "032",
@@ -4725,7 +4725,7 @@
             }
         ]
     },
-    {
+    "33": {
         "speciesName": "Nidorino",
         "speciesSlug": "nidorino",
         "speciesID": "033",
@@ -4867,7 +4867,7 @@
             }
         ]
     },
-    {
+    "34": {
         "speciesName": "Nidoking",
         "speciesSlug": "nidoking",
         "speciesID": "034",
@@ -5033,7 +5033,7 @@
             }
         ]
     },
-    {
+    "35": {
         "speciesName": "Clefairy",
         "speciesSlug": "clefairy",
         "speciesID": "035",
@@ -5174,7 +5174,7 @@
             }
         ]
     },
-    {
+    "36": {
         "speciesName": "Clefable",
         "speciesSlug": "clefable",
         "speciesID": "036",
@@ -5334,7 +5334,7 @@
             }
         ]
     },
-    {
+    "37": {
         "speciesName": "Vulpix",
         "speciesSlug": "vulpix",
         "speciesID": "037",
@@ -5478,7 +5478,7 @@
             }
         ]
     },
-    {
+    "38": {
         "speciesName": "Ninetales",
         "speciesSlug": "ninetales",
         "speciesID": "038",
@@ -5679,7 +5679,7 @@
             }
         ]
     },
-    {
+    "39": {
         "speciesName": "Jigglypuff",
         "speciesSlug": "jigglypuff",
         "speciesID": "039",
@@ -5860,7 +5860,7 @@
             }
         ]
     },
-    {
+    "40": {
         "speciesName": "Wigglytuff",
         "speciesSlug": "wigglytuff",
         "speciesID": "040",
@@ -6003,7 +6003,7 @@
             }
         ]
     },
-    {
+    "41": {
         "speciesName": "Zubat",
         "speciesSlug": "zubat",
         "speciesID": "041",
@@ -6168,7 +6168,7 @@
             }
         ]
     },
-    {
+    "42": {
         "speciesName": "Golbat",
         "speciesSlug": "golbat",
         "speciesID": "042",
@@ -6333,7 +6333,7 @@
             }
         ]
     },
-    {
+    "43": {
         "speciesName": "Oddish",
         "speciesSlug": "oddish",
         "speciesID": "043",
@@ -6483,7 +6483,7 @@
             }
         ]
     },
-    {
+    "44": {
         "speciesName": "Gloom",
         "speciesSlug": "gloom",
         "speciesID": "044",
@@ -6633,7 +6633,7 @@
             }
         ]
     },
-    {
+    "45": {
         "speciesName": "Vileplume",
         "speciesSlug": "vileplume",
         "speciesID": "045",
@@ -6783,7 +6783,7 @@
             }
         ]
     },
-    {
+    "46": {
         "speciesName": "Paras",
         "speciesSlug": "paras",
         "speciesID": "046",
@@ -6929,7 +6929,7 @@
             }
         ]
     },
-    {
+    "47": {
         "speciesName": "Parasect",
         "speciesSlug": "parasect",
         "speciesID": "047",
@@ -7094,7 +7094,7 @@
             }
         ]
     },
-    {
+    "48": {
         "speciesName": "Venonat",
         "speciesSlug": "venonat",
         "speciesID": "048",
@@ -7240,7 +7240,7 @@
             }
         ]
     },
-    {
+    "49": {
         "speciesName": "Venomoth",
         "speciesSlug": "venomoth",
         "speciesID": "049",
@@ -7424,7 +7424,7 @@
             }
         ]
     },
-    {
+    "50": {
         "speciesName": "Diglett",
         "speciesSlug": "diglett",
         "speciesID": "050",
@@ -7584,7 +7584,7 @@
             }
         ]
     },
-    {
+    "51": {
         "speciesName": "Dugtrio",
         "speciesSlug": "dugtrio",
         "speciesID": "051",
@@ -7744,7 +7744,7 @@
             }
         ]
     },
-    {
+    "52": {
         "speciesName": "Meowth",
         "speciesSlug": "meowth",
         "speciesID": "052",
@@ -7900,7 +7900,7 @@
             }
         ]
     },
-    {
+    "53": {
         "speciesName": "Persian",
         "speciesSlug": "persian",
         "speciesID": "053",
@@ -8056,7 +8056,7 @@
             }
         ]
     },
-    {
+    "54": {
         "speciesName": "Psyduck",
         "speciesSlug": "psyduck",
         "speciesID": "054",
@@ -8197,7 +8197,7 @@
             }
         ]
     },
-    {
+    "55": {
         "speciesName": "Golduck",
         "speciesSlug": "golduck",
         "speciesID": "055",
@@ -8338,7 +8338,7 @@
             }
         ]
     },
-    {
+    "56": {
         "speciesName": "Mankey",
         "speciesSlug": "mankey",
         "speciesID": "056",
@@ -8479,7 +8479,7 @@
             }
         ]
     },
-    {
+    "57": {
         "speciesName": "Primeape",
         "speciesSlug": "primeape",
         "speciesID": "057",
@@ -8658,7 +8658,7 @@
             }
         ]
     },
-    {
+    "58": {
         "speciesName": "Growlithe",
         "speciesSlug": "growlithe",
         "speciesID": "058",
@@ -8802,7 +8802,7 @@
             }
         ]
     },
-    {
+    "59": {
         "speciesName": "Arcanine",
         "speciesSlug": "arcanine",
         "speciesID": "059",
@@ -9006,7 +9006,7 @@
             }
         ]
     },
-    {
+    "60": {
         "speciesName": "Poliwag",
         "speciesSlug": "poliwag",
         "speciesID": "060",
@@ -9147,7 +9147,7 @@
             }
         ]
     },
-    {
+    "61": {
         "speciesName": "Poliwhirl",
         "speciesSlug": "poliwhirl",
         "speciesID": "061",
@@ -9307,7 +9307,7 @@
             }
         ]
     },
-    {
+    "62": {
         "speciesName": "Poliwrath",
         "speciesSlug": "poliwrath",
         "speciesID": "062",
@@ -9492,7 +9492,7 @@
             }
         ]
     },
-    {
+    "63": {
         "speciesName": "Abra",
         "speciesSlug": "abra",
         "speciesID": "063",
@@ -9632,7 +9632,7 @@
             }
         ]
     },
-    {
+    "64": {
         "speciesName": "Kadabra",
         "speciesSlug": "kadabra",
         "speciesID": "064",
@@ -9772,7 +9772,7 @@
             }
         ]
     },
-    {
+    "65": {
         "speciesName": "Alakazam",
         "speciesSlug": "alakazam",
         "speciesID": "065",
@@ -9953,7 +9953,7 @@
             }
         ]
     },
-    {
+    "66": {
         "speciesName": "Machop",
         "speciesSlug": "machop",
         "speciesID": "066",
@@ -10113,7 +10113,7 @@
             }
         ]
     },
-    {
+    "67": {
         "speciesName": "Machoke",
         "speciesSlug": "machoke",
         "speciesID": "067",
@@ -10273,7 +10273,7 @@
             }
         ]
     },
-    {
+    "68": {
         "speciesName": "Machamp",
         "speciesSlug": "machamp",
         "speciesID": "068",
@@ -10493,7 +10493,7 @@
             }
         ]
     },
-    {
+    "69": {
         "speciesName": "Bellsprout",
         "speciesSlug": "bellsprout",
         "speciesID": "069",
@@ -10643,7 +10643,7 @@
             }
         ]
     },
-    {
+    "70": {
         "speciesName": "Weepinbell",
         "speciesSlug": "weepinbell",
         "speciesID": "070",
@@ -10812,7 +10812,7 @@
             }
         ]
     },
-    {
+    "71": {
         "speciesName": "Victreebel",
         "speciesSlug": "victreebel",
         "speciesID": "071",
@@ -10962,7 +10962,7 @@
             }
         ]
     },
-    {
+    "72": {
         "speciesName": "Tentacool",
         "speciesSlug": "tentacool",
         "speciesID": "072",
@@ -11110,7 +11110,7 @@
             }
         ]
     },
-    {
+    "73": {
         "speciesName": "Tentacruel",
         "speciesSlug": "tentacruel",
         "speciesID": "073",
@@ -11258,7 +11258,7 @@
             }
         ]
     },
-    {
+    "74": {
         "speciesName": "Geodude",
         "speciesSlug": "geodude",
         "speciesID": "074",
@@ -11405,7 +11405,7 @@
             }
         ]
     },
-    {
+    "75": {
         "speciesName": "Graveler",
         "speciesSlug": "graveler",
         "speciesID": "075",
@@ -11590,7 +11590,7 @@
             }
         ]
     },
-    {
+    "76": {
         "speciesName": "Golem",
         "speciesSlug": "golem",
         "speciesID": "076",
@@ -11775,7 +11775,7 @@
             }
         ]
     },
-    {
+    "77": {
         "speciesName": "Ponyta",
         "speciesSlug": "ponyta",
         "speciesID": "077",
@@ -11938,7 +11938,7 @@
             }
         ]
     },
-    {
+    "78": {
         "speciesName": "Rapidash",
         "speciesSlug": "rapidash",
         "speciesID": "078",
@@ -12101,7 +12101,7 @@
             }
         ]
     },
-    {
+    "79": {
         "speciesName": "Slowpoke",
         "speciesSlug": "slowpoke",
         "speciesID": "079",
@@ -12247,7 +12247,7 @@
             }
         ]
     },
-    {
+    "80": {
         "speciesName": "Slowbro",
         "speciesSlug": "slowbro",
         "speciesID": "080",
@@ -12393,7 +12393,7 @@
             }
         ]
     },
-    {
+    "81": {
         "speciesName": "Magnemite",
         "speciesSlug": "magnemite",
         "speciesID": "081",
@@ -12543,7 +12543,7 @@
             }
         ]
     },
-    {
+    "82": {
         "speciesName": "Magneton",
         "speciesSlug": "magneton",
         "speciesID": "082",
@@ -12731,7 +12731,7 @@
             }
         ]
     },
-    {
+    "83": {
         "speciesName": "Farfetchd",
         "speciesSlug": "farfetchd",
         "speciesID": "083",
@@ -12894,7 +12894,7 @@
             }
         ]
     },
-    {
+    "84": {
         "speciesName": "Doduo",
         "speciesSlug": "doduo",
         "speciesID": "084",
@@ -13057,7 +13057,7 @@
             }
         ]
     },
-    {
+    "85": {
         "speciesName": "Dodrio",
         "speciesSlug": "dodrio",
         "speciesID": "085",
@@ -13220,7 +13220,7 @@
             }
         ]
     },
-    {
+    "86": {
         "speciesName": "Seel",
         "speciesSlug": "seel",
         "speciesID": "086",
@@ -13399,7 +13399,7 @@
             }
         ]
     },
-    {
+    "87": {
         "speciesName": "Dewgong",
         "speciesSlug": "dewgong",
         "speciesID": "087",
@@ -13601,7 +13601,7 @@
             }
         ]
     },
-    {
+    "88": {
         "speciesName": "Grimer",
         "speciesSlug": "grimer",
         "speciesID": "088",
@@ -13762,7 +13762,7 @@
             }
         ]
     },
-    {
+    "89": {
         "speciesName": "Muk",
         "speciesSlug": "muk",
         "speciesID": "089",
@@ -13945,7 +13945,7 @@
             }
         ]
     },
-    {
+    "90": {
         "speciesName": "Shellder",
         "speciesSlug": "shellder",
         "speciesID": "090",
@@ -14086,7 +14086,7 @@
             }
         ]
     },
-    {
+    "91": {
         "speciesName": "Cloyster",
         "speciesSlug": "cloyster",
         "speciesID": "091",
@@ -14269,7 +14269,7 @@
             }
         ]
     },
-    {
+    "92": {
         "speciesName": "Gastly",
         "speciesSlug": "gastly",
         "speciesID": "092",
@@ -14452,7 +14452,7 @@
             }
         ]
     },
-    {
+    "93": {
         "speciesName": "Haunter",
         "speciesSlug": "haunter",
         "speciesID": "093",
@@ -14635,7 +14635,7 @@
             }
         ]
     },
-    {
+    "94": {
         "speciesName": "Gengar",
         "speciesSlug": "gengar",
         "speciesID": "094",
@@ -14840,7 +14840,7 @@
             }
         ]
     },
-    {
+    "95": {
         "speciesName": "Onix",
         "speciesSlug": "onix",
         "speciesID": "095",
@@ -15025,7 +15025,7 @@
             }
         ]
     },
-    {
+    "96": {
         "speciesName": "Drowzee",
         "speciesSlug": "drowzee",
         "speciesID": "096",
@@ -15165,7 +15165,7 @@
             }
         ]
     },
-    {
+    "97": {
         "speciesName": "Hypno",
         "speciesSlug": "hypno",
         "speciesID": "097",
@@ -15343,7 +15343,7 @@
             }
         ]
     },
-    {
+    "98": {
         "speciesName": "Krabby",
         "speciesSlug": "krabby",
         "speciesID": "098",
@@ -15484,7 +15484,7 @@
             }
         ]
     },
-    {
+    "99": {
         "speciesName": "Kingler",
         "speciesSlug": "kingler",
         "speciesID": "099",
@@ -15644,7 +15644,7 @@
             }
         ]
     },
-    {
+    "100": {
         "speciesName": "Voltorb",
         "speciesSlug": "voltorb",
         "speciesID": "100",
@@ -15802,7 +15802,7 @@
             }
         ]
     },
-    {
+    "101": {
         "speciesName": "Electrode",
         "speciesSlug": "electrode",
         "speciesID": "101",
@@ -15960,7 +15960,7 @@
             }
         ]
     },
-    {
+    "102": {
         "speciesName": "Exeggcute",
         "speciesSlug": "exeggcute",
         "speciesID": "102",
@@ -16108,7 +16108,7 @@
             }
         ]
     },
-    {
+    "103": {
         "speciesName": "Exeggutor",
         "speciesSlug": "exeggutor",
         "speciesID": "103",
@@ -16297,7 +16297,7 @@
             }
         ]
     },
-    {
+    "104": {
         "speciesName": "Cubone",
         "speciesSlug": "cubone",
         "speciesID": "104",
@@ -16438,7 +16438,7 @@
             }
         ]
     },
-    {
+    "105": {
         "speciesName": "Marowak",
         "speciesSlug": "marowak",
         "speciesID": "105",
@@ -16579,7 +16579,7 @@
             }
         ]
     },
-    {
+    "106": {
         "speciesName": "Hitmonlee",
         "speciesSlug": "hitmonlee",
         "speciesID": "106",
@@ -16758,7 +16758,7 @@
             }
         ]
     },
-    {
+    "107": {
         "speciesName": "Hitmonchan",
         "speciesSlug": "hitmonchan",
         "speciesID": "107",
@@ -16956,7 +16956,7 @@
             }
         ]
     },
-    {
+    "108": {
         "speciesName": "Lickitung",
         "speciesSlug": "lickitung",
         "speciesID": "108",
@@ -17093,7 +17093,7 @@
             }
         ]
     },
-    {
+    "109": {
         "speciesName": "Koffing",
         "speciesSlug": "koffing",
         "speciesID": "109",
@@ -17254,7 +17254,7 @@
             }
         ]
     },
-    {
+    "110": {
         "speciesName": "Weezing",
         "speciesSlug": "weezing",
         "speciesID": "110",
@@ -17418,7 +17418,7 @@
             }
         ]
     },
-    {
+    "111": {
         "speciesName": "Rhyhorn",
         "speciesSlug": "rhyhorn",
         "speciesID": "111",
@@ -17565,7 +17565,7 @@
             }
         ]
     },
-    {
+    "112": {
         "speciesName": "Rhydon",
         "speciesSlug": "rhydon",
         "speciesID": "112",
@@ -17715,7 +17715,7 @@
             }
         ]
     },
-    {
+    "113": {
         "speciesName": "Chansey",
         "speciesSlug": "chansey",
         "speciesID": "113",
@@ -17871,7 +17871,7 @@
             }
         ]
     },
-    {
+    "114": {
         "speciesName": "Tangela",
         "speciesSlug": "tangela",
         "speciesID": "114",
@@ -18034,7 +18034,7 @@
             }
         ]
     },
-    {
+    "115": {
         "speciesName": "Kangaskhan",
         "speciesSlug": "kangaskhan",
         "speciesID": "115",
@@ -18209,7 +18209,7 @@
             }
         ]
     },
-    {
+    "116": {
         "speciesName": "Horsea",
         "speciesSlug": "horsea",
         "speciesID": "116",
@@ -18350,7 +18350,7 @@
             }
         ]
     },
-    {
+    "117": {
         "speciesName": "Seadra",
         "speciesSlug": "seadra",
         "speciesID": "117",
@@ -18510,7 +18510,7 @@
             }
         ]
     },
-    {
+    "118": {
         "speciesName": "Goldeen",
         "speciesSlug": "goldeen",
         "speciesID": "118",
@@ -18651,7 +18651,7 @@
             }
         ]
     },
-    {
+    "119": {
         "speciesName": "Seaking",
         "speciesSlug": "seaking",
         "speciesID": "119",
@@ -18830,7 +18830,7 @@
             }
         ]
     },
-    {
+    "120": {
         "speciesName": "Staryu",
         "speciesSlug": "staryu",
         "speciesID": "120",
@@ -18990,7 +18990,7 @@
             }
         ]
     },
-    {
+    "121": {
         "speciesName": "Starmie",
         "speciesSlug": "starmie",
         "speciesID": "121",
@@ -19193,7 +19193,7 @@
             }
         ]
     },
-    {
+    "122": {
         "speciesName": "Mr-Mime",
         "speciesSlug": "mr-mime",
         "speciesID": "122",
@@ -19338,7 +19338,7 @@
             }
         ]
     },
-    {
+    "123": {
         "speciesName": "Scyther",
         "speciesSlug": "scyther",
         "speciesID": "123",
@@ -19520,7 +19520,7 @@
             }
         ]
     },
-    {
+    "124": {
         "speciesName": "Jynx",
         "speciesSlug": "jynx",
         "speciesID": "124",
@@ -19703,7 +19703,7 @@
             }
         ]
     },
-    {
+    "125": {
         "speciesName": "Electabuzz",
         "speciesSlug": "electabuzz",
         "speciesID": "125",
@@ -19845,7 +19845,7 @@
             }
         ]
     },
-    {
+    "126": {
         "speciesName": "Magmar",
         "speciesSlug": "magmar",
         "speciesID": "126",
@@ -19992,7 +19992,7 @@
             }
         ]
     },
-    {
+    "127": {
         "speciesName": "Pinsir",
         "speciesSlug": "pinsir",
         "speciesID": "127",
@@ -20171,7 +20171,7 @@
             }
         ]
     },
-    {
+    "128": {
         "speciesName": "Tauros",
         "speciesSlug": "tauros",
         "speciesID": "128",
@@ -20308,7 +20308,7 @@
             }
         ]
     },
-    {
+    "129": {
         "speciesName": "Magikarp",
         "speciesSlug": "magikarp",
         "speciesID": "129",
@@ -20395,7 +20395,7 @@
             }
         ]
     },
-    {
+    "130": {
         "speciesName": "Gyarados",
         "speciesSlug": "gyarados",
         "speciesID": "130",
@@ -20599,7 +20599,7 @@
             }
         ]
     },
-    {
+    "131": {
         "speciesName": "Lapras",
         "speciesSlug": "lapras",
         "speciesID": "131",
@@ -20785,7 +20785,7 @@
             }
         ]
     },
-    {
+    "132": {
         "speciesName": "Ditto",
         "speciesSlug": "ditto",
         "speciesID": "132",
@@ -20865,7 +20865,7 @@
             }
         ]
     },
-    {
+    "133": {
         "speciesName": "Eevee",
         "speciesSlug": "eevee",
         "speciesID": "133",
@@ -21002,7 +21002,7 @@
             }
         ]
     },
-    {
+    "134": {
         "speciesName": "Vaporeon",
         "speciesSlug": "vaporeon",
         "speciesID": "134",
@@ -21127,7 +21127,7 @@
             }
         ]
     },
-    {
+    "135": {
         "speciesName": "Jolteon",
         "speciesSlug": "jolteon",
         "speciesID": "135",
@@ -21269,7 +21269,7 @@
             }
         ]
     },
-    {
+    "136": {
         "speciesName": "Flareon",
         "speciesSlug": "flareon",
         "speciesID": "136",
@@ -21435,7 +21435,7 @@
             }
         ]
     },
-    {
+    "137": {
         "speciesName": "Porygon",
         "speciesSlug": "porygon",
         "speciesID": "137",
@@ -21686,7 +21686,7 @@
             }
         ]
     },
-    {
+    "138": {
         "speciesName": "Omanyte",
         "speciesSlug": "omanyte",
         "speciesID": "138",
@@ -21872,7 +21872,7 @@
             }
         ]
     },
-    {
+    "139": {
         "speciesName": "Omastar",
         "speciesSlug": "omastar",
         "speciesID": "139",
@@ -22058,7 +22058,7 @@
             }
         ]
     },
-    {
+    "140": {
         "speciesName": "Kabuto",
         "speciesSlug": "kabuto",
         "speciesID": "140",
@@ -22206,7 +22206,7 @@
             }
         ]
     },
-    {
+    "141": {
         "speciesName": "Kabutops",
         "speciesSlug": "kabutops",
         "speciesID": "141",
@@ -22373,7 +22373,7 @@
             }
         ]
     },
-    {
+    "142": {
         "speciesName": "Aerodactyl",
         "speciesSlug": "aerodactyl",
         "speciesID": "142",
@@ -22524,7 +22524,7 @@
             }
         ]
     },
-    {
+    "143": {
         "speciesName": "Snorlax",
         "speciesSlug": "snorlax",
         "speciesID": "143",
@@ -22683,7 +22683,7 @@
             }
         ]
     },
-    {
+    "144": {
         "speciesName": "Articuno",
         "speciesSlug": "articuno",
         "speciesID": "144",
@@ -22700,7 +22700,7 @@
         "base_defense_proportion": 103,
         "base_stamina_proportion": 36,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 2933,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -22813,7 +22813,7 @@
             }
         ]
     },
-    {
+    "145": {
         "speciesName": "Zapdos",
         "speciesSlug": "zapdos",
         "speciesID": "145",
@@ -22830,7 +22830,7 @@
         "base_defense_proportion": 78,
         "base_stamina_proportion": 36,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 3330,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -22981,7 +22981,7 @@
             }
         ]
     },
-    {
+    "146": {
         "speciesName": "Moltres",
         "speciesSlug": "moltres",
         "speciesID": "146",
@@ -22998,7 +22998,7 @@
         "base_defense_proportion": 76,
         "base_stamina_proportion": 36,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 3272,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -23151,7 +23151,7 @@
             }
         ]
     },
-    {
+    "147": {
         "speciesName": "Dratini",
         "speciesSlug": "dratini",
         "speciesID": "147",
@@ -23293,7 +23293,7 @@
             }
         ]
     },
-    {
+    "148": {
         "speciesName": "Dragonair",
         "speciesSlug": "dragonair",
         "speciesID": "148",
@@ -23435,7 +23435,7 @@
             }
         ]
     },
-    {
+    "149": {
         "speciesName": "Dragonite",
         "speciesSlug": "dragonite",
         "speciesID": "149",
@@ -23639,25 +23639,25 @@
             }
         ]
     },
-    {
+    "150": {
         "speciesName": "Mewtwo",
         "speciesSlug": "mewtwo",
         "speciesID": "150",
         "height": "2m",
         "weight": "122kg",
         "description": "A Pok\u00e9mon created by recombining Mew's genes. It's said to have the most savage heart among Pok\u00e9mon.",
-        "base_attack": "330",
-        "base_defense": "200",
-        "base_stamina": "212",
-        "base_attack_proportion": 116,
-        "base_defense_proportion": 83,
-        "base_stamina_proportion": 42,
+        "base_attack": "300",
+        "base_defense": "182",
+        "base_stamina": "193",
+        "base_attack_proportion": 106,
+        "base_defense_proportion": 75,
+        "base_stamina_proportion": 39,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
-        "max_cp": 4760,
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
+        "max_cp": 3982,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
-        "base_capture_rate": 0,
+        "base_capture_rate": 0.06,
         "base_flee_rate": 0.1,
         "type1": "psychic",
         "type1TextColor": "ffffff",
@@ -23798,7 +23798,7 @@
             }
         ]
     },
-    {
+    "151": {
         "speciesName": "Mew",
         "speciesSlug": "mew",
         "speciesID": "151",
@@ -24071,7 +24071,7 @@
             }
         ]
     },
-    {
+    "152": {
         "speciesName": "Chikorita",
         "speciesSlug": "chikorita",
         "speciesID": "152",
@@ -24215,7 +24215,7 @@
             }
         ]
     },
-    {
+    "153": {
         "speciesName": "Bayleef",
         "speciesSlug": "bayleef",
         "speciesID": "153",
@@ -24362,7 +24362,7 @@
             }
         ]
     },
-    {
+    "154": {
         "speciesName": "Meganium",
         "speciesSlug": "meganium",
         "speciesID": "154",
@@ -24506,7 +24506,7 @@
             }
         ]
     },
-    {
+    "155": {
         "speciesName": "Cyndaquil",
         "speciesSlug": "cyndaquil",
         "speciesID": "155",
@@ -24650,7 +24650,7 @@
             }
         ]
     },
-    {
+    "156": {
         "speciesName": "Quilava",
         "speciesSlug": "quilava",
         "speciesID": "156",
@@ -24797,7 +24797,7 @@
             }
         ]
     },
-    {
+    "157": {
         "speciesName": "Typhlosion",
         "speciesSlug": "typhlosion",
         "speciesID": "157",
@@ -24941,7 +24941,7 @@
             }
         ]
     },
-    {
+    "158": {
         "speciesName": "Totodile",
         "speciesSlug": "totodile",
         "speciesID": "158",
@@ -25082,7 +25082,7 @@
             }
         ]
     },
-    {
+    "159": {
         "speciesName": "Croconaw",
         "speciesSlug": "croconaw",
         "speciesID": "159",
@@ -25226,7 +25226,7 @@
             }
         ]
     },
-    {
+    "160": {
         "speciesName": "Feraligatr",
         "speciesSlug": "feraligatr",
         "speciesID": "160",
@@ -25367,7 +25367,7 @@
             }
         ]
     },
-    {
+    "161": {
         "speciesName": "Sentret",
         "speciesSlug": "sentret",
         "speciesID": "161",
@@ -25504,7 +25504,7 @@
             }
         ]
     },
-    {
+    "162": {
         "speciesName": "Furret",
         "speciesSlug": "furret",
         "speciesID": "162",
@@ -25641,7 +25641,7 @@
             }
         ]
     },
-    {
+    "163": {
         "speciesName": "Hoothoot",
         "speciesSlug": "hoothoot",
         "speciesID": "163",
@@ -25785,7 +25785,7 @@
             }
         ]
     },
-    {
+    "164": {
         "speciesName": "Noctowl",
         "speciesSlug": "noctowl",
         "speciesID": "164",
@@ -25929,7 +25929,7 @@
             }
         ]
     },
-    {
+    "165": {
         "speciesName": "Ledyba",
         "speciesSlug": "ledyba",
         "speciesID": "165",
@@ -26073,7 +26073,7 @@
             }
         ]
     },
-    {
+    "166": {
         "speciesName": "Ledian",
         "speciesSlug": "ledian",
         "speciesID": "166",
@@ -26217,7 +26217,7 @@
             }
         ]
     },
-    {
+    "167": {
         "speciesName": "Spinarak",
         "speciesSlug": "spinarak",
         "speciesID": "167",
@@ -26363,7 +26363,7 @@
             }
         ]
     },
-    {
+    "168": {
         "speciesName": "Ariados",
         "speciesSlug": "ariados",
         "speciesID": "168",
@@ -26509,7 +26509,7 @@
             }
         ]
     },
-    {
+    "169": {
         "speciesName": "Crobat",
         "speciesSlug": "crobat",
         "speciesID": "169",
@@ -26655,7 +26655,7 @@
             }
         ]
     },
-    {
+    "170": {
         "speciesName": "Chinchou",
         "speciesSlug": "chinchou",
         "speciesID": "170",
@@ -26799,7 +26799,7 @@
             }
         ]
     },
-    {
+    "171": {
         "speciesName": "Lanturn",
         "speciesSlug": "lanturn",
         "speciesID": "171",
@@ -26943,7 +26943,7 @@
             }
         ]
     },
-    {
+    "172": {
         "speciesName": "Pichu",
         "speciesSlug": "pichu",
         "speciesID": "172",
@@ -27082,7 +27082,7 @@
             }
         ]
     },
-    {
+    "173": {
         "speciesName": "Cleffa",
         "speciesSlug": "cleffa",
         "speciesID": "173",
@@ -27261,7 +27261,7 @@
             }
         ]
     },
-    {
+    "174": {
         "speciesName": "Igglybuff",
         "speciesSlug": "igglybuff",
         "speciesID": "174",
@@ -27423,7 +27423,7 @@
             }
         ]
     },
-    {
+    "175": {
         "speciesName": "Togepi",
         "speciesSlug": "togepi",
         "speciesID": "175",
@@ -27583,7 +27583,7 @@
             }
         ]
     },
-    {
+    "176": {
         "speciesName": "Togetic",
         "speciesSlug": "togetic",
         "speciesID": "176",
@@ -27767,7 +27767,7 @@
             }
         ]
     },
-    {
+    "177": {
         "speciesName": "Natu",
         "speciesSlug": "natu",
         "speciesID": "177",
@@ -27913,7 +27913,7 @@
             }
         ]
     },
-    {
+    "178": {
         "speciesName": "Xatu",
         "speciesSlug": "xatu",
         "speciesID": "178",
@@ -28059,7 +28059,7 @@
             }
         ]
     },
-    {
+    "179": {
         "speciesName": "Mareep",
         "speciesSlug": "mareep",
         "speciesID": "179",
@@ -28198,7 +28198,7 @@
             }
         ]
     },
-    {
+    "180": {
         "speciesName": "Flaaffy",
         "speciesSlug": "flaaffy",
         "speciesID": "180",
@@ -28337,7 +28337,7 @@
             }
         ]
     },
-    {
+    "181": {
         "speciesName": "Ampharos",
         "speciesSlug": "ampharos",
         "speciesID": "181",
@@ -28476,7 +28476,7 @@
             }
         ]
     },
-    {
+    "182": {
         "speciesName": "Bellossom",
         "speciesSlug": "bellossom",
         "speciesID": "182",
@@ -28490,7 +28490,7 @@
         "base_defense_proportion": 78,
         "base_stamina_proportion": 30,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "1<span style=\"font-size:14px;\">KM<\/span>",
+        "km_buddy_distance": "3<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 2108,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -28620,7 +28620,7 @@
             }
         ]
     },
-    {
+    "183": {
         "speciesName": "Marill",
         "speciesSlug": "marill",
         "speciesID": "183",
@@ -28767,7 +28767,7 @@
             }
         ]
     },
-    {
+    "184": {
         "speciesName": "Azumarill",
         "speciesSlug": "azumarill",
         "speciesID": "184",
@@ -28914,7 +28914,7 @@
             }
         ]
     },
-    {
+    "185": {
         "speciesName": "Sudowoodo",
         "speciesSlug": "sudowoodo",
         "speciesID": "185",
@@ -29058,7 +29058,7 @@
             }
         ]
     },
-    {
+    "186": {
         "speciesName": "Politoed",
         "speciesSlug": "politoed",
         "speciesID": "186",
@@ -29199,7 +29199,7 @@
             }
         ]
     },
-    {
+    "187": {
         "speciesName": "Hoppip",
         "speciesSlug": "hoppip",
         "speciesID": "187",
@@ -29347,7 +29347,7 @@
             }
         ]
     },
-    {
+    "188": {
         "speciesName": "Skiploom",
         "speciesSlug": "skiploom",
         "speciesID": "188",
@@ -29495,7 +29495,7 @@
             }
         ]
     },
-    {
+    "189": {
         "speciesName": "Jumpluff",
         "speciesSlug": "jumpluff",
         "speciesID": "189",
@@ -29643,7 +29643,7 @@
             }
         ]
     },
-    {
+    "190": {
         "speciesName": "Aipom",
         "speciesSlug": "aipom",
         "speciesID": "190",
@@ -29780,7 +29780,7 @@
             }
         ]
     },
-    {
+    "191": {
         "speciesName": "Sunkern",
         "speciesSlug": "sunkern",
         "speciesID": "191",
@@ -29924,7 +29924,7 @@
             }
         ]
     },
-    {
+    "192": {
         "speciesName": "Sunflora",
         "speciesSlug": "sunflora",
         "speciesID": "192",
@@ -30068,7 +30068,7 @@
             }
         ]
     },
-    {
+    "193": {
         "speciesName": "Yanma",
         "speciesSlug": "yanma",
         "speciesID": "193",
@@ -30212,7 +30212,7 @@
             }
         ]
     },
-    {
+    "194": {
         "speciesName": "Wooper",
         "speciesSlug": "wooper",
         "speciesID": "194",
@@ -30358,7 +30358,7 @@
             }
         ]
     },
-    {
+    "195": {
         "speciesName": "Quagsire",
         "speciesSlug": "quagsire",
         "speciesID": "195",
@@ -30504,7 +30504,7 @@
             }
         ]
     },
-    {
+    "196": {
         "speciesName": "Espeon",
         "speciesSlug": "espeon",
         "speciesID": "196",
@@ -30644,7 +30644,7 @@
             }
         ]
     },
-    {
+    "197": {
         "speciesName": "Umbreon",
         "speciesSlug": "umbreon",
         "speciesID": "197",
@@ -30766,7 +30766,7 @@
             }
         ]
     },
-    {
+    "198": {
         "speciesName": "Murkrow",
         "speciesSlug": "murkrow",
         "speciesID": "198",
@@ -30914,7 +30914,7 @@
             }
         ]
     },
-    {
+    "199": {
         "speciesName": "Slowking",
         "speciesSlug": "slowking",
         "speciesID": "199",
@@ -31060,7 +31060,7 @@
             }
         ]
     },
-    {
+    "200": {
         "speciesName": "Misdreavus",
         "speciesSlug": "misdreavus",
         "speciesID": "200",
@@ -31201,7 +31201,7 @@
             }
         ]
     },
-    {
+    "201": {
         "speciesName": "Unown",
         "speciesSlug": "unown",
         "speciesID": "201",
@@ -31284,7 +31284,7 @@
             }
         ]
     },
-    {
+    "202": {
         "speciesName": "Wobbuffet",
         "speciesSlug": "wobbuffet",
         "speciesID": "202",
@@ -31386,7 +31386,7 @@
             }
         ]
     },
-    {
+    "203": {
         "speciesName": "Girafarig",
         "speciesSlug": "girafarig",
         "speciesID": "203",
@@ -31528,7 +31528,7 @@
             }
         ]
     },
-    {
+    "204": {
         "speciesName": "Pineco",
         "speciesSlug": "pineco",
         "speciesID": "204",
@@ -31669,7 +31669,7 @@
             }
         ]
     },
-    {
+    "205": {
         "speciesName": "Forretress",
         "speciesSlug": "forretress",
         "speciesID": "205",
@@ -31822,7 +31822,7 @@
             }
         ]
     },
-    {
+    "206": {
         "speciesName": "Dunsparce",
         "speciesSlug": "dunsparce",
         "speciesID": "206",
@@ -31959,7 +31959,7 @@
             }
         ]
     },
-    {
+    "207": {
         "speciesName": "Gligar",
         "speciesSlug": "gligar",
         "speciesID": "207",
@@ -32106,7 +32106,7 @@
             }
         ]
     },
-    {
+    "208": {
         "speciesName": "Steelix",
         "speciesSlug": "steelix",
         "speciesID": "208",
@@ -32259,7 +32259,7 @@
             }
         ]
     },
-    {
+    "209": {
         "speciesName": "Snubbull",
         "speciesSlug": "snubbull",
         "speciesID": "209",
@@ -32400,7 +32400,7 @@
             }
         ]
     },
-    {
+    "210": {
         "speciesName": "Granbull",
         "speciesSlug": "granbull",
         "speciesID": "210",
@@ -32541,7 +32541,7 @@
             }
         ]
     },
-    {
+    "211": {
         "speciesName": "Qwilfish",
         "speciesSlug": "qwilfish",
         "speciesID": "211",
@@ -32689,7 +32689,7 @@
             }
         ]
     },
-    {
+    "212": {
         "speciesName": "Scizor",
         "speciesSlug": "scizor",
         "speciesID": "212",
@@ -32842,7 +32842,7 @@
             }
         ]
     },
-    {
+    "213": {
         "speciesName": "Shuckle",
         "speciesSlug": "shuckle",
         "speciesID": "213",
@@ -32992,7 +32992,7 @@
             }
         ]
     },
-    {
+    "214": {
         "speciesName": "Heracross",
         "speciesSlug": "heracross",
         "speciesID": "214",
@@ -33138,7 +33138,7 @@
             }
         ]
     },
-    {
+    "215": {
         "speciesName": "Sneasel",
         "speciesSlug": "sneasel",
         "speciesID": "215",
@@ -33283,7 +33283,7 @@
             }
         ]
     },
-    {
+    "216": {
         "speciesName": "Teddiursa",
         "speciesSlug": "teddiursa",
         "speciesID": "216",
@@ -33420,7 +33420,7 @@
             }
         ]
     },
-    {
+    "217": {
         "speciesName": "Ursaring",
         "speciesSlug": "ursaring",
         "speciesID": "217",
@@ -33557,7 +33557,7 @@
             }
         ]
     },
-    {
+    "218": {
         "speciesName": "Slugma",
         "speciesSlug": "slugma",
         "speciesID": "218",
@@ -33701,7 +33701,7 @@
             }
         ]
     },
-    {
+    "219": {
         "speciesName": "Magcargo",
         "speciesSlug": "magcargo",
         "speciesID": "219",
@@ -33851,7 +33851,7 @@
             }
         ]
     },
-    {
+    "220": {
         "speciesName": "Swinub",
         "speciesSlug": "swinub",
         "speciesID": "220",
@@ -33997,7 +33997,7 @@
             }
         ]
     },
-    {
+    "221": {
         "speciesName": "Piloswine",
         "speciesSlug": "piloswine",
         "speciesID": "221",
@@ -34143,7 +34143,7 @@
             }
         ]
     },
-    {
+    "222": {
         "speciesName": "Corsola",
         "speciesSlug": "corsola",
         "speciesID": "222",
@@ -34291,7 +34291,7 @@
             }
         ]
     },
-    {
+    "223": {
         "speciesName": "Remoraid",
         "speciesSlug": "remoraid",
         "speciesID": "223",
@@ -34432,7 +34432,7 @@
             }
         ]
     },
-    {
+    "224": {
         "speciesName": "Octillery",
         "speciesSlug": "octillery",
         "speciesID": "224",
@@ -34573,7 +34573,7 @@
             }
         ]
     },
-    {
+    "225": {
         "speciesName": "Delibird",
         "speciesSlug": "delibird",
         "speciesID": "225",
@@ -34719,7 +34719,7 @@
             }
         ]
     },
-    {
+    "226": {
         "speciesName": "Mantine",
         "speciesSlug": "mantine",
         "speciesID": "226",
@@ -34866,7 +34866,7 @@
             }
         ]
     },
-    {
+    "227": {
         "speciesName": "Skarmory",
         "speciesSlug": "skarmory",
         "speciesID": "227",
@@ -35020,7 +35020,7 @@
             }
         ]
     },
-    {
+    "228": {
         "speciesName": "Houndour",
         "speciesSlug": "houndour",
         "speciesID": "228",
@@ -35170,7 +35170,7 @@
             }
         ]
     },
-    {
+    "229": {
         "speciesName": "Houndoom",
         "speciesSlug": "houndoom",
         "speciesID": "229",
@@ -35320,7 +35320,7 @@
             }
         ]
     },
-    {
+    "230": {
         "speciesName": "Kingdra",
         "speciesSlug": "kingdra",
         "speciesID": "230",
@@ -35466,7 +35466,7 @@
             }
         ]
     },
-    {
+    "231": {
         "speciesName": "Phanpy",
         "speciesSlug": "phanpy",
         "speciesID": "231",
@@ -35607,7 +35607,7 @@
             }
         ]
     },
-    {
+    "232": {
         "speciesName": "Donphan",
         "speciesSlug": "donphan",
         "speciesID": "232",
@@ -35748,7 +35748,7 @@
             }
         ]
     },
-    {
+    "233": {
         "speciesName": "Porygon2",
         "speciesSlug": "porygon2",
         "speciesID": "233",
@@ -35885,7 +35885,7 @@
             }
         ]
     },
-    {
+    "234": {
         "speciesName": "Stantler",
         "speciesSlug": "stantler",
         "speciesID": "234",
@@ -36022,7 +36022,7 @@
             }
         ]
     },
-    {
+    "235": {
         "speciesName": "Smeargle",
         "speciesSlug": "smeargle",
         "speciesID": "235",
@@ -36102,7 +36102,7 @@
             }
         ]
     },
-    {
+    "236": {
         "speciesName": "Tyrogue",
         "speciesSlug": "tyrogue",
         "speciesID": "236",
@@ -36243,7 +36243,7 @@
             }
         ]
     },
-    {
+    "237": {
         "speciesName": "Hitmontop",
         "speciesSlug": "hitmontop",
         "speciesID": "237",
@@ -36384,7 +36384,7 @@
             }
         ]
     },
-    {
+    "238": {
         "speciesName": "Smoochum",
         "speciesSlug": "smoochum",
         "speciesID": "238",
@@ -36548,7 +36548,7 @@
             }
         ]
     },
-    {
+    "239": {
         "speciesName": "Elekid",
         "speciesSlug": "elekid",
         "speciesID": "239",
@@ -36687,7 +36687,7 @@
             }
         ]
     },
-    {
+    "240": {
         "speciesName": "Magby",
         "speciesSlug": "magby",
         "speciesID": "240",
@@ -36850,7 +36850,7 @@
             }
         ]
     },
-    {
+    "241": {
         "speciesName": "Miltank",
         "speciesSlug": "miltank",
         "speciesID": "241",
@@ -36987,7 +36987,7 @@
             }
         ]
     },
-    {
+    "242": {
         "speciesName": "Blissey",
         "speciesSlug": "blissey",
         "speciesID": "242",
@@ -37124,7 +37124,7 @@
             }
         ]
     },
-    {
+    "243": {
         "speciesName": "Raikou",
         "speciesSlug": "raikou",
         "speciesID": "243",
@@ -37138,7 +37138,7 @@
         "base_defense_proportion": 87,
         "base_stamina_proportion": 36,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 3349,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -37263,7 +37263,7 @@
             }
         ]
     },
-    {
+    "244": {
         "speciesName": "Entei",
         "speciesSlug": "entei",
         "speciesID": "244",
@@ -37277,7 +37277,7 @@
         "base_defense_proportion": 73,
         "base_stamina_proportion": 46,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 3377,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -37407,7 +37407,7 @@
             }
         ]
     },
-    {
+    "245": {
         "speciesName": "Suicune",
         "speciesSlug": "suicune",
         "speciesID": "245",
@@ -37421,7 +37421,7 @@
         "base_defense_proportion": 97,
         "base_stamina_proportion": 40,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 2823,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -37450,20 +37450,20 @@
         ],
         "quickMoves": [
             {
-                "move_id": "278",
-                "name": "SNARL",
-                "type": "dark",
-                "power": "12",
-                "duration": "1100",
-                "energy": "12",
-                "energyPerSecond": 10.91,
-                "energyBars": 8,
-                "damage_window": "200",
-                "crit_percentage": "0%",
-                "base_dps": 10.9,
+                "move_id": "281",
+                "name": "HIDDEN POWER",
+                "type": "normal",
+                "power": "15",
+                "duration": "1500",
+                "energy": "15",
+                "energyPerSecond": 10,
+                "energyBars": 7,
+                "damage_window": "300",
+                "crit_percentage": "5%",
+                "base_dps": 10,
                 "has_stab": 0,
-                "stab_dps": 13.6,
-                "background_hex": "68487d",
+                "stab_dps": 12.5,
+                "background_hex": "deb19c",
                 "percent": 50,
                 "count": 50,
                 "is_deprecated": false
@@ -37548,7 +37548,7 @@
             }
         ]
     },
-    {
+    "246": {
         "speciesName": "Larvitar",
         "speciesSlug": "larvitar",
         "speciesID": "246",
@@ -37695,7 +37695,7 @@
             }
         ]
     },
-    {
+    "247": {
         "speciesName": "Pupitar",
         "speciesSlug": "pupitar",
         "speciesID": "247",
@@ -37842,7 +37842,7 @@
             }
         ]
     },
-    {
+    "248": {
         "speciesName": "Tyranitar",
         "speciesSlug": "tyranitar",
         "speciesID": "248",
@@ -37994,7 +37994,7 @@
             }
         ]
     },
-    {
+    "249": {
         "speciesName": "Lugia",
         "speciesSlug": "lugia",
         "speciesID": "249",
@@ -38011,7 +38011,7 @@
         "base_defense_proportion": 133,
         "base_stamina_proportion": 42,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 3598,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -38143,7 +38143,7 @@
             }
         ]
     },
-    {
+    "250": {
         "speciesName": "Ho-Oh",
         "speciesSlug": "ho-oh",
         "speciesID": "250",
@@ -38157,7 +38157,7 @@
         "base_defense_proportion": 124,
         "base_stamina_proportion": 42,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 4650,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -38291,7 +38291,7 @@
             }
         ]
     },
-    {
+    "251": {
         "speciesName": "Celebi",
         "speciesSlug": "celebi",
         "speciesID": "251",
@@ -38305,7 +38305,7 @@
         "base_defense_proportion": 87,
         "base_stamina_proportion": 40,
         "candy_to_evolve": "0",
-        "km_buddy_distance": "5<span style=\"font-size:14px;\">KMs<span>",
+        "km_buddy_distance": "20<span style=\"font-size:14px;\">KMs<span>",
         "max_cp": 3090,
         "capture_rate_position": 10,
         "capture_rate_color": "a7132e",
@@ -38439,4 +38439,4 @@
             }
         ]
     }
-]
+}
