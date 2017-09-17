@@ -5,6 +5,7 @@
     <title>Master Best Pokemon</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="index.js"></script>
     <link rel="stylesheet" href="index.css">
 </head>
@@ -44,7 +45,7 @@
     
     <div class="master-content">
 
-        <div id="xContentPokedex" class="master-content-pokedex">
+        <div id="xContentBattle" class="master-content-battle">
             <div class="battle-header">
                 <div class="battle-field">
                     <div id="xBattleImage" class="battle-pokemon-image"></div>
@@ -70,12 +71,18 @@
             <ul id="xBattleList" class="content-list"></ul>
         </div>
 
-        <div id="xContentBattle" class="master-content-battle">
-
+        <div id="xContentPokedex" class="master-content-pokedex">
         </div>
 
         <div id="xContentArena" class="master-content-arena">
-
+            <div class="arena-header">
+                <select id="xArenaSelectA" class="content-select"></select>
+                <select id="xArenaSelectB" class="content-select"></select>
+            </div>
+            
+            <div class="arena-chart">
+                <canvas id="xArenaChart" width="600" height="300"></canvas>
+            </div>
         </div>
     </div>
 

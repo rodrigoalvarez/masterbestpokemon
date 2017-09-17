@@ -29,8 +29,12 @@ $(document).ready(function () {
         $.each(getPokemonNames(), function (key, value) {
             if (value.id == '000') {
                 $("#xBattleSelect").append($("<option disabled></option>").attr("value", value.id).text(value.name));
+                $("#xArenaSelectA").append($("<option disabled></option>").attr("value", value.id).text(value.name));
+                $("#xArenaSelectB").append($("<option disabled></option>").attr("value", value.id).text(value.name));
             } else {
                 $("#xBattleSelect").append($("<option></option>").attr("value", value.id).text(value.name));
+                $("#xArenaSelectA").append($("<option></option>").attr("value", value.id).text(value.name));
+                $("#xArenaSelectB").append($("<option></option>").attr("value", value.id).text(value.name));
             }
         });
         loadingCheck();
@@ -46,6 +50,10 @@ $(document).ready(function () {
 
     $("#xBattleSelect").change(battleChangePokemon);
     $("#xBattleFilter").change(battleChangePokemon);
+    
+    arenaStartChart();
+    $("#xArenaSelectA").change(arenaChangePokemon);
+    $("#xArenaSelectB").change(arenaChangePokemon);
 });
 
 function loadingCheck() {
@@ -218,7 +226,8 @@ function getAllPokemonCombinations() {
                                 'charge': charge, 
                                 'attack': (parseInt(element.base_attack) + iv) * cpM,
                                 'defense': (parseInt(element.base_defense) + iv) * cpM,
-                                'stamina': Math.floor((parseInt(element.base_stamina) + iv) * cpM) });
+                                'stamina': Math.floor((parseInt(element.base_stamina) + iv) * cpM),
+                                'maxCP': element.max_cp });
                 }
             }, this);
         }, this);
@@ -466,6 +475,109 @@ function isMyPokemon(pokemon) {
 }
 
 
+/* Functions - Arena */
+
+var barChartData;
+var myBar;
+var ctx;
+
+var chartColors = {
+	normal: '#FFEB3B',
+	fire: '#FF5722',
+	water: '#2196F3',
+	electric: '#FFC107',
+	grass: '#4CAF50',
+	ice: '#00BCD4',
+	fighting: '#FF9800',
+	poison: '#9C27B0',
+	ground: '#795548',
+	flying: '#009688',
+	psychic: '#673AB7',
+	bug: '#CDDC39',
+	rock: '#9E9E9E',
+	ghost: '#3F51B5',
+	dragon: '#F44336',
+	dark: '#000000',
+	steel: '#607D8B',
+	fairy: '#E91E63',
+	other: '#E0E0E0'
+};
+
+function arenaStartChart() {
+    barChartData = {
+        labels: ["CP","Attack", "Defense", "Stamina"],
+        datasets: [{
+            label: 'Dataset1',
+            backgroundColor: chartColors.normal,
+            stack: 'Stack0',
+            data: [
+                0.5,
+                0.5
+            ]
+        }, {
+            label: 'Dataset2',
+            backgroundColor: chartColors.normal,
+            stack: 'Stack0',
+            data: [
+                0.5,
+                0.5
+            ]
+        }]
+
+    };
+
+    ctx = document.getElementById("xArenaChart").getContext("2d");
+    myBar = new Chart(ctx, {
+        type: 'horizontalBar',
+        data: barChartData,
+        options: {
+            title: {
+                display: false
+            },
+            tooltips: {
+            },
+            responsive: true,
+            scales: {
+                xAxes: [{
+                    stacked: true,
+                }],
+                yAxes: [{
+                    stacked: true
+                }]
+            }
+        }
+    });
+}
+
+function arenaChangePokemon() {
+    var idA = $("#xArenaSelectA option:selected").val();
+    var nameA = $("#xArenaSelectA option:selected").text();
+    var pokemonA = getPokemonData(idA);
+
+    var idB = $("#xArenaSelectB option:selected").val();
+    var nameB = $("#xArenaSelectB option:selected").text();
+    var pokemonB = getPokemonData(idB);
+    
+    barChartData.datasets[0].label = nameA;
+    barChartData.datasets[1].label = nameB;
+
+    barChartData.datasets[0].backgroundColor = chartColors[pokemonA.type1];
+    barChartData.datasets[1].backgroundColor = chartColors[pokemonA.type1] != chartColors[pokemonB.type1] ? chartColors[pokemonB.type1] : chartColors.other;
+
+    barChartData.datasets[0].data[0] = Math.round(1000 * pokemonA.maxCP / (pokemonA.maxCP + pokemonB.maxCP)) / 1000;
+    barChartData.datasets[0].data[1] = Math.round(1000 * pokemonA.attack / (pokemonA.attack + pokemonB.attack)) / 1000;
+    barChartData.datasets[0].data[2] = Math.round(1000 * pokemonA.defense / (pokemonA.defense + pokemonB.defense)) / 1000;
+    barChartData.datasets[0].data[3] = Math.round(1000 * pokemonA.stamina / (pokemonA.stamina + pokemonB.stamina)) / 1000;
+
+    barChartData.datasets[1].data[0] = Math.round(1000 * (1 - barChartData.datasets[0].data[0])) / 1000;
+    barChartData.datasets[1].data[1] = Math.round(1000 * (1 - barChartData.datasets[0].data[1])) / 1000;
+    barChartData.datasets[1].data[2] = Math.round(1000 * (1 - barChartData.datasets[0].data[2])) / 1000;
+    barChartData.datasets[1].data[3] = Math.round(1000 * (1 - barChartData.datasets[0].data[3])) / 1000;
+
+    myBar.update();
+}
+
+
 /* Functions - Storage */
 
 function getStoredUser() {
@@ -543,5 +655,6 @@ function goBattle() {
 
 function goArena() {
     goHome();
+    arenaChangePokemon();
     $('#xContentArena').show();
 }

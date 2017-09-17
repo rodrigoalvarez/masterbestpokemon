@@ -158,6 +158,14 @@ textarea {
 
 /* Master - Content */
 
+.master-content-pokedex {
+    display: none;
+}
+
+.master-content-arena {
+    display: none;
+}
+
 .content-select {
     width: 200px;
     border: 2px solid #ddd;
@@ -236,6 +244,25 @@ textarea {
     color: #999;
     font-size: 14px;
     padding: 6px 0;
+}
+
+
+/* Master - Arena */
+
+.arena-header {
+    text-align: center;
+    padding: 12px;
+}
+
+.arena-chart {
+    max-width: 600px;
+    max-height: 300px;
+    margin: auto;
+}
+
+.master-content-arena .content-select {
+    margin-top: 6px;
+    margin-bottom: 3px;
 }
 
 
