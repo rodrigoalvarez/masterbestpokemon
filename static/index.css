@@ -31,6 +31,12 @@ select {
     color: #333;
 }
 
+select {
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-image: url('images/arrowDown.png');
+}
+
 textarea {
     resize: none;
 }
@@ -156,10 +162,10 @@ textarea {
     width: 200px;
     border: 2px solid #ddd;
     border-radius: 15px;
-    padding: 6px 8px;
+    padding: 6px 30px 6px 8px;
     outline: none;
     color: #666;
-    background: #fff;
+    background-position: 170px 6px;
 }
 
 .content-list {
@@ -207,23 +213,29 @@ textarea {
     background-position: center;
 }
 
+.battle-group-field {
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .battle-field {
     display: inline-block;
     vertical-align: middle;
+    padding-bottom: 6px;
 }
 
 .battle-field-text {
     display: block;
     color: #999;
     font-size: 14px;
-    padding: 12px 0 6px 0;
+    padding: 6px 0;
 }
 
 .battle-field-info {
     display: block;
     color: #999;
     font-size: 14px;
-    padding: 6px 12px;
+    padding: 6px 0;
 }
 
 
